@@ -19,10 +19,47 @@ python crane_analysis.py
 python strand_crane_analysis.py
 ```
 
+## Visualization Tools
+```bash
+# Deterministic calculator (hand-calc engine, no SimPy)
+python machine_cycle_calc.py --velocity 3.6
+python machine_cycle_calc.py --sweep
+
+# Static visualizations (matplotlib)
+python top_view_viz.py --velocity 3.6          # 5-per-page top view PNGs
+python side_view_viz.py --velocity 3.6 -s 3    # Side-view elevation
+python space_time_diagram.py --velocity 3.6    # Stringline diagram
+
+# Interactive 2D viewer (pygame)
+python pygame_viz.py --velocity 2.68
+
+# Interactive 3D viewer (ursina)
+python ursina_viz.py --velocity 2.68
+python ursina_viz.py --velocity 3.6 --t-end 500
+```
+
+## Building Standalone Exe (Windows)
+```bash
+# Must use Windows Python (not WSL) for .exe output
+"/mnt/c/Program Files/Python312/python.exe" -m PyInstaller \
+  --name "CCM_3D_Viewer" --onedir --windowed -y \
+  --collect-all ursina --collect-all panda3d --collect-all simplepbr \
+  --hidden-import panda3d.core --hidden-import panda3d.direct \
+  --hidden-import direct --hidden-import direct.showbase \
+  --hidden-import direct.showbase.ShowBase \
+  --hidden-import direct.task --hidden-import direct.filter \
+  --add-data "config.py;." --add-data "viz_common.py;." \
+  --add-data "machine_cycle_calc.py;." \
+  ursina_viz.py
+# Output: dist/CCM_3D_Viewer/CCM_3D_Viewer.exe (~364 MB folder)
+```
+
 ## Key Entry Points
 - `simulation.py:run_simulation()` — Main simulation function. Accepts `velocity`, `crane_packs_per_trip`, `num_strands` as runtime params.
 - `analysis.py:analyze_result()` — Returns dict with utilization stats.
 - `visualization.py:generate_all_plots()` — Generates all PNG plots to `output/`.
+- `machine_cycle_calc.py:MachineCycleCalculator` — Deterministic hand-calculation engine (no SimPy). Provides `get_state_at(t)` for any time t.
+- `ursina_viz.py` — Ursina 3D interactive viewer of the run-out table.
 
 ## Architecture Rules
 - **Never block strands**: The CCM casts continuously. Billet journeys must be launched as concurrent `env.process()` calls.
