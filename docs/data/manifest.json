@@ -1,0 +1,38 @@
+[
+  {
+    "file": "v1.5_s6.json",
+    "label": "1.5 m/min, 6 strands (safe, low load)",
+    "velocity": 1.5,
+    "strands": 6
+  },
+  {
+    "file": "v1.8_s6.json",
+    "label": "1.8 m/min, 6 strands (safe, moderate)",
+    "velocity": 1.8,
+    "strands": 6
+  },
+  {
+    "file": "v2.0_s6.json",
+    "label": "2.0 m/min, 6 strands (safe, near limit)",
+    "velocity": 2.0,
+    "strands": 6
+  },
+  {
+    "file": "v2.3_s6.json",
+    "label": "2.3 m/min, 6 strands (JAM)",
+    "velocity": 2.3,
+    "strands": 6
+  },
+  {
+    "file": "v2.6_s6.json",
+    "label": "2.6 m/min, 6 strands (JAM)",
+    "velocity": 2.6,
+    "strands": 6
+  },
+  {
+    "file": "v2.0_s4.json",
+    "label": "2.0 m/min, 4 strands (reduced)",
+    "velocity": 2.0,
+    "strands": 4
+  }
+]
