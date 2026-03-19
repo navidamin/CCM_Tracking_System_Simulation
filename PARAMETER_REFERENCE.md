@@ -81,7 +81,7 @@
 | Hook travel | `CRANE_HOOK_TRAVEL` | 9.0 | m | Full hoist stroke |
 | Grab time | `CRANE_GRAB_TIME` | 5.0 | s | Open or close |
 | Simultaneous travel | `CRANE_SIMULTANEOUS_TRAVEL` | True | — | Long + trans overlap |
-| Packs per trip | `CRANE_PACKS_PER_TRIP` | 7 | packs | Default = TABLE_CAPACITY |
+| Packs per trip | `CRANE_PACKS_PER_TRIP` | 1 | packs | Grab-type crane: 1 pack of 2 billets per trip |
 | Crane width | `CRANE_WIDTH` | 14.0 | m | Longitudinal footprint (A9) |
 | Min gap | `CRANE_MIN_GAP` | 15.0 | m | Anti-collision (A9) |
 | Rotation speed | `CRANE_ROTATION_SPEED` | 1.0 | rev/min | (A7) |

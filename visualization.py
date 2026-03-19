@@ -281,14 +281,14 @@ def _build_billet_phases(billet, velocity):
     return phases
 
 
-def plot_multi_billet_waterfall(result: SimulationResult, num_billets: int = 4,
+def plot_multi_billet_waterfall(result: SimulationResult, num_billets: int = 6,
                                 save_path: str | None = None):
     """
     Compact waterfall chart showing multiple billets' timing chains.
 
     Each billet is one row. Phases are shown as colored horizontal bars
     at their absolute simulation time positions. Billets are selected from
-    different strands for variety.
+    different strands for variety. Default 6 billets (one per strand).
     """
     complete = [b for b in _post_warmup_billets(result)
                 if b.t_crane_deliver is not None]
@@ -334,7 +334,10 @@ def plot_multi_billet_waterfall(result: SimulationResult, num_billets: int = 4,
 
             # Label inside bar if it's wide enough
             if duration > total_span * 0.03:
-                label = f"{duration:.0f}s"
+                if expected is not None:
+                    label = f"{duration:.1f}s (exp: {expected:.1f}s)"
+                else:
+                    label = f"{duration:.0f}s"
                 ax.text(start + duration / 2, y, label,
                         ha='center', va='center', fontsize=6,
                         fontweight='bold', color='white')
