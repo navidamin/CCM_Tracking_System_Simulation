@@ -1,0 +1,5753 @@
+{
+ "label": "2.3 m/min, 6 strands (JAM)",
+ "params": {
+  "velocity": 2.3,
+  "strands": 6,
+  "duration": 7200,
+  "warmup": 1200,
+  "billet_length": 6.0,
+  "section": "130x130"
+ },
+ "stats": {
+  "total_billets": 222,
+  "delivered_billets": 64,
+  "traffic_jam": true,
+  "traffic_jam_time": 1236.4521739130432,
+  "traffic_jam_location": "security_stopper_strand_6",
+  "tc_utilization": 0.8973,
+  "tc_cycles": 108,
+  "tc_avg_cycle": 59.62,
+  "avg_coolbed_occupancy": 25.88,
+  "max_coolbed_occupancy": 34,
+  "max_table_packs": 43,
+  "bottleneck": "TRAFFIC JAM at security_stopper_strand_6 (t=1236s)"
+ },
+ "layout": {
+  "strand_count": 6,
+  "strand_pitch": 1.3,
+  "strand_to_coolbed": {
+   "1": 10.2,
+   "2": 8.9,
+   "3": 7.6,
+   "4": 6.3,
+   "5": 5.0,
+   "6": 3.7
+  },
+  "transport_rt_length": 25.2,
+  "discharge_rt_length": 13.375,
+  "intermediate_stopper_pos": 7.175,
+  "coolbed_slots": 84,
+  "coolbed_slot_pitch": 0.375,
+  "tc_initial_position": 4.2,
+  "table_capacity": 7,
+  "pack_size": 2,
+  "num_cranes": 2,
+  "yard_length": 186.0,
+  "yard_width": 32.45
+ },
+ "transfer_car_log": [
+  {
+   "t": 444.54,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 459.54,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 464.54,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 469.54,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 495.04,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 500.04,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 505.04,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 505.04,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 524.04,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 529.04,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 534.04,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 553.04,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 558.04,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 563.04,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 563.04,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 578.79,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 583.79,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 588.79,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 604.54,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 609.54,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 614.54,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 614.54,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 636.79,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 641.79,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 646.79,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 669.04,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 674.04,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 679.04,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 679.04,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 691.54,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 696.54,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 701.54,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 714.04,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 716.58,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 721.58,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 726.58,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 726.58,
+   "action": "travel_to_strand",
+   "strand": 6
+  },
+  {
+   "t": 735.83,
+   "action": "hook_down_pickup",
+   "strand": 6
+  },
+  {
+   "t": 740.83,
+   "action": "hook_up_pickup",
+   "strand": 6
+  },
+  {
+   "t": 745.83,
+   "action": "travel_to_coolbed",
+   "strand": 6
+  },
+  {
+   "t": 755.08,
+   "action": "hook_down_place",
+   "strand": 6
+  },
+  {
+   "t": 760.08,
+   "action": "hook_up_place",
+   "strand": 6
+  },
+  {
+   "t": 765.08,
+   "action": "cycle_complete",
+   "strand": 6
+  },
+  {
+   "t": 765.08,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 790.58,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 795.58,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 800.58,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 826.08,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 831.08,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 836.08,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 836.08,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 851.83,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 856.83,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 861.83,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 877.58,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 882.58,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 887.58,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 887.58,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 909.83,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 914.83,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 919.83,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 942.08,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 947.08,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 952.08,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 952.08,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 964.58,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 969.58,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 974.58,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 987.08,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 989.62,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 994.62,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 999.62,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 999.62,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 1018.62,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 1023.62,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 1028.62,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 1047.62,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 1052.62,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 1057.62,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 1070.63,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 1096.13,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 1101.13,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 1106.13,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 1131.63,
+   "action": "wait_interlock",
+   "strand": 1
+  },
+  {
+   "t": 1135.65,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 1140.65,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 1145.65,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 1145.65,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 1161.4,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 1166.4,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 1171.4,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 1187.15,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 1192.15,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 1197.15,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 1197.15,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 1219.4,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 1224.4,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 1229.4,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 1251.65,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 1255.7,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 1260.7,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 1265.7,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 1265.7,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 1278.2,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 1283.2,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 1288.2,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 1300.7,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 1303.72,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 1308.72,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 1313.72,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 1313.72,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 1332.72,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 1337.72,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 1342.72,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 1361.72,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 1366.72,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 1371.72,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 1383.67,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 1409.17,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 1414.17,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 1419.17,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 1444.67,
+   "action": "wait_interlock",
+   "strand": 1
+  },
+  {
+   "t": 1449.75,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 1454.75,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 1459.75,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 1459.75,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 1475.5,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 1480.5,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 1485.5,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 1501.25,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 1506.25,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 1511.25,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 1511.25,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 1533.5,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 1538.5,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 1543.5,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 1565.75,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 1569.8,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 1574.8,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 1579.8,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 1579.8,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 1592.3,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 1597.3,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 1602.3,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 1614.8,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 1617.82,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 1622.82,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 1627.82,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 1627.82,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 1646.82,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 1651.82,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 1656.82,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 1675.82,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 1680.82,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 1685.82,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 1696.72,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 1722.22,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 1727.22,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 1732.22,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 1757.72,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 1762.72,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 1767.72,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 1767.72,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 1783.47,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 1788.47,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 1793.47,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 1809.22,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 1814.22,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 1819.22,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 1819.22,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 1841.47,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 1846.47,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 1851.47,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 1873.72,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 1878.72,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 1883.72,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 1883.72,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 1896.22,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 1901.22,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 1906.22,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 1918.72,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 1921.26,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 1926.26,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 1931.26,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 1931.26,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 1950.26,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 1955.26,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 1960.26,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 1979.26,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 1984.26,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 1989.26,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 2009.76,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 2035.26,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 2040.26,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 2045.26,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 2070.76,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 2075.76,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 2080.76,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 2080.76,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 2096.51,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 2101.51,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 2106.51,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 2122.26,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 2127.26,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 2132.26,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 2132.26,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 2154.51,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 2159.51,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 2164.51,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 2186.76,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 2187.34,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 2192.34,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 2197.34,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 2197.34,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 2209.84,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 2214.84,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 2219.84,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 2232.34,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 2235.36,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 2240.36,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 2245.36,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 2245.36,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 2264.36,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 2269.36,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 2274.36,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 2293.36,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 2298.36,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 2303.36,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 2322.8,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 2348.3,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 2353.3,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 2358.3,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 2383.8,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 2388.8,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 2393.8,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 2393.8,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 2409.55,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 2414.55,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 2419.55,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 2435.3,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 2440.3,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 2445.3,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 2445.3,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 2467.55,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 2472.55,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 2477.55,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 2499.8,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 2501.44,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 2506.44,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 2511.44,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 2511.44,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 2523.94,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 2528.94,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 2533.94,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 2546.44,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 2549.46,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 2554.46,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 2559.46,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 2559.46,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 2578.46,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 2583.46,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 2588.46,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 2607.46,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 2612.46,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 2617.46,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 2635.85,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 2661.35,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 2666.35,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 2671.35,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 2696.85,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 2701.85,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 2706.85,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 2706.85,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 2722.6,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 2727.6,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 2732.6,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 2748.35,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 2753.35,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 2758.35,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 2758.35,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 2780.6,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 2785.6,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 2790.6,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 2812.85,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 2815.54,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 2820.54,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 2825.54,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 2825.54,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 2838.04,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 2843.04,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 2848.04,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 2860.54,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 2863.56,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 2868.56,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 2873.56,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 2873.56,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 2892.56,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 2897.56,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 2902.56,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 2921.56,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 2926.56,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 2931.56,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 2948.89,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 2974.39,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 2979.39,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 2984.39,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 3009.89,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 3014.89,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 3019.89,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 3019.89,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 3035.64,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 3040.64,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 3045.64,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 3061.39,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 3066.39,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 3071.39,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 3071.39,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 3093.64,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 3098.64,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 3103.64,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 3125.89,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 3129.64,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 3134.64,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 3139.64,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 3139.64,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 3152.14,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 3157.14,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 3162.14,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 3174.64,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 3177.66,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 3182.66,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 3187.66,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 3187.66,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 3206.66,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 3211.66,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 3216.66,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 3235.66,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 3240.66,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 3245.66,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 3261.93,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 3287.43,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 3292.43,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 3297.43,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 3322.93,
+   "action": "wait_interlock",
+   "strand": 1
+  },
+  {
+   "t": 3323.69,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 3328.69,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 3333.69,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 3333.69,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 3349.44,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 3354.44,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 3359.44,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 3375.19,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 3380.19,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 3385.19,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 3385.19,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 3407.44,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 3412.44,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 3417.44,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 3439.69,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 3443.74,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 3448.74,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 3453.74,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 3453.74,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 3466.24,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 3471.24,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 3476.24,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 3488.74,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 3491.76,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 3496.76,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 3501.76,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 3501.76,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 3520.76,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 3525.76,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 3530.76,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 3549.76,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 3554.76,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 3559.76,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 3574.98,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 3600.48,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 3605.48,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 3610.48,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 3635.98,
+   "action": "wait_interlock",
+   "strand": 1
+  },
+  {
+   "t": 3637.79,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 3642.79,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 3647.79,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 3647.79,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 3663.54,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 3668.54,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 3673.54,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 3689.29,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 3694.29,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 3699.29,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 3699.29,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 3721.54,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 3726.54,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 3731.54,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 3753.79,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 3757.84,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 3762.84,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 3767.84,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 3767.84,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 3780.34,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 3785.34,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 3790.34,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 3802.84,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 3805.86,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 3810.86,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 3815.86,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 3815.86,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 3834.86,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 3839.86,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 3844.86,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 3863.86,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 3868.86,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 3873.86,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 3888.02,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 3913.52,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 3918.52,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 3923.52,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 3949.02,
+   "action": "wait_interlock",
+   "strand": 1
+  },
+  {
+   "t": 3951.89,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 3956.89,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 3961.89,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 3961.89,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 3977.64,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 3982.64,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 3987.64,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 4003.39,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 4008.39,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 4013.39,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 4013.39,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 4035.64,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 4040.64,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 4045.64,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 4067.89,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 4071.94,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 4076.94,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 4081.94,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 4081.94,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 4094.44,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 4099.44,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 4104.44,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 4116.94,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 4119.96,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 4124.96,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 4129.96,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 4129.96,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 4148.96,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 4153.96,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 4158.96,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 4177.96,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 4182.96,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 4187.96,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 4201.07,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 4226.57,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 4231.57,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 4236.57,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 4262.07,
+   "action": "wait_interlock",
+   "strand": 1
+  },
+  {
+   "t": 4265.99,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 4270.99,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 4275.99,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 4275.99,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 4291.74,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 4296.74,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 4301.74,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 4317.49,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 4322.49,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 4327.49,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 4327.49,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 4349.74,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 4354.74,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 4359.74,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 4381.99,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 4386.04,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 4391.04,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 4396.04,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 4396.04,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 4408.54,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 4413.54,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 4418.54,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 4431.04,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 4434.06,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 4439.06,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 4444.06,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 4444.06,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 4463.06,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 4468.06,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 4473.06,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 4492.06,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 4497.06,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 4502.06,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 4514.11,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 4539.61,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 4544.61,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 4549.61,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 4575.11,
+   "action": "wait_interlock",
+   "strand": 1
+  },
+  {
+   "t": 4580.09,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 4585.09,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 4590.09,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 4590.09,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 4605.84,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 4610.84,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 4615.84,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 4631.59,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 4636.59,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 4641.59,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 4641.59,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 4663.84,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 4668.84,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 4673.84,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 4696.09,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 4700.14,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 4705.14,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 4710.14,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 4710.14,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 4722.64,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 4727.64,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 4732.64,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 4745.14,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 4748.16,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 4753.16,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 4758.16,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 4758.16,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 4777.16,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 4782.16,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 4787.16,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 4806.16,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 4811.16,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 4816.16,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 4827.15,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 4852.65,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 4857.65,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 4862.65,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 4888.15,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 4893.15,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 4898.15,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 4898.15,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 4913.9,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 4918.9,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 4923.9,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 4939.65,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 4944.65,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 4949.65,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 4949.65,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 4971.9,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 4976.9,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 4981.9,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 5004.15,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 5009.15,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 5014.15,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 5014.15,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 5026.65,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 5031.65,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 5036.65,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 5049.15,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 5051.69,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 5056.69,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 5061.69,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 5061.69,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 5080.69,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 5085.69,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 5090.69,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 5109.69,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 5114.69,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 5119.69,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 5140.2,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 5165.7,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 5170.7,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 5175.7,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 5201.2,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 5206.2,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 5211.2,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 5211.2,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 5226.95,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 5231.95,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 5236.95,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 5252.7,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 5257.7,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 5262.7,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 5262.7,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 5284.95,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 5289.95,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 5294.95,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 5317.2,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 5317.77,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 5322.77,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 5327.77,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 5327.77,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 5340.27,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 5345.27,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 5350.27,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 5362.77,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 5365.79,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 5370.79,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 5375.79,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 5375.79,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 5394.79,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 5399.79,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 5404.79,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 5423.79,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 5428.79,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 5433.79,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 5453.24,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 5478.74,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 5483.74,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 5488.74,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 5514.24,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 5519.24,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 5524.24,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 5524.24,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 5539.99,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 5544.99,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 5549.99,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 5565.74,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 5570.74,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 5575.74,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 5575.74,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 5597.99,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 5602.99,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 5607.99,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 5630.24,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 5631.87,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 5636.87,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 5641.87,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 5641.87,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 5654.37,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 5659.37,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 5664.37,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 5676.87,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 5679.89,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 5684.89,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 5689.89,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 5689.89,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 5708.89,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 5713.89,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 5718.89,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 5737.89,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 5742.89,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 5747.89,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 5766.28,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 5791.78,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 5796.78,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 5801.78,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 5827.28,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 5832.28,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 5837.28,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 5837.28,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 5853.03,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 5858.03,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 5863.03,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 5878.78,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 5883.78,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 5888.78,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 5888.78,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 5911.03,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 5916.03,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 5921.03,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 5943.28,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 5945.97,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 5950.97,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 5955.97,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 5955.97,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 5968.47,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 5973.47,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 5978.47,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 5990.97,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 5993.99,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 5998.99,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 6003.99,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 6003.99,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 6022.99,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 6027.99,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 6032.99,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 6051.99,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 6056.99,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 6061.99,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 6079.33,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 6104.83,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 6109.83,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 6114.83,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 6140.33,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 6145.33,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 6150.33,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 6150.33,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 6166.08,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 6171.08,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 6176.08,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 6191.83,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 6196.83,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 6201.83,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 6201.83,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 6224.08,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 6229.08,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 6234.08,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 6256.33,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 6260.07,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 6265.07,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 6270.07,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 6270.07,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 6282.57,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 6287.57,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 6292.57,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 6305.07,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 6308.09,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 6313.09,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 6318.09,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 6318.09,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 6337.09,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 6342.09,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 6347.09,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 6366.09,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 6371.09,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 6376.09,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 6392.37,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 6417.87,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 6422.87,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 6427.87,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 6453.37,
+   "action": "wait_interlock",
+   "strand": 1
+  },
+  {
+   "t": 6454.12,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 6459.12,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 6464.12,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 6464.12,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 6479.87,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 6484.87,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 6489.87,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 6505.62,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 6510.62,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 6515.62,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 6515.62,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 6537.87,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 6542.87,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 6547.87,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 6570.12,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 6574.17,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 6579.17,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 6584.17,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 6584.17,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 6596.67,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 6601.67,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 6606.67,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 6619.17,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 6622.19,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 6627.19,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 6632.19,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 6632.19,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 6651.19,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 6656.19,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 6661.19,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 6680.19,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 6685.19,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 6690.19,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 6705.41,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 6730.91,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 6735.91,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 6740.91,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 6766.41,
+   "action": "wait_interlock",
+   "strand": 1
+  },
+  {
+   "t": 6768.22,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 6773.22,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 6778.22,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 6778.22,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 6793.97,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 6798.97,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 6803.97,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 6819.72,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 6824.72,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 6829.72,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 6829.72,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 6851.97,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 6856.97,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 6861.97,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  },
+  {
+   "t": 6884.22,
+   "action": "wait_interlock",
+   "strand": 2
+  },
+  {
+   "t": 6888.27,
+   "action": "hook_down_place",
+   "strand": 2
+  },
+  {
+   "t": 6893.27,
+   "action": "hook_up_place",
+   "strand": 2
+  },
+  {
+   "t": 6898.27,
+   "action": "cycle_complete",
+   "strand": 2
+  },
+  {
+   "t": 6898.27,
+   "action": "travel_to_strand",
+   "strand": 5
+  },
+  {
+   "t": 6910.77,
+   "action": "hook_down_pickup",
+   "strand": 5
+  },
+  {
+   "t": 6915.77,
+   "action": "hook_up_pickup",
+   "strand": 5
+  },
+  {
+   "t": 6920.77,
+   "action": "travel_to_coolbed",
+   "strand": 5
+  },
+  {
+   "t": 6933.27,
+   "action": "wait_interlock",
+   "strand": 5
+  },
+  {
+   "t": 6936.29,
+   "action": "hook_down_place",
+   "strand": 5
+  },
+  {
+   "t": 6941.29,
+   "action": "hook_up_place",
+   "strand": 5
+  },
+  {
+   "t": 6946.29,
+   "action": "cycle_complete",
+   "strand": 5
+  },
+  {
+   "t": 6946.29,
+   "action": "travel_to_strand",
+   "strand": 3
+  },
+  {
+   "t": 6965.29,
+   "action": "hook_down_pickup",
+   "strand": 3
+  },
+  {
+   "t": 6970.29,
+   "action": "hook_up_pickup",
+   "strand": 3
+  },
+  {
+   "t": 6975.29,
+   "action": "travel_to_coolbed",
+   "strand": 3
+  },
+  {
+   "t": 6994.29,
+   "action": "hook_down_place",
+   "strand": 3
+  },
+  {
+   "t": 6999.29,
+   "action": "hook_up_place",
+   "strand": 3
+  },
+  {
+   "t": 7004.29,
+   "action": "cycle_complete",
+   "strand": 3
+  },
+  {
+   "t": 7018.46,
+   "action": "travel_to_strand",
+   "strand": 1
+  },
+  {
+   "t": 7043.96,
+   "action": "hook_down_pickup",
+   "strand": 1
+  },
+  {
+   "t": 7048.96,
+   "action": "hook_up_pickup",
+   "strand": 1
+  },
+  {
+   "t": 7053.96,
+   "action": "travel_to_coolbed",
+   "strand": 1
+  },
+  {
+   "t": 7079.46,
+   "action": "wait_interlock",
+   "strand": 1
+  },
+  {
+   "t": 7082.32,
+   "action": "hook_down_place",
+   "strand": 1
+  },
+  {
+   "t": 7087.32,
+   "action": "hook_up_place",
+   "strand": 1
+  },
+  {
+   "t": 7092.32,
+   "action": "cycle_complete",
+   "strand": 1
+  },
+  {
+   "t": 7092.32,
+   "action": "travel_to_strand",
+   "strand": 4
+  },
+  {
+   "t": 7108.07,
+   "action": "hook_down_pickup",
+   "strand": 4
+  },
+  {
+   "t": 7113.07,
+   "action": "hook_up_pickup",
+   "strand": 4
+  },
+  {
+   "t": 7118.07,
+   "action": "travel_to_coolbed",
+   "strand": 4
+  },
+  {
+   "t": 7133.82,
+   "action": "hook_down_place",
+   "strand": 4
+  },
+  {
+   "t": 7138.82,
+   "action": "hook_up_place",
+   "strand": 4
+  },
+  {
+   "t": 7143.82,
+   "action": "cycle_complete",
+   "strand": 4
+  },
+  {
+   "t": 7143.82,
+   "action": "travel_to_strand",
+   "strand": 2
+  },
+  {
+   "t": 7166.07,
+   "action": "hook_down_pickup",
+   "strand": 2
+  },
+  {
+   "t": 7171.07,
+   "action": "hook_up_pickup",
+   "strand": 2
+  },
+  {
+   "t": 7176.07,
+   "action": "travel_to_coolbed",
+   "strand": 2
+  }
+ ],
+ "coolbed_occupancy_log": [
+  {
+   "t": 24.0,
+   "occupied": 0
+  },
+  {
+   "t": 48.01,
+   "occupied": 0
+  },
+  {
+   "t": 72.02,
+   "occupied": 0
+  },
+  {
+   "t": 96.03,
+   "occupied": 0
+  },
+  {
+   "t": 120.04,
+   "occupied": 0
+  },
+  {
+   "t": 144.05,
+   "occupied": 0
+  },
+  {
+   "t": 168.06,
+   "occupied": 0
+  },
+  {
+   "t": 192.07,
+   "occupied": 0
+  },
+  {
+   "t": 216.08,
+   "occupied": 0
+  },
+  {
+   "t": 240.09,
+   "occupied": 0
+  },
+  {
+   "t": 264.1,
+   "occupied": 0
+  },
+  {
+   "t": 288.11,
+   "occupied": 0
+  },
+  {
+   "t": 312.12,
+   "occupied": 0
+  },
+  {
+   "t": 336.13,
+   "occupied": 0
+  },
+  {
+   "t": 360.14,
+   "occupied": 0
+  },
+  {
+   "t": 384.15,
+   "occupied": 0
+  },
+  {
+   "t": 408.16,
+   "occupied": 0
+  },
+  {
+   "t": 432.17,
+   "occupied": 0
+  },
+  {
+   "t": 456.18,
+   "occupied": 0
+  },
+  {
+   "t": 480.19,
+   "occupied": 0
+  },
+  {
+   "t": 504.2,
+   "occupied": 0
+  },
+  {
+   "t": 529.04,
+   "occupied": 1
+  },
+  {
+   "t": 553.05,
+   "occupied": 1
+  },
+  {
+   "t": 587.04,
+   "occupied": 1
+  },
+  {
+   "t": 611.05,
+   "occupied": 2
+  },
+  {
+   "t": 638.54,
+   "occupied": 3
+  },
+  {
+   "t": 662.55,
+   "occupied": 3
+  },
+  {
+   "t": 686.56,
+   "occupied": 3
+  },
+  {
+   "t": 710.57,
+   "occupied": 4
+  },
+  {
+   "t": 734.58,
+   "occupied": 4
+  },
+  {
+   "t": 758.59,
+   "occupied": 5
+  },
+  {
+   "t": 789.08,
+   "occupied": 5
+  },
+  {
+   "t": 813.09,
+   "occupied": 6
+  },
+  {
+   "t": 837.1,
+   "occupied": 6
+  },
+  {
+   "t": 861.11,
+   "occupied": 7
+  },
+  {
+   "t": 885.12,
+   "occupied": 7
+  },
+  {
+   "t": 911.58,
+   "occupied": 8
+  },
+  {
+   "t": 935.59,
+   "occupied": 8
+  },
+  {
+   "t": 959.6,
+   "occupied": 8
+  },
+  {
+   "t": 983.61,
+   "occupied": 9
+  },
+  {
+   "t": 1007.62,
+   "occupied": 9
+  },
+  {
+   "t": 1031.63,
+   "occupied": 10
+  },
+  {
+   "t": 1055.64,
+   "occupied": 10
+  },
+  {
+   "t": 1081.62,
+   "occupied": 11
+  },
+  {
+   "t": 1105.63,
+   "occupied": 11
+  },
+  {
+   "t": 1129.64,
+   "occupied": 11
+  },
+  {
+   "t": 1153.65,
+   "occupied": 11
+  },
+  {
+   "t": 1177.66,
+   "occupied": 12
+  },
+  {
+   "t": 1201.67,
+   "occupied": 12
+  },
+  {
+   "t": 1225.68,
+   "occupied": 13
+  },
+  {
+   "t": 1249.69,
+   "occupied": 13
+  },
+  {
+   "t": 1273.7,
+   "occupied": 13
+  },
+  {
+   "t": 1297.71,
+   "occupied": 14
+  },
+  {
+   "t": 1321.72,
+   "occupied": 14
+  },
+  {
+   "t": 1345.73,
+   "occupied": 15
+  },
+  {
+   "t": 1369.74,
+   "occupied": 15
+  },
+  {
+   "t": 1395.72,
+   "occupied": 16
+  },
+  {
+   "t": 1419.73,
+   "occupied": 16
+  },
+  {
+   "t": 1443.74,
+   "occupied": 16
+  },
+  {
+   "t": 1467.75,
+   "occupied": 16
+  },
+  {
+   "t": 1491.76,
+   "occupied": 17
+  },
+  {
+   "t": 1515.77,
+   "occupied": 17
+  },
+  {
+   "t": 1539.78,
+   "occupied": 18
+  },
+  {
+   "t": 1563.79,
+   "occupied": 18
+  },
+  {
+   "t": 1587.8,
+   "occupied": 18
+  },
+  {
+   "t": 1611.81,
+   "occupied": 19
+  },
+  {
+   "t": 1635.82,
+   "occupied": 19
+  },
+  {
+   "t": 1659.83,
+   "occupied": 20
+  },
+  {
+   "t": 1683.84,
+   "occupied": 20
+  },
+  {
+   "t": 1709.82,
+   "occupied": 21
+  },
+  {
+   "t": 1733.83,
+   "occupied": 21
+  },
+  {
+   "t": 1757.84,
+   "occupied": 21
+  },
+  {
+   "t": 1791.72,
+   "occupied": 21
+  },
+  {
+   "t": 1815.73,
+   "occupied": 22
+  },
+  {
+   "t": 1843.22,
+   "occupied": 23
+  },
+  {
+   "t": 1867.23,
+   "occupied": 23
+  },
+  {
+   "t": 1891.24,
+   "occupied": 23
+  },
+  {
+   "t": 1915.25,
+   "occupied": 24
+  },
+  {
+   "t": 1939.26,
+   "occupied": 24
+  },
+  {
+   "t": 1963.27,
+   "occupied": 25
+  },
+  {
+   "t": 1987.28,
+   "occupied": 25
+  },
+  {
+   "t": 2013.26,
+   "occupied": 26
+  },
+  {
+   "t": 2037.27,
+   "occupied": 26
+  },
+  {
+   "t": 2061.28,
+   "occupied": 26
+  },
+  {
+   "t": 2085.29,
+   "occupied": 26
+  },
+  {
+   "t": 2109.3,
+   "occupied": 27
+  },
+  {
+   "t": 2133.31,
+   "occupied": 27
+  },
+  {
+   "t": 2157.32,
+   "occupied": 28
+  },
+  {
+   "t": 2181.33,
+   "occupied": 28
+  },
+  {
+   "t": 2205.34,
+   "occupied": 28
+  },
+  {
+   "t": 2229.35,
+   "occupied": 29
+  },
+  {
+   "t": 2253.36,
+   "occupied": 29
+  },
+  {
+   "t": 2277.37,
+   "occupied": 30
+  },
+  {
+   "t": 2301.38,
+   "occupied": 30
+  },
+  {
+   "t": 2327.36,
+   "occupied": 31
+  },
+  {
+   "t": 2351.37,
+   "occupied": 31
+  },
+  {
+   "t": 2375.38,
+   "occupied": 31
+  },
+  {
+   "t": 2399.39,
+   "occupied": 31
+  },
+  {
+   "t": 2423.4,
+   "occupied": 32
+  },
+  {
+   "t": 2447.41,
+   "occupied": 32
+  },
+  {
+   "t": 2471.42,
+   "occupied": 33
+  },
+  {
+   "t": 2495.43,
+   "occupied": 33
+  },
+  {
+   "t": 2519.44,
+   "occupied": 33
+  },
+  {
+   "t": 2543.45,
+   "occupied": 34
+  },
+  {
+   "t": 2567.46,
+   "occupied": 33
+  },
+  {
+   "t": 2591.47,
+   "occupied": 34
+  },
+  {
+   "t": 2615.48,
+   "occupied": 34
+  },
+  {
+   "t": 2641.46,
+   "occupied": 34
+  },
+  {
+   "t": 2665.47,
+   "occupied": 33
+  },
+  {
+   "t": 2689.48,
+   "occupied": 33
+  },
+  {
+   "t": 2713.49,
+   "occupied": 33
+  },
+  {
+   "t": 2737.5,
+   "occupied": 33
+  },
+  {
+   "t": 2761.51,
+   "occupied": 33
+  },
+  {
+   "t": 2785.52,
+   "occupied": 33
+  },
+  {
+   "t": 2809.53,
+   "occupied": 33
+  },
+  {
+   "t": 2833.54,
+   "occupied": 32
+  },
+  {
+   "t": 2857.55,
+   "occupied": 33
+  },
+  {
+   "t": 2881.56,
+   "occupied": 32
+  },
+  {
+   "t": 2905.57,
+   "occupied": 33
+  },
+  {
+   "t": 2929.58,
+   "occupied": 32
+  },
+  {
+   "t": 2955.56,
+   "occupied": 33
+  },
+  {
+   "t": 2979.57,
+   "occupied": 33
+  },
+  {
+   "t": 3003.58,
+   "occupied": 32
+  },
+  {
+   "t": 3027.59,
+   "occupied": 32
+  },
+  {
+   "t": 3051.6,
+   "occupied": 32
+  },
+  {
+   "t": 3075.61,
+   "occupied": 32
+  },
+  {
+   "t": 3099.62,
+   "occupied": 32
+  },
+  {
+   "t": 3123.63,
+   "occupied": 32
+  },
+  {
+   "t": 3147.64,
+   "occupied": 32
+  },
+  {
+   "t": 3171.65,
+   "occupied": 33
+  },
+  {
+   "t": 3195.66,
+   "occupied": 32
+  },
+  {
+   "t": 3219.67,
+   "occupied": 33
+  },
+  {
+   "t": 3243.68,
+   "occupied": 32
+  },
+  {
+   "t": 3269.66,
+   "occupied": 33
+  },
+  {
+   "t": 3293.67,
+   "occupied": 33
+  },
+  {
+   "t": 3317.68,
+   "occupied": 32
+  },
+  {
+   "t": 3341.69,
+   "occupied": 32
+  },
+  {
+   "t": 3365.7,
+   "occupied": 32
+  },
+  {
+   "t": 3389.71,
+   "occupied": 32
+  },
+  {
+   "t": 3413.72,
+   "occupied": 32
+  },
+  {
+   "t": 3437.73,
+   "occupied": 32
+  },
+  {
+   "t": 3461.74,
+   "occupied": 32
+  },
+  {
+   "t": 3485.75,
+   "occupied": 33
+  },
+  {
+   "t": 3509.76,
+   "occupied": 32
+  },
+  {
+   "t": 3533.77,
+   "occupied": 33
+  },
+  {
+   "t": 3557.78,
+   "occupied": 32
+  },
+  {
+   "t": 3583.76,
+   "occupied": 33
+  },
+  {
+   "t": 3607.77,
+   "occupied": 33
+  },
+  {
+   "t": 3631.78,
+   "occupied": 32
+  },
+  {
+   "t": 3655.79,
+   "occupied": 32
+  },
+  {
+   "t": 3679.8,
+   "occupied": 32
+  },
+  {
+   "t": 3703.81,
+   "occupied": 32
+  },
+  {
+   "t": 3727.82,
+   "occupied": 32
+  },
+  {
+   "t": 3751.83,
+   "occupied": 32
+  },
+  {
+   "t": 3775.84,
+   "occupied": 32
+  },
+  {
+   "t": 3799.85,
+   "occupied": 33
+  },
+  {
+   "t": 3823.86,
+   "occupied": 32
+  },
+  {
+   "t": 3847.87,
+   "occupied": 32
+  },
+  {
+   "t": 3871.88,
+   "occupied": 32
+  },
+  {
+   "t": 3897.86,
+   "occupied": 33
+  },
+  {
+   "t": 3921.87,
+   "occupied": 32
+  },
+  {
+   "t": 3945.88,
+   "occupied": 32
+  },
+  {
+   "t": 3969.89,
+   "occupied": 31
+  },
+  {
+   "t": 3993.9,
+   "occupied": 32
+  },
+  {
+   "t": 4017.91,
+   "occupied": 31
+  },
+  {
+   "t": 4041.92,
+   "occupied": 32
+  },
+  {
+   "t": 4065.93,
+   "occupied": 32
+  },
+  {
+   "t": 4089.94,
+   "occupied": 32
+  },
+  {
+   "t": 4113.95,
+   "occupied": 32
+  },
+  {
+   "t": 4137.96,
+   "occupied": 32
+  },
+  {
+   "t": 4161.97,
+   "occupied": 32
+  },
+  {
+   "t": 4185.98,
+   "occupied": 32
+  },
+  {
+   "t": 4211.96,
+   "occupied": 33
+  },
+  {
+   "t": 4235.97,
+   "occupied": 32
+  },
+  {
+   "t": 4259.98,
+   "occupied": 32
+  },
+  {
+   "t": 4283.99,
+   "occupied": 31
+  },
+  {
+   "t": 4308.0,
+   "occupied": 32
+  },
+  {
+   "t": 4332.01,
+   "occupied": 31
+  },
+  {
+   "t": 4356.02,
+   "occupied": 32
+  },
+  {
+   "t": 4380.03,
+   "occupied": 32
+  },
+  {
+   "t": 4404.04,
+   "occupied": 32
+  },
+  {
+   "t": 4428.05,
+   "occupied": 32
+  },
+  {
+   "t": 4452.06,
+   "occupied": 32
+  },
+  {
+   "t": 4476.07,
+   "occupied": 32
+  },
+  {
+   "t": 4500.08,
+   "occupied": 32
+  },
+  {
+   "t": 4526.06,
+   "occupied": 33
+  },
+  {
+   "t": 4550.07,
+   "occupied": 32
+  },
+  {
+   "t": 4574.08,
+   "occupied": 32
+  },
+  {
+   "t": 4598.09,
+   "occupied": 31
+  },
+  {
+   "t": 4622.1,
+   "occupied": 32
+  },
+  {
+   "t": 4646.11,
+   "occupied": 31
+  },
+  {
+   "t": 4670.12,
+   "occupied": 32
+  },
+  {
+   "t": 4694.13,
+   "occupied": 32
+  },
+  {
+   "t": 4718.14,
+   "occupied": 32
+  },
+  {
+   "t": 4742.15,
+   "occupied": 32
+  },
+  {
+   "t": 4766.16,
+   "occupied": 32
+  },
+  {
+   "t": 4790.17,
+   "occupied": 32
+  },
+  {
+   "t": 4814.18,
+   "occupied": 32
+  },
+  {
+   "t": 4840.16,
+   "occupied": 33
+  },
+  {
+   "t": 4864.17,
+   "occupied": 32
+  },
+  {
+   "t": 4888.18,
+   "occupied": 32
+  },
+  {
+   "t": 4922.15,
+   "occupied": 31
+  },
+  {
+   "t": 4946.16,
+   "occupied": 32
+  },
+  {
+   "t": 4973.65,
+   "occupied": 32
+  },
+  {
+   "t": 4997.66,
+   "occupied": 32
+  },
+  {
+   "t": 5021.67,
+   "occupied": 32
+  },
+  {
+   "t": 5045.68,
+   "occupied": 33
+  },
+  {
+   "t": 5069.69,
+   "occupied": 32
+  },
+  {
+   "t": 5093.7,
+   "occupied": 33
+  },
+  {
+   "t": 5117.71,
+   "occupied": 32
+  },
+  {
+   "t": 5143.69,
+   "occupied": 33
+  },
+  {
+   "t": 5167.7,
+   "occupied": 33
+  },
+  {
+   "t": 5191.71,
+   "occupied": 32
+  },
+  {
+   "t": 5215.72,
+   "occupied": 32
+  },
+  {
+   "t": 5239.73,
+   "occupied": 32
+  },
+  {
+   "t": 5263.74,
+   "occupied": 32
+  },
+  {
+   "t": 5287.75,
+   "occupied": 32
+  },
+  {
+   "t": 5311.76,
+   "occupied": 32
+  },
+  {
+   "t": 5335.77,
+   "occupied": 32
+  },
+  {
+   "t": 5359.78,
+   "occupied": 33
+  },
+  {
+   "t": 5383.79,
+   "occupied": 32
+  },
+  {
+   "t": 5407.8,
+   "occupied": 33
+  },
+  {
+   "t": 5431.81,
+   "occupied": 32
+  },
+  {
+   "t": 5457.79,
+   "occupied": 33
+  },
+  {
+   "t": 5481.8,
+   "occupied": 33
+  },
+  {
+   "t": 5505.81,
+   "occupied": 32
+  },
+  {
+   "t": 5529.82,
+   "occupied": 32
+  },
+  {
+   "t": 5553.83,
+   "occupied": 32
+  },
+  {
+   "t": 5577.84,
+   "occupied": 32
+  },
+  {
+   "t": 5601.85,
+   "occupied": 32
+  },
+  {
+   "t": 5625.86,
+   "occupied": 32
+  },
+  {
+   "t": 5649.87,
+   "occupied": 32
+  },
+  {
+   "t": 5673.88,
+   "occupied": 33
+  },
+  {
+   "t": 5697.89,
+   "occupied": 32
+  },
+  {
+   "t": 5721.9,
+   "occupied": 33
+  },
+  {
+   "t": 5745.91,
+   "occupied": 32
+  },
+  {
+   "t": 5771.89,
+   "occupied": 33
+  },
+  {
+   "t": 5795.9,
+   "occupied": 33
+  },
+  {
+   "t": 5819.91,
+   "occupied": 32
+  },
+  {
+   "t": 5843.92,
+   "occupied": 32
+  },
+  {
+   "t": 5867.93,
+   "occupied": 32
+  },
+  {
+   "t": 5891.94,
+   "occupied": 32
+  },
+  {
+   "t": 5915.95,
+   "occupied": 32
+  },
+  {
+   "t": 5939.96,
+   "occupied": 32
+  },
+  {
+   "t": 5963.97,
+   "occupied": 32
+  },
+  {
+   "t": 5987.98,
+   "occupied": 33
+  },
+  {
+   "t": 6011.99,
+   "occupied": 32
+  },
+  {
+   "t": 6036.0,
+   "occupied": 33
+  },
+  {
+   "t": 6060.01,
+   "occupied": 32
+  },
+  {
+   "t": 6085.99,
+   "occupied": 33
+  },
+  {
+   "t": 6110.0,
+   "occupied": 33
+  },
+  {
+   "t": 6134.01,
+   "occupied": 32
+  },
+  {
+   "t": 6158.02,
+   "occupied": 32
+  },
+  {
+   "t": 6182.03,
+   "occupied": 32
+  },
+  {
+   "t": 6206.04,
+   "occupied": 32
+  },
+  {
+   "t": 6230.05,
+   "occupied": 32
+  },
+  {
+   "t": 6254.06,
+   "occupied": 32
+  },
+  {
+   "t": 6278.07,
+   "occupied": 32
+  },
+  {
+   "t": 6302.08,
+   "occupied": 33
+  },
+  {
+   "t": 6326.09,
+   "occupied": 32
+  },
+  {
+   "t": 6350.1,
+   "occupied": 33
+  },
+  {
+   "t": 6374.11,
+   "occupied": 32
+  },
+  {
+   "t": 6400.09,
+   "occupied": 33
+  },
+  {
+   "t": 6424.1,
+   "occupied": 33
+  },
+  {
+   "t": 6448.11,
+   "occupied": 32
+  },
+  {
+   "t": 6472.12,
+   "occupied": 32
+  },
+  {
+   "t": 6496.13,
+   "occupied": 32
+  },
+  {
+   "t": 6520.14,
+   "occupied": 32
+  },
+  {
+   "t": 6544.15,
+   "occupied": 32
+  },
+  {
+   "t": 6568.16,
+   "occupied": 32
+  },
+  {
+   "t": 6592.17,
+   "occupied": 32
+  },
+  {
+   "t": 6616.18,
+   "occupied": 33
+  },
+  {
+   "t": 6640.19,
+   "occupied": 32
+  },
+  {
+   "t": 6664.2,
+   "occupied": 33
+  },
+  {
+   "t": 6688.21,
+   "occupied": 32
+  },
+  {
+   "t": 6714.19,
+   "occupied": 33
+  },
+  {
+   "t": 6738.2,
+   "occupied": 33
+  },
+  {
+   "t": 6762.21,
+   "occupied": 32
+  },
+  {
+   "t": 6786.22,
+   "occupied": 32
+  },
+  {
+   "t": 6810.23,
+   "occupied": 32
+  },
+  {
+   "t": 6834.24,
+   "occupied": 32
+  },
+  {
+   "t": 6858.25,
+   "occupied": 32
+  },
+  {
+   "t": 6882.26,
+   "occupied": 32
+  },
+  {
+   "t": 6906.27,
+   "occupied": 32
+  },
+  {
+   "t": 6930.28,
+   "occupied": 33
+  },
+  {
+   "t": 6954.29,
+   "occupied": 32
+  },
+  {
+   "t": 6978.3,
+   "occupied": 32
+  },
+  {
+   "t": 7002.31,
+   "occupied": 32
+  },
+  {
+   "t": 7028.29,
+   "occupied": 33
+  },
+  {
+   "t": 7052.3,
+   "occupied": 32
+  },
+  {
+   "t": 7076.31,
+   "occupied": 32
+  },
+  {
+   "t": 7100.32,
+   "occupied": 31
+  },
+  {
+   "t": 7124.33,
+   "occupied": 32
+  },
+  {
+   "t": 7148.34,
+   "occupied": 31
+  },
+  {
+   "t": 7172.35,
+   "occupied": 32
+  },
+  {
+   "t": 7196.36,
+   "occupied": 32
+  }
+ ],
+ "billets": [
+  {
+   "id": "S2-B044",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1217.3913043478258,
+    "torch_cut_complete": 1272.173913043478,
+    "transport_entry": 1272.173913043478,
+    "transport_exit": 1372.973913043478,
+    "discharge_entry": 1372.973913043478,
+    "discharge_buffer": 1401.673913043478,
+    "discharge_ready": 1403.673913043478,
+    "transfer_pickup": 1538.5034782608693,
+    "coolbed_entry": 1574.8034782608693,
+    "coolbed_exit": 3625.7773913043584,
+    "crane_pickup": 5118.457391304351,
+    "crane_deliver": 5302.437391304351
+   }
+  },
+  {
+   "id": "S5-B045",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1217.3913043478258,
+    "torch_cut_complete": 1272.173913043478,
+    "transport_entry": 1272.173913043478,
+    "transport_exit": 1372.973913043478,
+    "discharge_entry": 1372.973913043478,
+    "discharge_buffer": 1401.673913043478,
+    "discharge_ready": 1403.673913043478,
+    "transfer_pickup": 1597.3034782608693,
+    "coolbed_entry": 1622.8234782608693,
+    "coolbed_exit": 3673.797391304359,
+    "crane_pickup": 5255.457391304351,
+    "crane_deliver": 5439.437391304351
+   }
+  },
+  {
+   "id": "S3-B046",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1237.3913043478258,
+    "torch_cut_complete": 1292.173913043478,
+    "transport_entry": 1292.173913043478,
+    "transport_exit": 1392.973913043478,
+    "discharge_entry": 1392.973913043478,
+    "discharge_buffer": 1421.673913043478,
+    "discharge_ready": 1423.673913043478,
+    "transfer_pickup": 1651.8234782608693,
+    "coolbed_entry": 1680.8234782608693,
+    "coolbed_exit": 3721.8173913043593,
+    "crane_pickup": 5392.457391304351,
+    "crane_deliver": 5575.657391304351
+   }
+  },
+  {
+   "id": "S1-B048",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1353.9130434782605,
+    "torch_cut_complete": 1408.6956521739128,
+    "transport_entry": 1408.6956521739128,
+    "transport_exit": 1509.4956521739127,
+    "discharge_entry": 1509.4956521739127,
+    "discharge_buffer": 1562.9956521739127,
+    "discharge_ready": 1696.7173913043475,
+    "transfer_pickup": 1727.2173913043475,
+    "coolbed_entry": 1762.7173913043475,
+    "coolbed_exit": 3817.85739130436,
+    "crane_pickup": 5529.457391304351,
+    "crane_deliver": 5712.657391304351
+   }
+  },
+  {
+   "id": "S1-B054",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1510.4347826086953,
+    "torch_cut_complete": 1565.2173913043475,
+    "transport_entry": 1565.2173913043475,
+    "transport_exit": 1666.0173913043475,
+    "discharge_entry": 1666.0173913043475,
+    "discharge_buffer": 1694.7173913043475,
+    "discharge_ready": 1696.7173913043475,
+    "transfer_pickup": 1727.2173913043475,
+    "coolbed_entry": 1762.7173913043475,
+    "coolbed_exit": 3817.85739130436,
+    "crane_pickup": 5529.457391304351,
+    "crane_deliver": 5712.657391304351
+   }
+  },
+  {
+   "id": "S4-B049",
+   "strand": 4,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1353.9130434782605,
+    "torch_cut_complete": 1408.6956521739128,
+    "transport_entry": 1408.6956521739128,
+    "transport_exit": 1509.4956521739127,
+    "discharge_entry": 1509.4956521739127,
+    "discharge_buffer": 1562.9956521739127,
+    "discharge_ready": 1696.7173913043475,
+    "transfer_pickup": 1788.4673913043475,
+    "coolbed_entry": 1814.2173913043475,
+    "coolbed_exit": 3841.8673913043604,
+    "crane_pickup": 5666.457391304351,
+    "crane_deliver": 5848.8773913043515
+   }
+  },
+  {
+   "id": "S4-B055",
+   "strand": 4,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1510.4347826086953,
+    "torch_cut_complete": 1565.2173913043475,
+    "transport_entry": 1565.2173913043475,
+    "transport_exit": 1666.0173913043475,
+    "discharge_entry": 1666.0173913043475,
+    "discharge_buffer": 1694.7173913043475,
+    "discharge_ready": 1696.7173913043475,
+    "transfer_pickup": 1788.4673913043475,
+    "coolbed_entry": 1814.2173913043475,
+    "coolbed_exit": 3841.8673913043604,
+    "crane_pickup": 5666.457391304351,
+    "crane_deliver": 5848.8773913043515
+   }
+  },
+  {
+   "id": "S2-B050",
+   "strand": 2,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1373.9130434782605,
+    "torch_cut_complete": 1428.6956521739128,
+    "transport_entry": 1428.6956521739128,
+    "transport_exit": 1529.4956521739127,
+    "discharge_entry": 1541.4956521739127,
+    "discharge_buffer": 1594.9956521739127,
+    "discharge_ready": 1716.7173913043475,
+    "transfer_pickup": 1846.4673913043475,
+    "coolbed_entry": 1878.7173913043475,
+    "coolbed_exit": 3915.8673913043604,
+    "crane_pickup": 5803.457391304351,
+    "crane_deliver": 5985.8773913043515
+   }
+  },
+  {
+   "id": "S2-B056",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1530.4347826086953,
+    "torch_cut_complete": 1585.2173913043475,
+    "transport_entry": 1585.2173913043475,
+    "transport_exit": 1686.0173913043475,
+    "discharge_entry": 1686.0173913043475,
+    "discharge_buffer": 1714.7173913043475,
+    "discharge_ready": 1716.7173913043475,
+    "transfer_pickup": 1846.4673913043475,
+    "coolbed_entry": 1878.7173913043475,
+    "coolbed_exit": 3915.8673913043604,
+    "crane_pickup": 5803.457391304351,
+    "crane_deliver": 5985.8773913043515
+   }
+  },
+  {
+   "id": "S5-B051",
+   "strand": 5,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1373.9130434782605,
+    "torch_cut_complete": 1428.6956521739128,
+    "transport_entry": 1428.6956521739128,
+    "transport_exit": 1529.4956521739127,
+    "discharge_entry": 1599.4956521739127,
+    "discharge_buffer": 1652.9956521739127,
+    "discharge_ready": 1716.7173913043475,
+    "transfer_pickup": 1901.2173913043475,
+    "coolbed_entry": 1926.2573913043475,
+    "coolbed_exit": 3963.887391304361,
+    "crane_pickup": 5940.457391304351,
+    "crane_deliver": 6122.097391304352
+   }
+  },
+  {
+   "id": "S5-B057",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1530.4347826086953,
+    "torch_cut_complete": 1585.2173913043475,
+    "transport_entry": 1585.2173913043475,
+    "transport_exit": 1686.0173913043475,
+    "discharge_entry": 1686.0173913043475,
+    "discharge_buffer": 1714.7173913043475,
+    "discharge_ready": 1716.7173913043475,
+    "transfer_pickup": 1901.2173913043475,
+    "coolbed_entry": 1926.2573913043475,
+    "coolbed_exit": 3963.887391304361,
+    "crane_pickup": 5940.457391304351,
+    "crane_deliver": 6122.097391304352
+   }
+  },
+  {
+   "id": "S3-B052",
+   "strand": 3,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1393.9130434782605,
+    "torch_cut_complete": 1448.6956521739128,
+    "transport_entry": 1448.6956521739128,
+    "transport_exit": 1549.4956521739127,
+    "discharge_entry": 1654.4956521739127,
+    "discharge_buffer": 1707.9956521739127,
+    "discharge_ready": 1736.7173913043475,
+    "transfer_pickup": 1955.2573913043475,
+    "coolbed_entry": 1984.2573913043475,
+    "coolbed_exit": 4011.907391304361,
+    "crane_pickup": 6077.457391304351,
+    "crane_deliver": 6259.097391304352
+   }
+  },
+  {
+   "id": "S3-B058",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1550.4347826086953,
+    "torch_cut_complete": 1605.2173913043475,
+    "transport_entry": 1605.2173913043475,
+    "transport_exit": 1706.0173913043475,
+    "discharge_entry": 1706.0173913043475,
+    "discharge_buffer": 1734.7173913043475,
+    "discharge_ready": 1736.7173913043475,
+    "transfer_pickup": 1955.2573913043475,
+    "coolbed_entry": 1984.2573913043475,
+    "coolbed_exit": 4011.907391304361,
+    "crane_pickup": 6077.457391304351,
+    "crane_deliver": 6259.097391304352
+   }
+  },
+  {
+   "id": "S1-B060",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1666.95652173913,
+    "torch_cut_complete": 1721.7391304347823,
+    "transport_entry": 1721.7391304347823,
+    "transport_exit": 1822.5391304347822,
+    "discharge_entry": 1822.5391304347822,
+    "discharge_buffer": 1876.0391304347822,
+    "discharge_ready": 2009.760869565217,
+    "transfer_pickup": 2040.260869565217,
+    "coolbed_entry": 2075.760869565217,
+    "coolbed_exit": 4107.947391304362,
+    "crane_pickup": 6214.457391304351,
+    "crane_deliver": 6395.317391304351
+   }
+  },
+  {
+   "id": "S1-B066",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1823.4782608695648,
+    "torch_cut_complete": 1878.260869565217,
+    "transport_entry": 1878.260869565217,
+    "transport_exit": 1979.060869565217,
+    "discharge_entry": 1979.060869565217,
+    "discharge_buffer": 2007.760869565217,
+    "discharge_ready": 2009.760869565217,
+    "transfer_pickup": 2040.260869565217,
+    "coolbed_entry": 2075.760869565217,
+    "coolbed_exit": 4107.947391304362,
+    "crane_pickup": 6214.457391304351,
+    "crane_deliver": 6395.317391304351
+   }
+  },
+  {
+   "id": "S4-B061",
+   "strand": 4,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1666.95652173913,
+    "torch_cut_complete": 1721.7391304347823,
+    "transport_entry": 1721.7391304347823,
+    "transport_exit": 1822.5391304347822,
+    "discharge_entry": 1822.5391304347822,
+    "discharge_buffer": 1876.0391304347822,
+    "discharge_ready": 2009.760869565217,
+    "transfer_pickup": 2101.510869565217,
+    "coolbed_entry": 2127.260869565217,
+    "coolbed_exit": 4155.9673913043625,
+    "crane_pickup": 6351.457391304351,
+    "crane_deliver": 6532.317391304351
+   }
+  },
+  {
+   "id": "S4-B067",
+   "strand": 4,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1823.4782608695648,
+    "torch_cut_complete": 1878.260869565217,
+    "transport_entry": 1878.260869565217,
+    "transport_exit": 1979.060869565217,
+    "discharge_entry": 1979.060869565217,
+    "discharge_buffer": 2007.760869565217,
+    "discharge_ready": 2009.760869565217,
+    "transfer_pickup": 2101.510869565217,
+    "coolbed_entry": 2127.260869565217,
+    "coolbed_exit": 4155.9673913043625,
+    "crane_pickup": 6351.457391304351,
+    "crane_deliver": 6532.317391304351
+   }
+  },
+  {
+   "id": "S2-B062",
+   "strand": 2,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1686.95652173913,
+    "torch_cut_complete": 1741.7391304347823,
+    "transport_entry": 1741.7391304347823,
+    "transport_exit": 1842.5391304347822,
+    "discharge_entry": 1848.5391304347822,
+    "discharge_buffer": 1902.0391304347822,
+    "discharge_ready": 2029.760869565217,
+    "transfer_pickup": 2159.510869565217,
+    "coolbed_entry": 2192.337391304349,
+    "coolbed_exit": 4229.9673913043625,
+    "crane_pickup": 6488.457391304351,
+    "crane_deliver": 6668.537391304351
+   }
+  },
+  {
+   "id": "S2-B068",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1843.4782608695648,
+    "torch_cut_complete": 1898.260869565217,
+    "transport_entry": 1898.260869565217,
+    "transport_exit": 1999.060869565217,
+    "discharge_entry": 1999.060869565217,
+    "discharge_buffer": 2027.760869565217,
+    "discharge_ready": 2029.760869565217,
+    "transfer_pickup": 2159.510869565217,
+    "coolbed_entry": 2192.337391304349,
+    "coolbed_exit": 4229.9673913043625,
+    "crane_pickup": 6488.457391304351,
+    "crane_deliver": 6668.537391304351
+   }
+  },
+  {
+   "id": "S5-B063",
+   "strand": 5,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1686.95652173913,
+    "torch_cut_complete": 1741.7391304347823,
+    "transport_entry": 1741.7391304347823,
+    "transport_exit": 1842.5391304347822,
+    "discharge_entry": 1903.5391304347822,
+    "discharge_buffer": 1957.0391304347822,
+    "discharge_ready": 2029.760869565217,
+    "transfer_pickup": 2214.837391304349,
+    "coolbed_entry": 2240.357391304349,
+    "coolbed_exit": 4277.987391304363,
+    "crane_pickup": 6625.457391304351,
+    "crane_deliver": 6805.537391304351
+   }
+  },
+  {
+   "id": "S5-B069",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1843.4782608695648,
+    "torch_cut_complete": 1898.260869565217,
+    "transport_entry": 1898.260869565217,
+    "transport_exit": 1999.060869565217,
+    "discharge_entry": 1999.060869565217,
+    "discharge_buffer": 2027.760869565217,
+    "discharge_ready": 2029.760869565217,
+    "transfer_pickup": 2214.837391304349,
+    "coolbed_entry": 2240.357391304349,
+    "coolbed_exit": 4277.987391304363,
+    "crane_pickup": 6625.457391304351,
+    "crane_deliver": 6805.537391304351
+   }
+  },
+  {
+   "id": "S3-B064",
+   "strand": 3,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1706.95652173913,
+    "torch_cut_complete": 1761.7391304347823,
+    "transport_entry": 1761.7391304347823,
+    "transport_exit": 1862.5391304347822,
+    "discharge_entry": 1957.5391304347822,
+    "discharge_buffer": 2011.0391304347822,
+    "discharge_ready": 2049.760869565217,
+    "transfer_pickup": 2269.357391304349,
+    "coolbed_entry": 2298.357391304349,
+    "coolbed_exit": 4326.007391304363,
+    "crane_pickup": 6762.457391304351,
+    "crane_deliver": 6941.757391304352
+   }
+  },
+  {
+   "id": "S3-B070",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1863.4782608695648,
+    "torch_cut_complete": 1918.260869565217,
+    "transport_entry": 1918.260869565217,
+    "transport_exit": 2019.060869565217,
+    "discharge_entry": 2019.060869565217,
+    "discharge_buffer": 2047.760869565217,
+    "discharge_ready": 2049.760869565217,
+    "transfer_pickup": 2269.357391304349,
+    "coolbed_entry": 2298.357391304349,
+    "coolbed_exit": 4326.007391304363,
+    "crane_pickup": 6762.457391304351,
+    "crane_deliver": 6941.757391304352
+   }
+  },
+  {
+   "id": "S1-B072",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1979.9999999999995,
+    "torch_cut_complete": 2034.7826086956518,
+    "transport_entry": 2034.7826086956518,
+    "transport_exit": 2135.5826086956517,
+    "discharge_entry": 2135.5826086956517,
+    "discharge_buffer": 2189.0826086956517,
+    "discharge_ready": 2322.8043478260865,
+    "transfer_pickup": 2353.3043478260865,
+    "coolbed_entry": 2388.8043478260865,
+    "coolbed_exit": 4422.047391304364,
+    "crane_pickup": 6899.457391304351,
+    "crane_deliver": 7078.757391304352
+   }
+  },
+  {
+   "id": "S1-B078",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 2136.5217391304345,
+    "torch_cut_complete": 2191.3043478260865,
+    "transport_entry": 2191.3043478260865,
+    "transport_exit": 2292.1043478260867,
+    "discharge_entry": 2292.1043478260867,
+    "discharge_buffer": 2320.8043478260865,
+    "discharge_ready": 2322.8043478260865,
+    "transfer_pickup": 2353.3043478260865,
+    "coolbed_entry": 2388.8043478260865,
+    "coolbed_exit": 4422.047391304364,
+    "crane_pickup": 6899.457391304351,
+    "crane_deliver": 7078.757391304352
+   }
+  }
+ ]
+}

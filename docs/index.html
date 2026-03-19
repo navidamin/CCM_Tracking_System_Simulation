@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCM Billet Tracking — 3D Visualization</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Top bar -->
+    <header id="header">
+        <h1>CCM Billet Tracking System</h1>
+        <div id="scenario-selector">
+            <label for="scenario">Scenario:</label>
+            <select id="scenario"></select>
+        </div>
+    </header>
+
+    <!-- Stats overlay -->
+    <div id="stats-panel">
+        <div class="stat-row">
+            <span class="stat-label">Time</span>
+            <span class="stat-value" id="stat-time">0 s</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">Billets cast</span>
+            <span class="stat-value" id="stat-cast">0</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">Billets delivered</span>
+            <span class="stat-value" id="stat-delivered">0</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">Coolbed occ.</span>
+            <span class="stat-value" id="stat-coolbed">0</span>
+        </div>
+        <div class="stat-row">
+            <span class="stat-label">TC status</span>
+            <span class="stat-value" id="stat-tc">idle</span>
+        </div>
+        <div class="stat-row" id="jam-row" style="display:none">
+            <span class="stat-label">JAM</span>
+            <span class="stat-value" id="stat-jam" style="color:#ff4444">—</span>
+        </div>
+    </div>
+
+    <!-- Legend -->
+    <div id="legend">
+        <div class="legend-title">Strands</div>
+        <div id="legend-items"></div>
+    </div>
+
+    <!-- Playback controls -->
+    <div id="controls">
+        <button id="btn-play" title="Play/Pause">&#9654;</button>
+        <input type="range" id="time-slider" min="0" max="7200" value="1200" step="1">
+        <span id="time-display">1200 / 7200 s</span>
+        <label for="speed-select">Speed:</label>
+        <select id="speed-select">
+            <option value="1">1x</option>
+            <option value="5">5x</option>
+            <option value="20" selected>20x</option>
+            <option value="50">50x</option>
+            <option value="100">100x</option>
+        </select>
+    </div>
+
+    <!-- Three.js -->
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.164.1/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
