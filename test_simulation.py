@@ -10,6 +10,7 @@ Tests cover:
   - Plot generation
 """
 
+import json
 import os
 import pytest
 import matplotlib
@@ -18,6 +19,7 @@ matplotlib.use("Agg")
 from simulation import run_simulation
 from analysis import analyze_result
 from visualization import generate_all_plots
+from main import _export_json, _export_sweep_json
 
 
 # ---------------------------------------------------------------------------
@@ -180,3 +182,48 @@ class TestPlotGeneration:
         path = os.path.join(plot_dir, filename)
         assert os.path.exists(path), f"{filename} not generated"
         assert os.path.getsize(path) > 1000, f"{filename} is too small"
+
+
+# ---------------------------------------------------------------------------
+# JSON export
+# ---------------------------------------------------------------------------
+
+class TestJSONExport:
+    """Verify --json export produces valid, complete JSON files."""
+
+    def test_single_run_json(self, tmp_path):
+        r = run_simulation(2.0, duration=7200, seed=42,
+                           crane_packs_per_trip=7, num_strands=6)
+        a = analyze_result(r)
+        out = str(tmp_path / "result.json")
+        _export_json(out, "single", 2.0, a, r)
+
+        with open(out) as f:
+            data = json.load(f)
+
+        assert data["mode"] == "single"
+        assert data["velocity_m_per_min"] == 2.0
+        assert data["traffic_jam"] is False
+        assert data["total_billets"] == 228
+        assert 0 < data["tc_utilization"] <= 1.0
+        assert "bottleneck" in data
+
+    def test_sweep_json(self, tmp_path):
+        results = []
+        for v in [1.8, 2.0, 2.2]:
+            r = run_simulation(v, duration=7200, seed=42,
+                               crane_packs_per_trip=7, num_strands=6)
+            s = analyze_result(r)
+            jams = 1 if r.traffic_jam else 0
+            results.append((v, r, s, jams, 1))
+
+        out = str(tmp_path / "sweep.json")
+        _export_sweep_json(out, results, 2.0)
+
+        with open(out) as f:
+            data = json.load(f)
+
+        assert data["mode"] == "sweep"
+        assert data["max_safe_velocity"] == 2.0
+        assert len(data["results"]) == 3
+        assert data["results"][0]["velocity"] == 1.8
