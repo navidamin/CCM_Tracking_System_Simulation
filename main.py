@@ -8,6 +8,7 @@ Supports three modes:
 """
 
 import argparse
+import json
 import sys
 
 # Set non-interactive backend before pyplot import when saving to files
@@ -204,6 +205,52 @@ def _print_sweep_table(results: list, multi_seed: bool):
                   f"{stats['max_table_packs']:>8}")
 
 
+def _export_json(path: str, mode: str, velocity: float, stats: dict, result):
+    """Export single-run results to a JSON file."""
+    data = {
+        "mode": mode,
+        "velocity_m_per_min": velocity,
+        "traffic_jam": result.traffic_jam,
+        "traffic_jam_location": getattr(result, 'traffic_jam_location', None),
+        "traffic_jam_time": getattr(result, 'traffic_jam_time', None),
+        "total_billets": stats["total_billets"],
+        "delivered_billets": stats["delivered_billets"],
+        "tc_utilization": round(stats["tc_utilization"], 4),
+        "tc_cycles": stats["tc_cycles"],
+        "tc_avg_cycle": round(stats["tc_avg_cycle"], 2),
+        "avg_coolbed_occupancy": round(stats["avg_coolbed_occupancy"], 2),
+        "max_coolbed_occupancy": stats["max_coolbed_occupancy"],
+        "avg_table_packs": round(stats["avg_table_packs"], 2),
+        "max_table_packs": stats["max_table_packs"],
+        "bottleneck": stats["bottleneck"],
+    }
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2)
+    print(f"\nResults exported to {path}")
+
+
+def _export_sweep_json(path: str, results: list, max_ok_velocity: float):
+    """Export sweep results to a JSON file."""
+    rows = []
+    for v, result, stats, jams, ns in results:
+        rows.append({
+            "velocity": v,
+            "jam_count": jams,
+            "seeds_tested": ns,
+            "jam_rate": round(jams / ns, 4),
+            "tc_utilization": round(stats["tc_utilization"], 4),
+            "total_billets": stats["total_billets"],
+        })
+    data = {
+        "mode": "sweep",
+        "max_safe_velocity": max_ok_velocity,
+        "results": rows,
+    }
+    with open(path, "w") as f:
+        json.dump(data, f, indent=2)
+    print(f"\nSweep results exported to {path}")
+
+
 def main():
     parser = argparse.ArgumentParser(
         description='CCM Billet Tracking System Simulation')
@@ -231,22 +278,31 @@ def main():
                         help='Disable plotting')
     parser.add_argument('--quiet', action='store_true',
                         help='Reduce output verbosity')
+    parser.add_argument('--json', type=str, metavar='FILE',
+                        help='Export results summary to a JSON file')
 
     args = parser.parse_args()
     verbose = not args.quiet
     plot = not args.no_plot
 
     if args.mode == 'single':
-        single_run(args.velocity, args.duration, args.seed,
-                    verbose=verbose, plot=plot)
+        result, stats = single_run(args.velocity, args.duration, args.seed,
+                                   verbose=verbose, plot=plot)
+        if args.json:
+            _export_json(args.json, args.mode, args.velocity, stats, result)
     elif args.mode == 'sweep':
-        velocity_sweep(args.sweep_start, args.sweep_end, args.sweep_step,
-                        args.duration, args.seed,
-                        num_seeds=args.num_seeds,
-                        verbose=verbose, plot=plot)
+        results, max_ok = velocity_sweep(
+            args.sweep_start, args.sweep_end, args.sweep_step,
+            args.duration, args.seed,
+            num_seeds=args.num_seeds,
+            verbose=verbose, plot=plot)
+        if args.json:
+            _export_sweep_json(args.json, results, max_ok)
     elif args.mode == 'analysis':
-        analysis_run(args.velocity, args.duration, args.seed,
-                     output_dir=args.output_dir, verbose=verbose)
+        result, stats = analysis_run(args.velocity, args.duration, args.seed,
+                                     output_dir=args.output_dir, verbose=verbose)
+        if args.json:
+            _export_json(args.json, args.mode, args.velocity, stats, result)
 
 
 if __name__ == '__main__':

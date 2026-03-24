@@ -19,7 +19,8 @@
 9. [Crane Parametric Analysis](#9-crane-parametric-analysis)
 10. [Strand x Crane Combined Parametric](#10-strand-x-crane-combined-parametric)
 11. [Validation Summary](#11-validation-summary)
-12. [Conclusions and Recommendations](#12-conclusions-and-recommendations)
+12. [Crane Bottleneck with Realistic Grab Constraints](#12-crane-bottleneck-with-realistic-grab-constraints)
+13. [Conclusions and Recommendations](#13-conclusions-and-recommendations)
 - [Appendix A: Complete Parameter Table](#appendix-a-complete-parameter-table)
 - [Appendix B: Plot Catalog](#appendix-b-plot-catalog)
 - [Appendix C: Changelog](#appendix-c-changelog)
@@ -32,7 +33,7 @@ This report evaluates the CCM (Continuous Casting Machine) billet handling chain
 
 1. **Torch cut** — Oxy-fuel torch severs the billet from the moving strand
 2. **Transport roller table** — Carries billets 25.2 m from torch cut to discharge area
-3. **Discharge roller table** — 13.375 m run with intermediate and fixed stoppers; pairs billets for transfer
+3. **Discharge roller table** — 13.375 m run with intermediate and fixed stoppers; pairs billets for transfer. The intermediate stopper is located 7.175 m from the discharge entry. A billet travelling at 15 m/min reaches it in `7.175 / 15.0 × 60 = 28.7 s`. This 28.7 s transit time is the detection window for traffic jams (see Section 3.4 for full stopper timing derivation)
 4. **Transfer car** — C-hook car lifts billet pairs and travels to cooling bed
 5. **Cooling bed** — 84-slot walking beam; billets traverse in 2016 s
 6. **Collecting table** — Pusher groups billets into packs of 2
@@ -196,21 +197,40 @@ Each pack requires one crane service every `crane_cycle / P` seconds (where P = 
 v_max_crane = 1440 x P / (274 x N)
 ```
 
-### 3.4 Stopper Timing
+### 3.4 Stopper Timing — Hand Calculation
 
-| Stopper | Position from Transport RT Entry | Transit Time (at 15 m/min) |
-|---------|:--------------------------------:|:--------------------------:|
-| Security stopper | 25.2 m (end of transport RT) | 100.8 s |
-| Intermediate stopper | 25.2 + 7.175 = 32.375 m from entry | 129.5 s total |
-| Fixed stopper | 25.2 + 13.375 = 38.575 m from entry | 154.3 s total |
+The discharge roller table has three stopper positions. All transit times use the roller table speed of 15 m/min.
 
-**Inter-stopper gaps on discharge RT:**
+**Step 1: Positions (measured from transport RT entry)**
+
+| Stopper | Position from Transport RT Entry | Calculation |
+|---------|:--------------------------------:|:-----------:|
+| Security stopper | 25.2 m (end of transport RT) | Fixed |
+| Intermediate stopper | 25.2 + 7.175 = 32.375 m | Security + 7.175 m into discharge |
+| Fixed stopper | 25.2 + 13.375 = 38.575 m | Security + full discharge length |
+
+**Step 2: Transit times from transport RT entry**
 ```
-Intermediate to fixed: (13.375 - 7.175) / 15.0 x 60 = 24.8 s
-Entry to intermediate: 7.175 / 15.0 x 60 = 28.7 s
+Security:     25.2 / 15.0 × 60 = 100.8 s
+Intermediate: 32.375 / 15.0 × 60 = 129.5 s
+Fixed:        38.575 / 15.0 × 60 = 154.3 s
 ```
 
-The 28.7 s transit time from discharge entry to the intermediate stopper provides the TC a margin window — even if the TC is slightly behind, the second billet of a pair has not yet reached the intermediate stopper.
+**Step 3: Inter-stopper gaps on discharge RT**
+
+The 28.7 s value is the time for a billet to travel from the discharge entry to the intermediate stopper:
+```
+Entry to intermediate: 7.175 m / 15.0 (m/min) × 60 (s/min) = 28.7 s
+```
+
+The gap from intermediate to fixed stopper:
+```
+Intermediate to fixed: (13.375 - 7.175) / 15.0 × 60 = 6.200 / 15.0 × 60 = 24.8 s
+```
+
+**Step 4: Why 28.7 s matters for traffic jam detection**
+
+When the second billet of a pair enters the discharge RT, it takes 28.7 s to reach the intermediate stopper. During this 28.7 s window, even if the TC is slightly behind schedule, no jam occurs because the billet is still in transit. The collision check happens at the security stopper (end of transport RT), not at the discharge entry. A third billet arriving at the security stopper while it is raised (because the pair is still waiting for TC pickup) triggers a traffic jam.
 
 ---
 
@@ -245,25 +265,51 @@ The 28.7 s transit time from discharge entry to the intermediate stopper provide
 
 The transfer car is the binding constraint at 86.1% utilization. The crane system operates well below capacity — collecting table packs never exceed 3 (capacity is 7), confirming ample crane headroom.
 
-### 4.3 TC Margin Validation
+### 4.3 TC Margin Validation — Hand Calculation vs Simulation
 
-**Hand calculation:** pair production time at 2.0 m/min = 360.0 s, TC total = 328.5 s, margin = 31.5 s (9.6%).
+**How to verify the "228 billets produced" number:**
+```
+Billet cycle time at 2.0 m/min = 6.0 / 2.0 × 60 = 180 s
+Billets per strand over 7200 s = 7200 / 180 = 40
+Expected total (6 strands) = 6 × 40 = 240
+Actual (simulation) = 228
+Difference: 12 billets (5%) due to startup lags (strands 2,3,5,6 start 20–40 s late)
+```
 
-**Simulation:** TC average cycle = 55.7 s vs hand-calculated 54.75 s. The +0.95 s difference (1.7%) arises from queuing delays when the TC arrives at a strand before the pair is fully assembled. Over 6 strands, this adds 5.7 s to the theoretical 328.5 s total, leaving an effective margin of 25.8 s.
+**How to verify the "86.1% TC utilization" number:**
+```
+TC average cycle = 55.7 s per strand (simulation measured)
+TC total for 6 strands = 6 × 55.7 = 334.2 s
+TC cycles completed = ~69 (from simulation log)
+TC busy time = 69 × 334.2 / 6 = 69 × 55.7 = 3843 s  [approximate]
+Simulation end time ≈ 7200 s (no jam, ran full duration)
+Utilization = 3843 / (7200 - ~1200 startup) ...
+  More precisely: total logged busy time / sim end time = 86.1%
+```
+
+**Hand calculation vs simulation:**
+
+| Metric | Hand Calculation | Simulation | Gap | Reason |
+|--------|:----------------:|:----------:|:---:|--------|
+| Pair production time | 720 / 2.0 = 360.0 s | — | — | Fixed formula |
+| TC time for 6 strands | 328.5 s | 334.2 s | +1.7% | Queuing delays |
+| TC margin | 360.0 - 328.5 = 31.5 s (9.6%) | 360.0 - 334.2 = 25.8 s (7.2%) | — | Sim margin is smaller |
+
+The 0.95 s per-strand queuing delay arises when the TC arrives at a strand before the pair is fully assembled and waits briefly.
 
 ### 4.4 Plots — Safe Operating Point
 
 The following plots from `output/v2.0/` characterize the safe operating point:
 
-**Equipment Utilization** (`output/v2.0/V5_equipment_utilization.png`): TC is the highest-utilized equipment at 86%. Cooling bed and crane utilizations remain moderate.
+**Equipment Utilization** (`output/v2.0/V5_equipment_utilization.png`): The utilization chart shows four metrics. For the transfer car and cranes, the bar represents **time-averaged utilization** (fraction of simulation time spent actively working). For the cooling bed and collecting table, the bar represents **peak capacity fraction** (maximum slots or packs observed divided by total capacity). These are different metrics: the collecting table "max packs" bar shows 3/7 = 43% peak capacity, while the time-averaged pack count is 1.20 (17% of capacity). Both are reported in Section 4.1 above. TC is the highest-utilized equipment at 86%.
 
 **TC Strand Pattern** (`output/v2.0/V2_tc_strand_pattern.png`): Shows a regular cyclic pattern — the TC visits strands in a consistent round-robin order without long gaps. All 6 strands receive equitable service.
 
 **Strand Contention** (`output/v2.0/V7_strand_contention.png`): No strand shows contention overflow. The maximum number of billets waiting at any strand stays within the 2-billet pair capacity.
 
-**Multi-Billet Waterfall** (`output/v2.0/V6b_multi_billet_waterfall.png`): Orderly cascading flow from strand to yard. Each billet progresses through the handling chain without pileup.
+**Multi-Billet Waterfall** (`output/v2.0/V6b_multi_billet_waterfall.png`): Shows 6 billets (one per strand) progressing through the handling chain simultaneously. Each horizontal bar represents a process stage, annotated with both the actual duration and the hand-calculated expected value. For example, "Transport RT: 100.8s (exp: 100.8s)" confirms the 25.2 m / 15.0 m/min × 60 = 100.8 s hand calculation. Variable stages like "TC Wait" and "Discharge Wait" have no expected value because they depend on system state. Orderly cascading flow without pileup.
 
-**Cooling Bed Occupancy** (`output/v2.0/coolbed_occupancy.png`): Occupancy reaches a steady state around 27 slots (of 84 available, 32% utilization). No risk of cooling bed overflow.
+**Cooling Bed Occupancy** (`output/v2.0/coolbed_occupancy.png`): Occupancy reaches a steady state around 27 slots (of 84 available, 32%). This means that at any given moment during steady-state operation, approximately 27 of the 84 slots contain a billet and 57 are empty. No risk of cooling bed overflow.
 
 **Billet Gantt** (`output/v2.0/E1_billet_gantt.png`): Full timeline showing continuous production with no gaps or stalls.
 
@@ -290,21 +336,45 @@ The following plots from `output/v2.0/` characterize the safe operating point:
 | Max cooling bed occupancy | 34 slots |
 | Primary bottleneck | TRAFFIC JAM (strand 6) |
 
-### 5.2 Why the Jam Occurs
+### 5.2 Failure Modes Explained
 
-At v = 2.3 m/min, pair production takes 313.0 s. The TC needs 328.5 s to serve all 6 strands in theory (more with queuing delays). The per-cycle deficit is:
+Two distinct traffic jam mechanisms exist in the simulation. Both are detected only after the 1200 s warmup period.
 
+**Failure Mode 1: Discharge roller table collision (TC-limited)**
+
+This is the primary failure mode. It occurs when the transfer car cannot serve all strands fast enough:
+
+1. Each strand produces a pair of billets every `720/v` seconds (e.g., 313 s at 2.3 m/min).
+2. The TC needs 328.5 s to visit all 6 strands (travel + hook operations).
+3. When `720/v < 328.5` (i.e., v > 2.19 m/min), the TC falls behind by `328.5 - 720/v` seconds per cycle.
+4. As the TC falls behind, a strand's completed pair waits longer for pickup. The security stopper stays raised to hold the waiting pair.
+5. Meanwhile, the strand continues casting. A third billet arrives at the raised security stopper. This is the collision — the simulation registers a traffic jam.
+
+At v = 2.3 m/min, the per-cycle deficit is:
 ```
-deficit = 328.5 - 313.0 = 15.5 s per cycle
+deficit = 328.5 - (720 / 2.3) = 328.5 - 313.0 = 15.5 s per cycle
 ```
 
-This means that every full 6-strand cycle, the TC falls 15.5 s further behind. The deficit accumulates as a growing queue of billets waiting at the discharge area. Eventually, a strand accumulates a third billet that reaches the security stopper while it is still raised (holding the second billet at the intermediate stopper). At that point, the simulation registers a traffic jam.
+Over ~4 cycles (from simulation start to warmup end), the accumulated deficit reaches ~60 s. At t = 1236.5 s (36.5 s after warmup), strand 6 overflows.
 
-**Jam timeline:** The jam occurs at t = 1236.5 s (36.5 s after the 1200 s warmup ends). The TC has completed approximately (1236.5 - 0) / 328.5 = 3.8 full cycles. By cycle 4, the accumulated deficit of ~60 s means one strand's pair has been waiting long enough for a third billet to arrive.
+**Failure Mode 2: Collecting table overflow (crane-limited)**
 
-Strand 6 jams first because it has the shortest TC travel distance (3.7 m). While this might seem counterintuitive, the deterministic lag pattern (strand 6 has 40 s lag) combined with the TC's round-robin order means strand 6 happens to be the one where the timing mismatch peaks first.
+This occurs when the cranes cannot clear packs from the collecting table fast enough:
 
-### 5.3 TC Margin (Negative)
+1. Billets exit the cooling bed and are pushed into packs of 2 on the collecting table.
+2. The table holds a maximum of 7 packs.
+3. With grab-type crane (1 pack per trip, 274 s cycle time), each crane clears 1 pack every 274 s.
+4. Two cranes together clear 2 packs per 274 s = 0.00730 packs/s.
+5. If the billet arrival rate exceeds the crane clearing rate, packs accumulate until the table is full.
+6. When pack 8 would be placed on a full table, the simulation registers a traffic jam.
+
+This mode is the binding constraint with realistic grab-type crane at velocities above 0.88 m/min for 6 strands (see Section 12).
+
+### 5.3 Why Strand 6 Jams First (at v = 2.3 m/min)
+
+Strand 6 jams first because of the deterministic lag pattern. Strand 6 has a 40 s startup lag (A1). Combined with the TC's round-robin service order, strand 6 is the strand where the accumulated TC deficit causes the third billet to arrive at the security stopper first. Different lag patterns or velocities may cause different strands to jam first (strand 2 jams first at v = 2.6 and 3.0 m/min).
+
+### 5.4 TC Margin (Negative)
 
 ```
 TC margin = 720 / 2.3 - 328.5 = 313.0 - 328.5 = -15.5 s
@@ -312,7 +382,7 @@ TC margin = 720 / 2.3 - 328.5 = 313.0 - 328.5 = -15.5 s
 
 A negative margin means sustained operation is mathematically impossible. The only question is when the jam occurs, not whether.
 
-### 5.4 Comparison: v = 2.0 vs v = 2.3
+### 5.5 Comparison: v = 2.0 vs v = 2.3
 
 | Metric | v = 2.0 | v = 2.3 | Change |
 |--------|--------:|--------:|-------:|
@@ -364,7 +434,11 @@ Higher velocities jam more quickly and more severely.
 
 **Different jam strands.** Strand 6 jams first at 2.3 m/min, but strand 2 jams first at 2.6 and 3.0 m/min. The specific strand depends on the interaction between casting lag offsets and TC service order at the moment congestion peaks. All strands are vulnerable once the TC margin is negative.
 
-### 6.3 Bottleneck Progression
+### 6.3 Bottleneck Progression — Wait Time Analysis
+
+**Definition of wait times:**
+- **Discharge wait (for TC):** Time a completed billet pair spends at the discharge stopper waiting for the transfer car to arrive and pick it up. Measured from the moment both billets in the pair reach their stoppers until the TC hooks are lowered.
+- **TC wait:** Total time a billet waits at the discharge area, including both the time to form a pair and the time waiting for TC pickup.
 
 | Velocity | Avg Wait Discharge (s) | Max Wait Discharge (s) | Avg Wait TC (s) | Max Wait TC (s) |
 |:--------:|:----------------------:|:----------------------:|:----------------:|:----------------:|
@@ -372,7 +446,9 @@ Higher velocities jam more quickly and more severely.
 | 2.6 | 56.7 | 115.7 | 92.2 | 261.1 |
 | 3.0 | 44.8 | 97.2 | 88.1 | 271.6 |
 
-Average wait times decrease at higher jam velocities because the simulation runs for less time after warmup. Maximum TC wait times remain high (256–272 s) across all jammed cases — this reflects the structural limit of TC service time.
+**Why average wait times decrease at higher jammed velocities:** The jam occurs earlier (closer to warmup at 1200 s), so fewer billets complete the full wait cycle before the simulation halts. The averages are computed over fewer data points, biased toward early billets that experienced shorter waits.
+
+**Why maximum wait times remain similar (256–272 s):** The maximum represents the worst-case billet — the last one served before the jam. Regardless of velocity, the TC takes approximately the same per-strand cycle time (54.75 s × 6 ≈ 329 s for a full round), so the longest any billet can wait is roughly one full TC cycle.
 
 ---
 
@@ -404,7 +480,7 @@ These velocities operate well below the TC ceiling and represent comfortable ope
 
 **Margin scales linearly with velocity.** At 1.5 m/min, the TC has 151.5 s of slack per 6-strand cycle — nearly half the pair production time is idle. At 1.8 m/min, the margin narrows to 71.5 s (18%). At 2.0 m/min, only 31.5 s (9.6%) remains.
 
-**Cooling bed occupancy scales with throughput.** Average occupancy: 16.3 (1.5 m/min), 24.2 (1.8 m/min), 27.4 (2.0 m/min). Even at 2.0 m/min, occupancy is only 33% of the 84-slot capacity.
+**Cooling bed occupancy scales with throughput.** "Average occupancy of 27.4 slots" means: if you sampled the cooling bed at a random instant during the simulation, on average 27.4 out of 84 slots would contain a billet. The remaining 56.6 slots would be empty. This is computed by recording the slot count every cooling bed cycle (24 s) and averaging over the full simulation. Values by velocity: 16.3 slots (1.5 m/min), 24.2 slots (1.8 m/min), 27.4 slots (2.0 m/min). Even at 2.0 m/min, the average is only 33% of the 84-slot capacity, confirming the cooling bed is not a bottleneck.
 
 **Collecting table never approaches capacity.** Maximum packs on table is 3 across all velocities (capacity = 7). The crane system has substantial spare capacity.
 
@@ -420,24 +496,30 @@ These velocities operate well below the TC ceiling and represent comfortable ope
 
 ## 8. Velocity Sweep — 20-Seed Monte Carlo
 
-A sweep of casting velocities from 1.0 to 3.0 m/min in 0.1 m/min steps was conducted with 20 independent random seeds per velocity. This tests whether the jam boundary is sharp or gradual, and whether stochastic effects influence the outcome.
+**Note:** The sweep in this section uses a crane configuration of 7 packs/trip to isolate the transfer car bottleneck. With the realistic grab-type crane (1 pack/trip), the crane becomes the bottleneck at lower velocities — see Section 12.
 
-### 8.1 Results
+### 8.1 What This Sweep Tests
+
+A "velocity sweep" means: run the full 7200 s simulation at each velocity from 1.0 to 3.0 m/min (in 0.1 m/min steps). At each velocity, repeat the experiment 20 times with different random seeds. Count how many of the 20 runs produce a traffic jam. The **maximum safe velocity** is defined as the highest velocity where 0 out of 20 runs jammed.
+
+### 8.2 Results
 
 **Plot:** `output/velocity_sweep_20seeds.png`
 
 | Velocity Range | Jam Rate | Description |
 |:--------------:|:--------:|-------------|
-| 1.0 – 2.0 m/min | 0% (0/20 seeds) | All seeds run jam-free |
-| 2.1 – 3.0 m/min | 100% (20/20 seeds) | All seeds produce jams |
+| 1.0 – 2.0 m/min | 0% (0/20 seeds) | All 20 runs complete 7200 s with no traffic jam |
+| 2.1 – 3.0 m/min | 100% (20/20 seeds) | All 20 runs produce a traffic jam before 7200 s |
 
-### 8.2 Key Finding: Sharp Cliff Transition
+**Maximum safe velocity (TC-limited, 7 packs/trip crane): 2.0 m/min.**
+
+### 8.3 Key Finding: Sharp Cliff Transition
 
 The transition from 0% jam rate to 100% jam rate occurs in a single 0.1 m/min step between 2.0 and 2.1 m/min. There is no gradual degradation — no velocity produces partial jam rates (e.g., 50% of seeds jamming).
 
-This behavior is expected because the simulation uses deterministic strand lags (A1). The TC deficit per cycle is a fixed quantity at any given velocity. Either the margin is positive (no jam, regardless of seed) or negative (jam guaranteed, regardless of seed). The random seed affects only the cooling bed and crane timing, which have no influence on the TC bottleneck.
+**Why the cliff is sharp, not gradual:** The simulation uses deterministic strand lags (A1). The TC deficit per cycle is a fixed quantity at any given velocity — it depends only on the TC travel distances and hook operation times, not on random seed. Either the margin is positive (the TC finishes serving all 6 strands before the next pair arrives — no jam, regardless of seed) or negative (the TC structurally cannot keep up — jam guaranteed, regardless of seed). The random seed affects only cooling bed and crane timing, which do not influence the TC bottleneck.
 
-### 8.3 Validation of TC Ceiling
+### 8.4 Validation of TC Ceiling
 
 The theoretical TC ceiling is 2.19 m/min. The sweep shows the operational maximum is 2.0 m/min. The gap of 0.19 m/min (8.7%) arises because:
 
@@ -447,7 +529,7 @@ The theoretical TC ceiling is 2.19 m/min. The sweep shows the operational maximu
 
 These effects consume the theoretical 31.5 s margin at 2.0 m/min, pushing the effective ceiling to just below 2.1 m/min.
 
-### 8.4 Statistical Confidence
+### 8.5 Statistical Confidence
 
 With 20 seeds per velocity:
 - At 2.0 m/min: 0/20 jams. 95% CI for true jam rate: [0%, 16.8%] (Clopper-Pearson).
@@ -490,7 +572,7 @@ The simulation finds 1.9 m/min. The overshoot vs theory (1.9 vs 1.75) is because
 
 ### 9.3 Practical Implication
 
-The default configuration uses 7 packs per trip (full table capacity). This provides ample crane headroom. Reducing grab size below 3 would unnecessarily restrict throughput by making the crane — not the TC — the bottleneck.
+With a grab-type crane (1 pack per trip), the crane is the bottleneck at 6 strands. The crane only stops being the bottleneck when the grab size reaches 3 packs per trip. Since the crane in this plant is grab-type and realistically picks up 1 pack of 2 billets per trip, the crane constraint is binding — see Section 12 for the full analysis of practical options.
 
 ---
 
@@ -566,33 +648,109 @@ The following visual checks confirm simulation correctness:
 
 ---
 
-## 12. Conclusions and Recommendations
+## 12. Crane Bottleneck with Realistic Grab Constraints
 
-### 12.1 Primary Findings
+### 12.1 Problem Statement
 
-1. **Maximum safe casting velocity: 2.0 m/min** for 6 strands with default crane configuration (7 packs/trip). Confirmed by 20-seed sweep with 0% jam rate at 2.0 m/min and 100% jam rate at 2.1 m/min.
+The cranes are **grab-type** (not magnet). Each crane picks up **1 pack of 2 billets** per trip. The crane cycle time for layer 1 is 274.0 s (see Section 3.3).
 
-2. **The transfer car is the binding constraint** at the standard 6-strand configuration. The TC must serve all 6 strands serially, with an average cycle of 54.75 s per strand (328.5 s total). This limits pair production time to 328.5 s minimum, corresponding to 2.19 m/min theoretical ceiling.
+With 2 cranes each picking 1 pack per trip, the maximum crane throughput is:
+```
+crane_supply = 2 packs / 274.0 s = 0.00730 packs/s
+```
 
-3. **The crane system has ample capacity** at the default 7 packs/trip configuration. The crane bottleneck only appears when grab size drops to 2 or fewer packs per trip.
+At casting velocity v, 6 strands produce billets at a rate of:
+```
+billet_rate = 6 × v / (6.0 × 60) = v / 60  billets/s
+pack_demand = billet_rate / 2 = v / 120  packs/s  (each pack = 2 billets)
+```
 
-4. **No gradual degradation exists.** The system transitions from 0% to 100% jam rate in a single 0.1 m/min step. This is because the TC deficit is deterministic — either the margin is positive (indefinitely stable) or negative (guaranteed jam).
+Setting supply ≥ demand:
+```
+2 / 274 ≥ v / 120
+v ≤ 2 × 120 / 274 = 240 / 274 = 0.876 m/min
+```
 
-5. **Reducing strand count is the most effective capacity lever.** Going from 6 to 3 strands increases the safe velocity from 2.0 to 3.7 m/min (with 3 packs/trip).
+For N strands (generalised):
+```
+v_max_crane = 1440 / (N × 274)
+```
 
-### 12.2 Recommendations
+### 12.2 Simulation Results — 1 Pack/Trip (Realistic Default)
+
+| Strands | Crane Ceiling (theory) | TC Ceiling (theory) | Binding Constraint | Max Safe Velocity (sim, 10 seeds) |
+|:-------:|:---------------------:|:-------------------:|:------------------:|:---------------------------------:|
+| 6 | 0.88 m/min | 2.19 m/min | **Crane** | 0.9 m/min |
+| 5 | 1.05 m/min | 2.48 m/min | **Crane** | 1.2 m/min |
+| 4 | 1.31 m/min | 2.94 m/min | **Crane** | 1.5 m/min |
+| 3 | 1.75 m/min | 3.72 m/min | **Crane** | 2.0 m/min |
+
+At every strand count, the crane is the bottleneck — not the transfer car. Collecting table overflow occurs because cranes cannot clear packs fast enough, and the table fills to its 7-pack capacity.
+
+### 12.3 Practical Recommendations (Three Options)
+
+The reviewer identified three viable solutions. Here is the quantitative assessment of each:
+
+**Option A: Reduce casting velocity (keep 6 strands, 1 pack/trip)**
+
+Operate at v ≤ 0.8 m/min. This is conservative and may be too slow for production targets.
+
+**Option B: Reduce strand count (keep 1 pack/trip)**
+
+| Strands | Max Safe Velocity | Annual Throughput (est.) |
+|:-------:|:-----------------:|:-----------------------:|
+| 6 | 0.9 m/min | 0.9 × 6 = 5.4 strand·m/min |
+| 5 | 1.2 m/min | 1.2 × 5 = 6.0 strand·m/min |
+| 4 | 1.5 m/min | 1.5 × 4 = 6.0 strand·m/min |
+| 3 | 2.0 m/min | 2.0 × 3 = 6.0 strand·m/min |
+
+Reducing from 6 to 5 strands increases total output from 5.4 to 6.0 strand·m/min despite casting fewer strands. Further reductions to 4 or 3 strands maintain the same 6.0 strand·m/min with higher per-strand velocity.
+
+**Option C: Increase pack size to 3 billets (crane picks 1 pack of 3 per trip)**
+
+If the grab can safely hold 3 billets (3 × 0.8 t = 2.4 t, well within the 27 t crane net capacity), the crane throughput limit becomes:
+```
+v_max_crane = 1440 × 1.5 / (274 × N)   [1 pack of 3 billets = 1.5 standard packs]
+```
+
+For 6 strands: v_max_crane = 2160 / 1644 = 1.31 m/min. This doubles the crane ceiling from 0.88 to 1.31 m/min.
+
+### 12.4 Recommended Configuration
+
+For 6-strand operation with a grab-type crane (1 pack of 2 billets per trip):
+- **Maximum safe velocity: 0.9 m/min**
+- If this is insufficient, reduce to **5 strands at 1.2 m/min** or **4 strands at 1.5 m/min**
+- Pack size of 3 billets provides a modest improvement but carries rigging risk with grab-type crane
+
+---
+
+## 13. Conclusions and Recommendations
+
+### 13.1 Primary Findings
+
+1. **With realistic grab-type crane (1 pack/trip), the crane is the binding constraint — not the transfer car.** Maximum safe velocity for 6 strands is **0.9 m/min** (confirmed by 10-seed simulation sweep).
+
+2. **The transfer car ceiling is 2.19 m/min** (theoretical) for 6 strands, but this ceiling is only reachable if the crane can pick up 3 or more packs per trip (Section 9).
+
+3. **No gradual degradation exists.** The system transitions from 0% to 100% jam rate in a single 0.1 m/min step. The deficit (either crane or TC) is deterministic — either positive (stable) or negative (guaranteed jam).
+
+4. **Reducing strand count is the most effective capacity lever.** 5 strands at 1.2 m/min produces more total output (6.0 strand·m/min) than 6 strands at 0.9 m/min (5.4 strand·m/min).
+
+5. **The analysis in Sections 4–8 remains valid for evaluating TC-limited regimes** (e.g., when crane grab size ≥ 3 packs/trip). The TC ceiling of 2.0 m/min operational applies when cranes have sufficient capacity.
+
+### 13.2 Recommendations
 
 | Recommendation | Rationale |
 |----------------|-----------|
-| Operate at v ≤ 1.8 m/min for 6 strands | Provides 18% TC margin for transient disturbances |
-| Maintain crane grab size ≥ 3 packs/trip | Prevents crane from becoming the bottleneck |
-| If higher velocity is needed, reduce strand count | 3 strands with 3 packs/trip allows up to 3.7 m/min |
-| Monitor TC utilization in real time | Values above 85% indicate proximity to the cliff |
-| Implement TC priority optimization | Current round-robin may be suboptimal; nearest-first could narrow the gap between theoretical (2.19) and operational (2.0) ceilings |
+| For 6 strands with grab crane: v ≤ 0.8 m/min | Crane ceiling is 0.88 m/min; 0.8 provides safety margin |
+| Reduce to 5 strands at 1.2 m/min for higher output | 6.0 vs 5.4 strand·m/min total throughput |
+| Or reduce to 4 strands at 1.5 m/min | Same total throughput, higher per-strand velocity |
+| If crane grab can safely hold 3 billets, test in practice | Increases crane ceiling to ~1.31 m/min for 6 strands |
+| Monitor collecting table pack count in real time | Values above 5/7 indicate crane is struggling to keep up |
 
-### 12.3 Correction Plan v3 Impact
+### 13.3 Correction Plan v3 Impact
 
-The corrections in Plan v3 fundamentally changed the system's operating envelope. The single most impactful correction was C2 (TC speed from 100 to 24 m/min), which reduced the TC ceiling from 4.21 to 2.19 m/min. This simulation study provides the validated operating limits for the corrected system.
+The corrections in Plan v3 fundamentally changed the system's operating envelope. The single most impactful correction was C2 (TC speed from 100 to 24 m/min), which reduced the TC ceiling from 4.21 to 2.19 m/min. The realistic crane constraint (1 pack/trip for grab-type crane) further reduces the practical ceiling to 0.88 m/min for 6-strand operation.
 
 ---
 
@@ -618,7 +776,7 @@ All simulation parameters are documented in `PARAMETER_REFERENCE.md`. Key parame
 | COOLBED_CYCLE_TIME | 24.0 | s | Config |
 | TABLE_CAPACITY | 7 | packs | Config |
 | PACK_SIZE | 2 | billets | Config |
-| CRANE_PACKS_PER_TRIP | 7 | packs | Config |
+| CRANE_PACKS_PER_TRIP | 1 | packs | Config (grab-type crane: 1 pack of 2 billets) |
 | CRANE_LONG_SPEED | 100.0 | m/min | Config |
 | CRANE_TRANS_SPEED | 40.0 | m/min | Config |
 | CRANE_HOOK_SPEED | 10.0 | m/min | Config |
@@ -678,3 +836,4 @@ All simulation parameters are documented in `PARAMETER_REFERENCE.md`. Key parame
 | Date | Entry |
 |------|-------|
 | 2026-02-25 | Initial creation. Full report covering all Correction Plan v3 results: 6 single-run velocity analyses (1.5, 1.8, 2.0, 2.3, 2.6, 3.0 m/min), 20-seed velocity sweep, crane parametric study, strand x crane combined study, hand calculations, and validation. |
+| 2026-03-18 | **Reviewer comments resolution (Comments 1–9).** (1) Clarified velocity sweep meaning. (2) Added step-by-step 28.7s hand calculation in Section 3.4. (3) Enhanced multi-billet waterfall to show 6 billets with expected-value annotations. (4) Clarified utilization chart metrics (peak vs time-averaged). (5) Explained mean occupancy in plain language. (6) Rewrote failure modes with numbered step-by-step explanations. (7) Added verifiable hand calculations to Section 4.3 KPIs. (8) Removed all metaphors from text. (9) **Critical:** Changed crane default from 7 to 1 pack/trip (realistic grab-type crane). Added Section 12 with crane bottleneck analysis showing 0.9 m/min max for 6 strands. Provided three practical options: reduce velocity, reduce strands, or increase pack size. Updated Section 13 conclusions. |

@@ -73,8 +73,10 @@ CRANE_HOOK_SPEED = 10.0      # m/min
 CRANE_HOOK_TRAVEL = 9.0      # m
 CRANE_GRAB_TIME = 5.0        # s (open or close)
 CRANE_SIMULTANEOUS_TRAVEL = True
-# Packs picked up per crane trip. Net capacity 27t >> typical load.
-CRANE_PACKS_PER_TRIP = TABLE_CAPACITY
+# Packs picked up per crane trip.
+# Grab-type crane (not magnet): 1 pack of 2 billets per trip is the realistic default.
+# Higher values represent hypothetical pack-of-3 or bundle-grab scenarios.
+CRANE_PACKS_PER_TRIP = 1
 
 # Crane additions (A7, A8, A9)
 CRANE_WIDTH = 14.0            # m (longitudinal footprint)
