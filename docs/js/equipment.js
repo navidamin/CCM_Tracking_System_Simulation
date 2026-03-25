@@ -32,7 +32,13 @@ const TRANSPORT_LENGTH = 25.2;
 const DISCHARGE_LENGTH = 13.375;
 const INTERM_STOPPER_POS = 7.175;
 const COOLBED_SLOTS = 82;
-const COOLBED_PITCH = 0.375;
+export const COOLBED_PITCH = 0.375;
+export const COOLBED_PHASE_TIME = 6.0;     // s per phase
+export const COOLBED_CYCLE_TIME = 24.0;    // s total (4 phases)
+export const COOLBED_VERT_TRAVEL = 0.325;  // m (movable beam vertical)
+export const COOLBED_HORIZ_TRAVEL = 0.505; // m (movable beam forward, 130mm billet)
+const TC_FULL_STROKE = 1.1;               // m (1100mm hydraulic stroke)
+const TC_PLACE_EXTEND = 0.44;             // m (partial lower for placement, 2s)
 const RT_WIDTH = 0.4;
 const BILLET_LEN = 6.0;
 
@@ -69,6 +75,8 @@ export const Z_YARD = Z_COOLBED;
  */
 export function buildEquipment(scene, numStrands = 6) {
     const group = new THREE.Group();
+    // Per-strand stopper mesh references for animation
+    const stoppers = {};
     const materials = {
         rt: new THREE.MeshStandardMaterial({ color: 0x555566, roughness: 0.6 }),
         rtDark: new THREE.MeshStandardMaterial({ color: 0x444455, roughness: 0.7 }),
@@ -85,6 +93,8 @@ export function buildEquipment(scene, numStrands = 6) {
     // --- Strands (mold exits) ---
     for (let s = 1; s <= numStrands; s++) {
         const z = strandZ(s, numStrands);
+        stoppers[s] = {};
+
         // Mold marker
         const mold = new THREE.Mesh(
             new THREE.BoxGeometry(1.5, 0.8, 0.5),
@@ -106,10 +116,11 @@ export function buildEquipment(scene, numStrands = 6) {
         // Security stopper (at end of transport RT)
         const secStop = new THREE.Mesh(
             new THREE.BoxGeometry(0.3, 0.5, 0.5),
-            materials.stopper
+            materials.stopper.clone()
         );
         secStop.position.set(X_TRANSPORT_END, 0.25, z);
         group.add(secStop);
+        stoppers[s].security = secStop;
 
         // Discharge roller table
         const drt = new THREE.Mesh(
@@ -123,29 +134,55 @@ export function buildEquipment(scene, numStrands = 6) {
         // Intermediate stopper
         const intStop = new THREE.Mesh(
             new THREE.BoxGeometry(0.25, 0.45, 0.45),
-            materials.stopper
+            materials.stopper.clone()
         );
         intStop.position.set(X_INTERM_STOPPER, 0.22, z);
         group.add(intStop);
+        stoppers[s].intermediate = intStop;
 
-        // Fixed stopper (end of discharge)
+        // Fixed stopper (end of discharge — always up, dark color)
         const fixStop = new THREE.Mesh(
             new THREE.BoxGeometry(0.25, 0.45, 0.45),
-            materials.stopper
+            new THREE.MeshStandardMaterial({ color: 0x666666, roughness: 0.5 })
         );
         fixStop.position.set(X_DISCHARGE_END, 0.22, z);
         group.add(fixStop);
+        stoppers[s].fixed = fixStop;
     }
 
-    // --- Transfer car ---
+    // --- Transfer car (frame + hook) ---
     const tcWidth = (numStrands + 1) * STRAND_PITCH;
-    const tc = new THREE.Mesh(
-        new THREE.BoxGeometry(2.0, 0.3, 0.8),
+    const tcGroup = new THREE.Group();
+    tcGroup.position.set(X_DISCHARGE_END + 1.5, 0, strandZ(1, numStrands));
+
+    // TC frame (upper carriage on rail)
+    const tcFrame = new THREE.Mesh(
+        new THREE.BoxGeometry(2.0, 0.2, 0.8),
         materials.tc
     );
-    tc.position.set(X_DISCHARGE_END + 1.5, 0.15, strandZ(1, numStrands));
-    tc.castShadow = true;
-    group.add(tc);
+    tcFrame.position.set(0, 1.4, 0);
+    tcFrame.castShadow = true;
+    tcGroup.add(tcFrame);
+
+    // TC hook/lifting arm (hangs below frame, moves vertically)
+    const tcHook = new THREE.Mesh(
+        new THREE.BoxGeometry(1.6, 0.15, 0.5),
+        new THREE.MeshStandardMaterial({ color: 0xcc8811, roughness: 0.3, metalness: 0.5 })
+    );
+    tcHook.position.set(0, 0.15, 0); // starts at low position (roller table level)
+    tcHook.castShadow = true;
+    tcGroup.add(tcHook);
+
+    // TC lifting rod (connects frame to hook)
+    const tcRod = new THREE.Mesh(
+        new THREE.CylinderGeometry(0.03, 0.03, 1.1, 8),
+        new THREE.MeshStandardMaterial({ color: 0x999999 })
+    );
+    tcRod.position.set(0, 0.75, 0);
+    tcGroup.add(tcRod);
+
+    group.add(tcGroup);
+    const tc = tcGroup; // for backward compat (tc.position.z is used for lateral movement)
 
     // TC rail
     const tcRail = new THREE.Mesh(
@@ -156,23 +193,36 @@ export function buildEquipment(scene, numStrands = 6) {
         (strandZ(1, numStrands) + strandZ(numStrands, numStrands)) / 2);
     group.add(tcRail);
 
-    // --- Cooling bed ---
+    // --- Cooling bed (fixed beam + movable beam) ---
     const cbLength = COOLBED_SLOTS * COOLBED_PITCH;
-    const coolbed = new THREE.Mesh(
-        new THREE.BoxGeometry(cbLength, 0.2, 4),
+
+    // Fixed beam (stationary, blue)
+    const fixedBeam = new THREE.Mesh(
+        new THREE.BoxGeometry(cbLength, 0.12, 4),
         materials.coolbed
     );
-    coolbed.position.set(X_COOLBED_START + cbLength / 2, 0.1, Z_COOLBED);
-    coolbed.receiveShadow = true;
-    group.add(coolbed);
+    fixedBeam.position.set(X_COOLBED_START + cbLength / 2, 0.06, Z_COOLBED);
+    fixedBeam.receiveShadow = true;
+    group.add(fixedBeam);
 
-    // Slot lines on cooling bed
+    // Movable beam (animated, cyan tint, slightly narrower)
+    const movableBeamMat = new THREE.MeshStandardMaterial({
+        color: 0x44aadd, roughness: 0.4, transparent: true, opacity: 0.7
+    });
+    const movableBeam = new THREE.Mesh(
+        new THREE.BoxGeometry(cbLength, 0.10, 3.5),
+        movableBeamMat
+    );
+    movableBeam.position.set(X_COOLBED_START + cbLength / 2, 0.05, Z_COOLBED);
+    group.add(movableBeam);
+
+    // Slot lines on cooling bed (every 4 slots)
     for (let i = 0; i <= COOLBED_SLOTS; i += 4) {
         const line = new THREE.Mesh(
-            new THREE.BoxGeometry(0.02, 0.22, 4),
+            new THREE.BoxGeometry(0.02, 0.18, 4),
             new THREE.MeshBasicMaterial({ color: 0x4466cc })
         );
-        line.position.set(X_COOLBED_START + i * COOLBED_PITCH, 0.11, Z_COOLBED);
+        line.position.set(X_COOLBED_START + i * COOLBED_PITCH, 0.09, Z_COOLBED);
         group.add(line);
     }
 
@@ -252,7 +302,7 @@ export function buildEquipment(scene, numStrands = 6) {
 
     scene.add(group);
 
-    return { tc, cranes, numStrands };
+    return { tc, tcHook, tcRod, cranes, stoppers, fixedBeam, movableBeam, numStrands };
 }
 
 

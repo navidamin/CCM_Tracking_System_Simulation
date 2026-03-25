@@ -19,6 +19,11 @@ export class UIController {
         this.statTc = document.getElementById('stat-tc');
         this.statJam = document.getElementById('stat-jam');
         this.jamRow = document.getElementById('jam-row');
+        this.statTcUtil = document.getElementById('stat-tc-util');
+        this.statTcCycle = document.getElementById('stat-tc-cycle');
+        this.statCbMax = document.getElementById('stat-cb-max');
+        this.statTableMax = document.getElementById('stat-table-max');
+        this.statBottleneck = document.getElementById('stat-bottleneck');
 
         this.playing = false;
         this.speed = 20;
@@ -107,6 +112,15 @@ export class UIController {
         } else {
             this.jamRow.style.display = 'none';
         }
+        // Summary stats (from analysis, static per scenario)
+        this.statTcUtil.textContent = stats.tc_utilization != null
+            ? `${(stats.tc_utilization * 100).toFixed(1)}%` : '—';
+        this.statTcCycle.textContent = stats.tc_avg_cycle != null
+            ? `${stats.tc_avg_cycle.toFixed(1)}s` : '—';
+        this.statCbMax.textContent = stats.max_coolbed_occupancy ?? '—';
+        this.statTableMax.textContent = stats.max_table_packs ?? '—';
+        this.statBottleneck.textContent = stats.bottleneck
+            ? stats.bottleneck.split('(')[0].trim() : '—';
     }
 
     /**
