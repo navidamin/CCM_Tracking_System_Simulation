@@ -49,3942 +49,4730 @@
   {
    "t": 491.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 0.0
   },
   {
    "t": 491.5,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 496.5,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 497.62,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 502.62,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 528.12,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 530.12,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 530.12,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 547.0,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 550.0,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 551.12,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 556.12,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 571.88,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 573.88,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 573.88,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 594.0,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 597.0,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 598.12,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 603.12,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 622.12,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 624.12,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 624.12,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 647.5,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 650.5,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 651.62,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 656.62,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 678.88,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 680.88,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 680.88,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 694.5,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 697.5,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 698.62,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 703.62,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 716.12,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 718.12,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 718.12,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 728.5,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 731.5,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 732.62,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 737.62,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 746.88,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 748.88,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 851.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 878.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 881.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 882.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 887.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 912.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 914.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 914.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 938.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 941.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 942.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 947.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 969.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 971.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 971.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 988.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 991.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 992.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 997.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 1013.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 1015.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 1015.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 1028.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 1031.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 1033.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 1038.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 1050.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 1052.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 1052.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 1072.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 1075.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 1076.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 1081.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 1100.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 1102.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 1102.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 1113.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 1116.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 1117.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 1122.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 1131.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 1133.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 1211.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 1238.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 1241.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 1242.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 1247.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 1272.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 1274.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 1274.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 1298.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 1301.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 1302.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 1307.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 1329.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 1331.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 1331.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 1348.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 1351.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 1352.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 1357.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 1373.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 1375.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 1375.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 1388.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 1391.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 1393.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 1398.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 1410.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 1412.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 1412.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 1432.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 1435.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 1436.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 1441.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 1460.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 1462.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 1462.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 1473.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 1476.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 1477.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 1482.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 1491.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 1493.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 1571.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 1598.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 1601.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 1602.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 1607.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 1632.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 1634.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 1634.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 1658.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 1661.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 1662.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 1667.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 1689.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 1691.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 1691.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 1708.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 1711.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 1712.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 1717.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 1733.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 1735.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 1735.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 1748.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 1751.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 1753.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 1758.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 1770.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 1772.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 1772.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 1792.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 1795.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 1796.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 1801.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 1820.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 1822.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 1822.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 1833.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 1836.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 1837.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 1842.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 1851.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 1853.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 1931.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 1958.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 1961.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 1962.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 1967.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 1992.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 1994.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 1994.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 2018.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 2021.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 2022.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 2027.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 2049.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 2051.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 2051.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 2068.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 2071.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 2072.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 2077.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 2093.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 2095.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 2095.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 2108.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 2111.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 2113.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 2118.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 2130.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 2132.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 2132.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 2152.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 2155.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 2156.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 2161.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 2180.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 2182.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 2182.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 2193.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 2196.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 2197.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 2202.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 2211.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 2213.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 2291.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 2318.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 2321.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 2322.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 2327.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 2352.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 2354.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 2354.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 2378.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 2381.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 2382.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 2387.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 2409.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 2411.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 2411.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 2428.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 2431.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 2432.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 2437.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 2453.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 2455.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 2455.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 2468.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 2471.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 2473.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 2478.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 2490.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 2492.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 2492.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 2512.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 2515.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 2516.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 2521.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 2540.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 2542.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 2542.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 2553.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 2556.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 2557.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 2562.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 2571.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 2573.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 2651.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 2678.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 2681.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 2682.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 2687.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 2712.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 2714.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 2714.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 2738.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 2741.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 2742.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 2747.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 2769.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 2771.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 2771.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 2788.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 2791.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 2792.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 2797.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 2813.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 2815.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 2815.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 2828.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 2831.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 2833.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 2838.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 2850.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 2852.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 2852.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 2872.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 2875.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 2876.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 2881.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 2900.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 2902.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 2902.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 2913.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 2916.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 2917.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 2922.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 2931.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 2933.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 3011.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 3038.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 3041.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 3042.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 3047.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 3072.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 3074.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 3074.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 3098.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 3101.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 3102.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 3107.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 3129.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 3131.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 3131.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 3148.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 3151.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 3152.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 3157.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 3173.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 3175.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 3175.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 3188.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 3191.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 3193.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 3198.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 3210.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 3212.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 3212.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 3232.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 3235.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 3236.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 3241.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 3260.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 3262.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 3262.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 3273.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 3276.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 3277.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 3282.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 3291.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 3293.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 3371.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 3398.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 3401.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 3402.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 3407.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 3432.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 3434.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 3434.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 3458.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 3461.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 3462.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 3467.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 3489.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 3491.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 3491.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 3508.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 3511.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 3512.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 3517.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 3533.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 3535.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 3535.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 3548.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 3551.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 3553.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 3558.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 3570.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 3572.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 3572.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 3592.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 3595.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 3596.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 3601.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 3620.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 3622.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 3622.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 3633.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 3636.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 3637.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 3642.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 3651.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 3653.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 3731.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 3758.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 3761.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 3762.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 3767.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 3792.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 3794.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 3794.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 3818.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 3821.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 3822.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 3827.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 3849.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 3851.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 3851.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 3868.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 3871.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 3872.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 3877.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 3893.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 3895.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 3895.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 3908.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 3911.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 3913.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 3918.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 3930.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 3932.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 3932.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 3952.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 3955.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 3956.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 3961.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 3980.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 3982.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 3982.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 3993.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 3996.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 3997.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 4002.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 4011.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 4013.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 4091.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 4118.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 4121.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 4122.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 4127.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 4152.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 4154.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 4154.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 4178.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 4181.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 4182.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 4187.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 4209.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 4211.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 4211.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 4228.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 4231.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 4232.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 4237.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 4253.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 4255.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 4255.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 4268.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 4271.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 4273.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 4278.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 4290.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 4292.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 4292.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 4312.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 4315.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 4316.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 4321.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 4340.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 4342.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 4342.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 4353.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 4356.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 4357.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 4362.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 4371.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 4373.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 4451.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 4478.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 4481.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 4482.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 4487.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 4512.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 4514.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 4514.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 4538.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 4541.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 4542.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 4547.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 4569.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 4571.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 4571.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 4588.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 4591.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 4592.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 4597.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 4613.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 4615.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 4615.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 4628.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 4631.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 4633.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 4638.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 4650.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 4652.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 4652.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 4672.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 4675.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 4676.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 4681.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 4700.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 4702.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 4702.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 4713.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 4716.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 4717.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 4722.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 4731.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 4733.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 4811.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 4838.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 4841.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 4842.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 4847.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 4872.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 4874.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 4874.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 4898.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 4901.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 4902.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 4907.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 4929.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 4931.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 4931.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 4948.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 4951.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 4952.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 4957.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 4973.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 4975.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 4975.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 4988.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 4991.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 4993.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 4998.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 5010.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 5012.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 5012.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 5032.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 5035.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 5036.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 5041.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 5060.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 5062.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 5062.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 5073.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 5076.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 5077.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 5082.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 5091.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 5093.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 5171.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 5198.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 5201.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 5202.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 5207.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 5232.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 5234.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 5234.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 5258.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 5261.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 5262.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 5267.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 5289.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 5291.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 5291.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 5308.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 5311.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 5312.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 5317.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 5333.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 5335.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 5335.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 5348.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 5351.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 5353.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 5358.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 5370.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 5372.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 5372.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 5392.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 5395.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 5396.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 5401.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 5420.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 5422.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 5422.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 5433.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 5436.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 5437.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 5442.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 5451.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 5453.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 5531.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 5558.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 5561.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 5562.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 5567.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 5592.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 5594.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 5594.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 5618.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 5621.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 5622.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 5627.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 5649.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 5651.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 5651.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 5668.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 5671.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 5672.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 5677.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 5693.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 5695.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 5695.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 5708.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 5711.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 5713.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 5718.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 5730.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 5732.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 5732.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 5752.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 5755.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 5756.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 5761.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 5780.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 5782.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 5782.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 5793.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 5796.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 5797.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 5802.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 5811.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 5813.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 5891.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 5918.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 5921.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 5922.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 5927.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 5952.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 5954.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 5954.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 5978.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 5981.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 5982.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 5987.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 6009.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 6011.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 6011.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 6028.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 6031.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 6032.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 6037.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 6053.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 6055.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 6055.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 6068.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 6071.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 6073.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 6078.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 6090.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 6092.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 6092.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 6112.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 6115.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 6116.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 6121.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 6140.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 6142.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 6142.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 6153.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 6156.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 6157.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 6162.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 6171.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 6173.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 6251.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 6278.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 6281.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 6282.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 6287.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 6312.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 6314.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 6314.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 6338.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 6341.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 6342.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 6347.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 6369.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 6371.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 6371.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 6388.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 6391.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 6392.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 6397.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 6413.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 6415.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 6415.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 6428.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 6431.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 6433.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 6438.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 6450.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 6452.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 6452.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 6472.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 6475.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 6476.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 6481.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 6500.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 6502.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 6502.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 6513.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 6516.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 6517.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 6522.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 6531.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 6533.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 6611.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 6638.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 6641.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 6642.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 6647.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 6672.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 6674.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 6674.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 6698.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 6701.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 6702.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 6707.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 6729.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 6731.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 6731.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 6748.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 6751.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 6752.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 6757.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 6773.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 6775.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 6775.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 6788.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 6791.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 6793.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 6798.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 6810.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 6812.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 6812.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 6832.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 6835.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 6836.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   },
   {
    "t": 6841.75,
    "action": "travel_to_coolbed",
-   "strand": 3
+   "strand": 3,
+   "duration": 19.0
   },
   {
    "t": 6860.75,
    "action": "hook_down_place",
-   "strand": 3
+   "strand": 3,
+   "duration": 2.0
   },
   {
    "t": 6862.75,
    "action": "cycle_complete",
-   "strand": 3
+   "strand": 3,
+   "duration": 0
   },
   {
    "t": 6862.75,
    "action": "travel_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 10.375
   },
   {
    "t": 6873.12,
    "action": "hook_down_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 3.0
   },
   {
    "t": 6876.12,
    "action": "align_to_strand",
-   "strand": 6
+   "strand": 6,
+   "duration": 1.125
   },
   {
    "t": 6877.25,
    "action": "hook_up_pickup",
-   "strand": 6
+   "strand": 6,
+   "duration": 5.0
   },
   {
    "t": 6882.25,
    "action": "travel_to_coolbed",
-   "strand": 6
+   "strand": 6,
+   "duration": 9.25
   },
   {
    "t": 6891.5,
    "action": "hook_down_place",
-   "strand": 6
+   "strand": 6,
+   "duration": 2.0
   },
   {
    "t": 6893.5,
    "action": "cycle_complete",
-   "strand": 6
+   "strand": 6,
+   "duration": 0
   },
   {
    "t": 6971.5,
    "action": "travel_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 26.625
   },
   {
    "t": 6998.12,
    "action": "hook_down_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 3.0
   },
   {
    "t": 7001.12,
    "action": "align_to_strand",
-   "strand": 1
+   "strand": 1,
+   "duration": 1.125
   },
   {
    "t": 7002.25,
    "action": "hook_up_pickup",
-   "strand": 1
+   "strand": 1,
+   "duration": 5.0
   },
   {
    "t": 7007.25,
    "action": "travel_to_coolbed",
-   "strand": 1
+   "strand": 1,
+   "duration": 25.5
   },
   {
    "t": 7032.75,
    "action": "hook_down_place",
-   "strand": 1
+   "strand": 1,
+   "duration": 2.0
   },
   {
    "t": 7034.75,
    "action": "cycle_complete",
-   "strand": 1
+   "strand": 1,
+   "duration": 0
   },
   {
    "t": 7034.75,
    "action": "travel_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 23.375
   },
   {
    "t": 7058.12,
    "action": "hook_down_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 3.0
   },
   {
    "t": 7061.12,
    "action": "align_to_strand",
-   "strand": 2
+   "strand": 2,
+   "duration": 1.125
   },
   {
    "t": 7062.25,
    "action": "hook_up_pickup",
-   "strand": 2
+   "strand": 2,
+   "duration": 5.0
   },
   {
    "t": 7067.25,
    "action": "travel_to_coolbed",
-   "strand": 2
+   "strand": 2,
+   "duration": 22.25
   },
   {
    "t": 7089.5,
    "action": "hook_down_place",
-   "strand": 2
+   "strand": 2,
+   "duration": 2.0
   },
   {
    "t": 7091.5,
    "action": "cycle_complete",
-   "strand": 2
+   "strand": 2,
+   "duration": 0
   },
   {
    "t": 7091.5,
    "action": "travel_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 16.875
   },
   {
    "t": 7108.38,
    "action": "hook_down_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 3.0
   },
   {
    "t": 7111.38,
    "action": "align_to_strand",
-   "strand": 4
+   "strand": 4,
+   "duration": 1.125
   },
   {
    "t": 7112.5,
    "action": "hook_up_pickup",
-   "strand": 4
+   "strand": 4,
+   "duration": 5.0
   },
   {
    "t": 7117.5,
    "action": "travel_to_coolbed",
-   "strand": 4
+   "strand": 4,
+   "duration": 15.75
   },
   {
    "t": 7133.25,
    "action": "hook_down_place",
-   "strand": 4
+   "strand": 4,
+   "duration": 2.0
   },
   {
    "t": 7135.25,
    "action": "cycle_complete",
-   "strand": 4
+   "strand": 4,
+   "duration": 0
   },
   {
    "t": 7135.25,
    "action": "travel_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 13.625
   },
   {
    "t": 7148.88,
    "action": "hook_down_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 3.0
   },
   {
    "t": 7151.88,
    "action": "align_to_strand",
-   "strand": 5
+   "strand": 5,
+   "duration": 1.125
   },
   {
    "t": 7153.0,
    "action": "hook_up_pickup",
-   "strand": 5
+   "strand": 5,
+   "duration": 5.0
   },
   {
    "t": 7158.0,
    "action": "travel_to_coolbed",
-   "strand": 5
+   "strand": 5,
+   "duration": 12.5
   },
   {
    "t": 7170.5,
    "action": "hook_down_place",
-   "strand": 5
+   "strand": 5,
+   "duration": 2.0
   },
   {
    "t": 7172.5,
    "action": "cycle_complete",
-   "strand": 5
+   "strand": 5,
+   "duration": 0
   },
   {
    "t": 7172.5,
    "action": "travel_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 20.125
   },
   {
    "t": 7192.62,
    "action": "hook_down_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 3.0
   },
   {
    "t": 7195.62,
    "action": "align_to_strand",
-   "strand": 3
+   "strand": 3,
+   "duration": 1.125
   },
   {
    "t": 7196.75,
    "action": "hook_up_pickup",
-   "strand": 3
+   "strand": 3,
+   "duration": 5.0
   }
  ],
  "coolbed_occupancy_log": [

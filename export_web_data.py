@@ -119,7 +119,8 @@ def export_scenario(scenario):
             "yard_width": YARD_TROLLEY_SPAN,
         },
         "transfer_car_log": [
-            {"t": round(entry[0], 2), "action": entry[1], "strand": entry[2]}
+            {"t": round(entry[0], 2), "action": entry[1], "strand": entry[2],
+             "duration": round(entry[3], 3) if len(entry) > 3 else 0}
             for entry in result.transfer_car_log
         ],
         "coolbed_occupancy_log": [
