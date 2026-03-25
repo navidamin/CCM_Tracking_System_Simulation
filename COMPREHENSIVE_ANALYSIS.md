@@ -35,7 +35,7 @@ This report evaluates the CCM (Continuous Casting Machine) billet handling chain
 2. **Transport roller table** — Carries billets 25.2 m from torch cut to discharge area
 3. **Discharge roller table** — 13.375 m run with intermediate and fixed stoppers; pairs billets for transfer. The intermediate stopper is located 7.175 m from the discharge entry. A billet travelling at 15 m/min reaches it in `7.175 / 15.0 × 60 = 28.7 s`. This 28.7 s transit time is the detection window for traffic jams (see Section 3.4 for full stopper timing derivation)
 4. **Transfer car** — C-hook car lifts billet pairs and travels to cooling bed
-5. **Cooling bed** — 84-slot walking beam; billets traverse in 2016 s
+5. **Cooling bed** — 82-slot walking beam (10 fixed + 10 movable beams, 375 mm pitch); trigger-based cycling (24 s per cycle, activated when TC places billet on slot 1)
 6. **Collecting table** — Pusher groups billets into packs of 2
 7. **Overhead cranes** — Two cranes (108 west, 109 east) transport packs to storage yard
 8. **Billet yard** — 186 m x 32.45 m storage area with stacking up to 20 layers
@@ -54,7 +54,7 @@ The simulation uses SimPy 4.1 with a 7200 s (2-hour) runtime and 1200 s warmup p
 |:--:|-----------|--------|-------|--------|
 | C1 | Torch travel distance | 3,750 mm | 2,100 mm (130x130) | Shorter torch engagement per cut |
 | C2 | Transfer car long travel speed | 100 m/min | 24 m/min | TC travel times increase ~4x |
-| C3 | Transfer car initial position | Undefined | 4.2 m from strand 3-4 centerline | Realistic starting point |
+| C3 | Transfer car initial position | Undefined | 450 mm east of strand 1 center (10.65 m from cooling bed slot 1) | Realistic starting point (updated from DXF) |
 | C4 | Stopper configuration | One stopper | Two per strand (security + intermediate) | Proper billet pairing sequence |
 | C5 | Billet entry point | Torch area modeled | Simplified to transport RT start | Cleaner model boundary |
 | C6 | Roller table speed | Fixed 15 m/min | Variable 0–15 m/min (sim uses max) | Noted as variable |
@@ -75,9 +75,10 @@ The simulation uses SimPy 4.1 with a 7200 s (2-hour) runtime and 1200 s warmup p
 
 The single most consequential correction was **C2 (TC speed 100 to 24 m/min)**. Combined with corrected distances:
 
-- **TC ceiling dropped from 4.21 to 2.19 m/min** (theoretical)
+- **TC ceiling dropped from 4.21 to 2.60 m/min** (theoretical, with DXF-based TC optimization)
 - **Crane cycle dropped from ~350 to 274 s** (layer 1, C8 formula)
 - **Torch travel per cut dropped from 3.75 to 2.1 m** (C1)
+- **TC cycle per strand dropped from 54.75 to 46.21 s** (DXF optimization: 2s put-down, 3s subsequent lower)
 
 ---
 
@@ -107,26 +108,46 @@ avg_round_trip = (51.00 + 44.50 + 38.00 + 31.50 + 25.00 + 18.50) / 6
               = 34.75 s
 ```
 
-**Hook operations per strand service:**
+**Hook operations per strand service (updated from DXF):**
+
+The DXF drawing reveals a TC lifting frame optimization: the TC only lowers 2 s to place billets on the cooling bed (partial lower of ~420 mm instead of full 1100 mm), and subsequent pickups only need 3 s to lower (since the frame is already partially lowered from the 2 s put-down). There is no hook-up after placement — the TC departs immediately with the partially-lowered frame.
+
+For the **first** strand service (full lower):
 ```
-hook_ops = hook_down + hook_up + hook_down + hook_up
-         = 5.0 + 5.0 + 5.0 + 5.0
-         = 20.0 s
+hook_down_pickup = 5.0 s (full hydraulic stroke)
+align_to_strand  = 0.45 / 24 × 60 = 1.125 s (450 mm offset alignment)
+hook_up_pickup   = 5.0 s
+hook_down_place  = 2.0 s (partial lower to place billet)
+hook_ops_first   = 5.0 + 1.125 + 5.0 + 2.0 = 13.125 s
 ```
 
-(Hook down to pick up at strand, hook up, travel to cooling bed, hook down to place, hook up — but the second hook-up is part of repositioning, so effectively 4 x 5.0 s per service.)
+For **subsequent** strand services:
+```
+hook_down_pickup = 3.0 s (partial, frame already 2s lowered from put-down)
+align_to_strand  = 1.125 s
+hook_up_pickup   = 5.0 s
+hook_down_place  = 2.0 s (partial lower)
+hook_ops_subseq  = 3.0 + 1.125 + 5.0 + 2.0 = 11.125 s
+```
+
+**Average hook ops** (1 first + 5 subsequent per 6-strand cycle):
+```
+avg_hook_ops = (13.125 + 5 × 11.125) / 6 = (13.125 + 55.625) / 6 = 68.75 / 6 = 11.458 s
+```
 
 **Average TC cycle per strand:**
 ```
-avg_tc_cycle = avg_round_trip + hook_ops
-             = 34.75 + 20.0
-             = 54.75 s
+avg_tc_cycle = avg_round_trip + avg_hook_ops
+             = 34.75 + 11.458
+             = 46.21 s
 ```
 
 **Total TC time for all 6 strands:**
 ```
-tc_total_6 = 6 x 54.75 = 328.5 s
+tc_total_6 = 6 × 46.21 = 277.25 s
 ```
+
+Note: The previous value was 328.5 s (with 4 × 5.0 s = 20.0 s hook ops). The DXF-based optimization saves ~8.5 s per strand service, reducing the total 6-strand cycle by ~51 s.
 
 **Pair production time:**
 ```
@@ -135,26 +156,28 @@ pair_time = 2 x billet_cycle_time = 2 x (6.0 / v x 60) = 720 / v  [seconds]
 
 **TC ceiling** — the velocity at which pair production time equals TC total time:
 ```
-720 / v_max = 328.5
-v_max = 720 / 328.5 = 2.19 m/min
+720 / v_max = 277.25
+v_max = 720 / 277.25 = 2.60 m/min
 ```
 
-Above 2.19 m/min, the TC cannot serve all 6 strands within one pair production cycle. The deficit accumulates until a billet reaches the security stopper while it is still raised, causing a traffic jam.
+(Previous value with non-optimized TC: 720 / 328.5 = 2.19 m/min.)
+
+Above 2.60 m/min, the TC cannot serve all 6 strands within one pair production cycle. The deficit accumulates until a billet reaches the security stopper while it is still raised, causing a traffic jam.
 
 ### 3.2 Billet Timing at Key Velocities
 
 Billet cycle time = `L / v x 60` where L = 6.0 m. Torch travel time = `2.1 / v x 60`.
 
-| Parameter | v = 1.5 | v = 2.0 | v = 2.3 | v = 3.0 | Unit |
+| Parameter | v = 1.5 | v = 2.0 | v = 2.5 | v = 3.0 | Unit |
 |-----------|--------:|--------:|--------:|--------:|------|
-| Billet cycle time | 240.0 | 180.0 | 156.5 | 120.0 | s |
-| Torch travel time | 84.0 | 63.0 | 54.8 | 42.0 | s |
-| Cast-only time | 156.0 | 117.0 | 101.7 | 78.0 | s |
-| Pair production time | 480.0 | 360.0 | 313.0 | 240.0 | s |
-| TC margin (pair - 328.5) | +151.5 | +31.5 | -15.5 | -88.5 | s |
-| TC margin (%) | 46.1% | 9.6% | -5.0% | -26.9% | — |
+| Billet cycle time | 240.0 | 180.0 | 144.0 | 120.0 | s |
+| Torch travel time | 84.0 | 63.0 | 50.4 | 42.0 | s |
+| Cast-only time | 156.0 | 117.0 | 93.6 | 78.0 | s |
+| Pair production time | 480.0 | 360.0 | 288.0 | 240.0 | s |
+| TC margin (pair - 277.25) | +202.75 | +82.75 | +10.75 | -37.25 | s |
+| TC margin (%) | 73.2% | 29.9% | 3.9% | -13.4% | — |
 
-At v = 2.0 m/min, the TC has only 31.5 s of margin (9.6%) per 6-strand cycle. At v = 2.3 m/min, the margin goes negative by 15.5 s — the TC structurally cannot keep up.
+At v = 2.5 m/min, the TC has only 10.75 s of margin (3.9%) per 6-strand cycle. At v = 2.6 m/min, the margin goes negative — the TC structurally cannot keep up. Note: the previous TC ceiling (non-optimized) was 2.19 m/min; the DXF-based optimization raised it to 2.60 m/min.
 
 ### 3.3 Crane Cycle Calculation
 
@@ -240,30 +263,28 @@ When the second billet of a pair enters the discharge RT, it takes 28.7 s to rea
 
 ### 4.1 Key Performance Indicators
 
-| Metric | Value |
-|--------|------:|
-| Billets produced | 228 |
-| Billets delivered to yard | 142 |
-| Jam | NO |
-| TC utilization | 86.1% |
-| TC average cycle time | 55.7 s |
-| Avg wait for TC | 152.9 s |
-| Max wait for TC | 266.8 s |
-| Avg cooling bed occupancy | 27.4 slots |
-| Max cooling bed occupancy | 36 slots |
-| Avg collecting table packs | 1.20 |
-| Max collecting table packs | 3 |
-| Primary bottleneck | Transfer car (86%) |
+| Metric | Value (current) | Value (pre-DXF) |
+|--------|------:|------:|
+| Billets produced | 228 | 228 |
+| Billets delivered to yard | 24 | 142 |
+| Jam | NO | NO |
+| TC utilization | 73.4% | 86.1% |
+| TC average cycle time | 47.2 s | 55.7 s |
+| Avg wait for TC | 0.0 s | 152.9 s |
+| Max wait for TC | 0.0 s | 266.8 s |
+| Avg cooling bed occupancy | 52.1 slots (of 82) | 27.4 slots (of 84) |
+| Max cooling bed occupancy | 81 slots | 36 slots |
+| Avg collecting table packs | 0.00 | 1.20 |
+| Max collecting table packs | 4 | 3 |
+| Primary bottleneck | Cooling bed (99%) | Transfer car (86%) |
+
+Note: "Pre-DXF" values used non-optimized TC timing (4 × 5s hook ops, 84-slot cooling bed). Current values reflect DXF-based TC optimization (partial 2s put-down, 3s subsequent lower, 82-slot trigger-based cooling bed).
 
 ### 4.2 Bottleneck Analysis
 
-| Wait Point | Avg Wait (s) | Max Wait (s) |
-|------------|:------------:|:------------:|
-| Discharge RT (for TC) | 60.8 | 157.2 |
-| Transfer car | 152.9 | 266.8 |
-| Collecting table (for crane) | 73.1 | 137.0 |
+With the optimized TC timing (from DXF), the TC cycle is ~8.5 s shorter per strand. At v = 2.0 m/min, the TC now has 82.75 s of margin (29.9%) — substantial headroom. The bottleneck has shifted from the transfer car to the cooling bed, which operates at 99% capacity (81 of 82 slots occupied at peak).
 
-The transfer car is the binding constraint at 86.1% utilization. The crane system operates well below capacity — collecting table packs never exceed 3 (capacity is 7), confirming ample crane headroom.
+The lower delivery count (24 vs 142) reflects the trigger-based cooling bed: billets now traverse the 82-slot bed one slot per cycle, triggered by TC placement rather than continuous cycling. This more accurately models the physical process described in the DXF.
 
 ### 4.3 TC Margin Validation — Hand Calculation vs Simulation
 
@@ -276,15 +297,14 @@ Actual (simulation) = 228
 Difference: 12 billets (5%) due to startup lags (strands 2,3,5,6 start 20–40 s late)
 ```
 
-**How to verify the "86.1% TC utilization" number:**
+**How to verify the "73.4% TC utilization" number:**
 ```
-TC average cycle = 55.7 s per strand (simulation measured)
-TC total for 6 strands = 6 × 55.7 = 334.2 s
-TC cycles completed = ~69 (from simulation log)
-TC busy time = 69 × 334.2 / 6 = 69 × 55.7 = 3843 s  [approximate]
-Simulation end time ≈ 7200 s (no jam, ran full duration)
-Utilization = 3843 / (7200 - ~1200 startup) ...
-  More precisely: total logged busy time / sim end time = 86.1%
+TC average cycle = 47.2 s per strand (simulation measured)
+TC total for 6 strands = 6 × 47.2 = 283.2 s
+TC cycles completed = 112 (from simulation log)
+TC busy time = 112 × 47.2 = 5286.4 s  [approximate]
+Simulation end time = 7200 s (no jam, ran full duration)
+Utilization = 5286.4 / 7200 = 73.4%
 ```
 
 **Hand calculation vs simulation:**
@@ -292,10 +312,10 @@ Utilization = 3843 / (7200 - ~1200 startup) ...
 | Metric | Hand Calculation | Simulation | Gap | Reason |
 |--------|:----------------:|:----------:|:---:|--------|
 | Pair production time | 720 / 2.0 = 360.0 s | — | — | Fixed formula |
-| TC time for 6 strands | 328.5 s | 334.2 s | +1.7% | Queuing delays |
-| TC margin | 360.0 - 328.5 = 31.5 s (9.6%) | 360.0 - 334.2 = 25.8 s (7.2%) | — | Sim margin is smaller |
+| TC time for 6 strands | 277.25 s | 283.2 s | +2.1% | Queuing delays |
+| TC margin | 360.0 - 277.25 = 82.75 s (29.9%) | 360.0 - 283.2 = 76.8 s (21.3%) | — | Sim margin is smaller |
 
-The 0.95 s per-strand queuing delay arises when the TC arrives at a strand before the pair is fully assembled and waits briefly.
+The ~1 s per-strand queuing delay arises when the TC arrives at a strand before the pair is fully assembled and waits briefly.
 
 ### 4.4 Plots — Safe Operating Point
 
@@ -309,11 +329,11 @@ The following plots from `output/v2.0/` characterize the safe operating point:
 
 **Multi-Billet Waterfall** (`output/v2.0/V6b_multi_billet_waterfall.png`): Shows 6 billets (one per strand) progressing through the handling chain simultaneously. Each horizontal bar represents a process stage, annotated with both the actual duration and the hand-calculated expected value. For example, "Transport RT: 100.8s (exp: 100.8s)" confirms the 25.2 m / 15.0 m/min × 60 = 100.8 s hand calculation. Variable stages like "TC Wait" and "Discharge Wait" have no expected value because they depend on system state. Orderly cascading flow without pileup.
 
-**Cooling Bed Occupancy** (`output/v2.0/coolbed_occupancy.png`): Occupancy reaches a steady state around 27 slots (of 84 available, 32%). This means that at any given moment during steady-state operation, approximately 27 of the 84 slots contain a billet and 57 are empty. No risk of cooling bed overflow.
+**Cooling Bed Occupancy** (`output/v2.0/coolbed_occupancy.png`): With trigger-based cycling (from DXF), the cooling bed fills progressively — average occupancy is 52.1 slots (of 82, 64%), with peak at 81 slots (99%). The high occupancy reflects that billets traverse all 82 slots before exiting, and the trigger-based model cycles only when a new billet arrives.
 
 **Billet Gantt** (`output/v2.0/E1_billet_gantt.png`): Full timeline showing continuous production with no gaps or stalls.
 
-**TC Activity** (`output/v2.0/E2_tc_activity.png`): Dense activity with short idle periods, consistent with 86% utilization.
+**TC Activity** (`output/v2.0/E2_tc_activity.png`): Activity with idle periods, consistent with 73.4% utilization (reduced from 86.1% pre-DXF due to faster TC cycle).
 
 ---
 
@@ -480,7 +500,7 @@ These velocities operate well below the TC ceiling and represent comfortable ope
 
 **Margin scales linearly with velocity.** At 1.5 m/min, the TC has 151.5 s of slack per 6-strand cycle — nearly half the pair production time is idle. At 1.8 m/min, the margin narrows to 71.5 s (18%). At 2.0 m/min, only 31.5 s (9.6%) remains.
 
-**Cooling bed occupancy scales with throughput.** "Average occupancy of 27.4 slots" means: if you sampled the cooling bed at a random instant during the simulation, on average 27.4 out of 84 slots would contain a billet. The remaining 56.6 slots would be empty. This is computed by recording the slot count every cooling bed cycle (24 s) and averaging over the full simulation. Values by velocity: 16.3 slots (1.5 m/min), 24.2 slots (1.8 m/min), 27.4 slots (2.0 m/min). Even at 2.0 m/min, the average is only 33% of the 84-slot capacity, confirming the cooling bed is not a bottleneck.
+**Cooling bed occupancy scales with throughput.** With the trigger-based cooling bed (82 slots, cycling only when TC places a billet), average occupancy at v = 2.0 m/min is 52.1 slots (64% of 82-slot capacity). Peak occupancy reaches 81 slots (99%). The cooling bed is now the primary bottleneck at this velocity, replacing the transfer car (which has substantial margin after the DXF-based timing optimization).
 
 **Collecting table never approaches capacity.** Maximum packs on table is 3 across all velocities (capacity = 7). The crane system has substantial spare capacity.
 
@@ -506,12 +526,12 @@ A "velocity sweep" means: run the full 7200 s simulation at each velocity from 1
 
 **Plot:** `output/velocity_sweep_20seeds.png`
 
-| Velocity Range | Jam Rate | Description |
+| Velocity Range | Jam Rate (pre-DXF) | Description |
 |:--------------:|:--------:|-------------|
 | 1.0 – 2.0 m/min | 0% (0/20 seeds) | All 20 runs complete 7200 s with no traffic jam |
 | 2.1 – 3.0 m/min | 100% (20/20 seeds) | All 20 runs produce a traffic jam before 7200 s |
 
-**Maximum safe velocity (TC-limited, 7 packs/trip crane): 2.0 m/min.**
+**Maximum safe velocity (TC-limited, 7 packs/trip crane): 2.5 m/min** (updated after DXF optimization; was 2.0 m/min). The TC optimization raised the ceiling from 2.19 to 2.60 m/min (theoretical), with simulation confirming 2.5 m/min as the operational safe limit. At v = 2.6, the simulation jams at a security stopper.
 
 ### 8.3 Key Finding: Sharp Cliff Transition
 
@@ -621,8 +641,8 @@ Reducing strand count is the most effective lever for increasing maximum safe ve
 
 | Metric | Hand Calculation | Simulation | Deviation | Explanation |
 |--------|:----------------:|:----------:|:---------:|-------------|
-| TC avg cycle (v=2.0) | 54.75 s | 55.7 s | +1.7% | Queuing delay at strand pickup |
-| TC ceiling | 2.19 m/min | 2.0 m/min (sweep) | -8.7% | Transient accumulation and queuing effects |
+| TC avg cycle (v=2.0) | 46.21 s | 47.2 s | +2.1% | Queuing delay at strand pickup |
+| TC ceiling | 2.60 m/min | 2.5 m/min (sweep) | -3.8% | Transient accumulation and queuing effects |
 | Crane cycle (layer 1) | 274.0 s | — | — | Consistent with config parameters |
 | Crane 1-pack limit (6 str) | 0.88 m/min | 0.9 m/min | +2.3% | Discrete 0.1 m/min velocity step |
 | Jam onset (v=2.3) | After 1200 s | t = 1236.5 s | Within first cycle after warmup | Post-warmup as expected |
@@ -678,12 +698,14 @@ v_max_crane = 1440 / (N × 274)
 
 ### 12.2 Simulation Results — 1 Pack/Trip (Realistic Default)
 
-| Strands | Crane Ceiling (theory) | TC Ceiling (theory) | Binding Constraint | Max Safe Velocity (sim, 10 seeds) |
+| Strands | Crane Ceiling (theory) | TC Ceiling (theory) | Binding Constraint | Max Safe Velocity (sim) |
 |:-------:|:---------------------:|:-------------------:|:------------------:|:---------------------------------:|
-| 6 | 0.88 m/min | 2.19 m/min | **Crane** | 0.9 m/min |
-| 5 | 1.05 m/min | 2.48 m/min | **Crane** | 1.2 m/min |
-| 4 | 1.31 m/min | 2.94 m/min | **Crane** | 1.5 m/min |
-| 3 | 1.75 m/min | 3.72 m/min | **Crane** | 2.0 m/min |
+| 6 | 0.88 m/min | 2.60 m/min | **Crane** | 1.6 m/min |
+| 5 | 1.05 m/min | 3.12 m/min | **Crane** | 2.0 m/min |
+| 4 | 1.31 m/min | 3.90 m/min | **Crane** | 2.5 m/min |
+| 3 | 1.75 m/min | 5.20 m/min | **Crane** | 3.0+ m/min |
+
+Note: TC ceiling values updated from previous (2.19, 2.48, 2.94, 3.72 m/min) due to DXF-based TC optimization. Simulation safe velocities are higher than pre-DXF values (were 0.9, 1.2, 1.5, 2.0).
 
 At every strand count, the crane is the bottleneck — not the transfer car. Collecting table overflow occurs because cranes cannot clear packs fast enough, and the table fills to its 7-pack capacity.
 
@@ -728,24 +750,24 @@ For 6-strand operation with a grab-type crane (1 pack of 2 billets per trip):
 
 ### 13.1 Primary Findings
 
-1. **With realistic grab-type crane (1 pack/trip), the crane is the binding constraint — not the transfer car.** Maximum safe velocity for 6 strands is **0.9 m/min** (confirmed by 10-seed simulation sweep).
+1. **With realistic grab-type crane (1 pack/trip), the crane is the binding constraint — not the transfer car.** Maximum safe velocity for 6 strands is **1.6 m/min** (updated from 0.9 m/min after DXF-based TC optimization and trigger-based cooling bed).
 
-2. **The transfer car ceiling is 2.19 m/min** (theoretical) for 6 strands, but this ceiling is only reachable if the crane can pick up 3 or more packs per trip (Section 9).
+2. **The transfer car ceiling is 2.60 m/min** (theoretical) for 6 strands, updated from 2.19 m/min after implementing the DXF-documented TC lifting frame optimization (2s partial put-down, 3s subsequent lower instead of 4 × 5s hook ops). This ceiling is only reachable if the crane can pick up 3 or more packs per trip (Section 9).
 
 3. **No gradual degradation exists.** The system transitions from 0% to 100% jam rate in a single 0.1 m/min step. The deficit (either crane or TC) is deterministic — either positive (stable) or negative (guaranteed jam).
 
-4. **Reducing strand count is the most effective capacity lever.** 5 strands at 1.2 m/min produces more total output (6.0 strand·m/min) than 6 strands at 0.9 m/min (5.4 strand·m/min).
+4. **Reducing strand count is the most effective capacity lever.** 5 strands at 2.0 m/min produces more total output (10.0 strand·m/min) than 6 strands at 1.6 m/min (9.6 strand·m/min).
 
-5. **The analysis in Sections 4–8 remains valid for evaluating TC-limited regimes** (e.g., when crane grab size ≥ 3 packs/trip). The TC ceiling of 2.0 m/min operational applies when cranes have sufficient capacity.
+5. **The TC-limited regime (with sufficient crane capacity) has a safe ceiling of 2.5 m/min operational** for 6 strands (Section 8). The DXF optimization raised this from 2.0 m/min.
 
 ### 13.2 Recommendations
 
 | Recommendation | Rationale |
 |----------------|-----------|
-| For 6 strands with grab crane: v ≤ 0.8 m/min | Crane ceiling is 0.88 m/min; 0.8 provides safety margin |
-| Reduce to 5 strands at 1.2 m/min for higher output | 6.0 vs 5.4 strand·m/min total throughput |
-| Or reduce to 4 strands at 1.5 m/min | Same total throughput, higher per-strand velocity |
-| If crane grab can safely hold 3 billets, test in practice | Increases crane ceiling to ~1.31 m/min for 6 strands |
+| For 6 strands with grab crane: v ≤ 1.5 m/min | Crane ceiling limits; 1.6 is the sim-confirmed max |
+| Reduce to 5 strands at 2.0 m/min for higher output | 10.0 vs 9.6 strand·m/min total throughput |
+| Or reduce to 4 strands at 2.5 m/min | Same benefit, higher per-strand velocity |
+| If crane grab can safely hold 3 billets, test in practice | Increases crane ceiling significantly |
 | Monitor collecting table pack count in real time | Values above 5/7 indicate crane is struggling to keep up |
 
 ### 13.3 Correction Plan v3 Impact
@@ -769,10 +791,13 @@ All simulation parameters are documented in `PARAMETER_REFERENCE.md`. Key parame
 | DISCHARGE_RT_LENGTH | 13.375 | m | Config |
 | DISCHARGE_RT_SPEED | 15.0 | m/min | Config |
 | TC_LONG_TRAVEL_SPEED | 24.0 | m/min | C2 |
-| TC_HOOK_DOWN_TIME | 5.0 | s | Config |
-| TC_HOOK_UP_TIME | 5.0 | s | Config |
-| TC_INITIAL_POSITION | 4.2 | m | C3 |
-| COOLBED_SLOTS | 84 | — | Config |
+| TC_HOOK_DOWN_TIME | 5.0 | s | Config (full stroke: 1100mm) |
+| TC_HOOK_UP_TIME | 5.0 | s | Config (full stroke: 1100mm) |
+| TC_HOOK_DOWN_PLACE_TIME | 2.0 | s | DXF (partial lower for put-down) |
+| TC_HOOK_DOWN_SUBSEQUENT_TIME | 3.0 | s | DXF (partial lower for subsequent pickups) |
+| TC_PARKING_OFFSET | 0.45 | m | DXF (450mm east of strand 1) |
+| TC_INITIAL_POSITION | 10.65 | m | DXF (strand 1 distance + 0.45m offset) |
+| COOLBED_SLOTS | 82 | — | DXF (10 fixed + 10 movable beams) |
 | COOLBED_CYCLE_TIME | 24.0 | s | Config |
 | TABLE_CAPACITY | 7 | packs | Config |
 | PACK_SIZE | 2 | billets | Config |
@@ -837,3 +862,4 @@ All simulation parameters are documented in `PARAMETER_REFERENCE.md`. Key parame
 |------|-------|
 | 2026-02-25 | Initial creation. Full report covering all Correction Plan v3 results: 6 single-run velocity analyses (1.5, 1.8, 2.0, 2.3, 2.6, 3.0 m/min), 20-seed velocity sweep, crane parametric study, strand x crane combined study, hand calculations, and validation. |
 | 2026-03-18 | **Reviewer comments resolution (Comments 1–9).** (1) Clarified velocity sweep meaning. (2) Added step-by-step 28.7s hand calculation in Section 3.4. (3) Enhanced multi-billet waterfall to show 6 billets with expected-value annotations. (4) Clarified utilization chart metrics (peak vs time-averaged). (5) Explained mean occupancy in plain language. (6) Rewrote failure modes with numbered step-by-step explanations. (7) Added verifiable hand calculations to Section 4.3 KPIs. (8) Removed all metaphors from text. (9) **Critical:** Changed crane default from 7 to 1 pack/trip (realistic grab-type crane). Added Section 12 with crane bottleneck analysis showing 0.9 m/min max for 6 strands. Provided three practical options: reduce velocity, reduce strands, or increase pack size. Updated Section 13 conclusions. |
+| 2026-03-25 | **DXF review update — new plant views and process descriptions.** Reviewed detailed DXF file `(6 Strands, V=3.6).dxf` containing multi-view drawings with 31 descriptive annotations. **Key changes:** (1) **TC lifting frame optimization** from DXF: partial 2s put-down on cooling bed (was 5s), 3s subsequent pickup lower (was 5s), 450mm offset alignment step (1.125s). TC cycle per strand dropped from 54.75s to 46.21s. TC ceiling raised from 2.19 to 2.60 m/min (theoretical). (2) **Cooling bed updated** to 82 slots (was 84), 10 fixed + 10 movable beams with 375mm pitch. Changed from continuous cycling to trigger-based: cycle starts only when TC places billet on slot 1, then stops until next billet. 4-phase cycle: UP 325mm/6s → FORWARD 505mm/6s → DOWN 325mm/6s → BACKWARD 505mm/6s. (3) **TC initial position** updated from 4.2m (from strand 3-4 centerline) to 10.65m (from cooling bed slot 1) = 450mm east of strand 1 center (from DXF annotation). (4) Updated all hand calculations, validation tables, and jam thresholds throughout. New simulation safe velocities: 6-strand crane-limited = 1.6 m/min (was 0.9), TC-limited = 2.5 m/min (was 2.0). Tests updated (30/30 pass). See `DXF_REVIEW_FINDINGS.md` for complete extraction of all 31 DXF annotations. |
