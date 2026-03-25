@@ -11,7 +11,16 @@ Coordinate system (user's physical measurements from drawing):
   Z = 0      : roller table surface (side view)
 """
 
-from config import STRAND_PITCH, NUM_STRANDS, STRAND_TO_COOLBED
+from config import (
+    STRAND_PITCH, NUM_STRANDS, STRAND_TO_COOLBED,
+    TC_INITIAL_POSITION as _TC_INIT_POS,
+    TC_PARKING_OFFSET, TC_HYDRAULIC_FULL_STROKE,
+    TC_HOOK_DOWN_TIME, TC_HOOK_DOWN_PLACE_TIME, TC_HOOK_DOWN_SUBSEQUENT_TIME,
+    TC_HOOK_UP_TIME, TC_LONG_TRAVEL_SPEED as _TC_SPEED,
+    COOLBED_SLOTS, COOLBED_SLOT_PITCH, COOLBED_PHASE_TIME,
+    COOLBED_VERTICAL_TRAVEL, COOLBED_HORIZONTAL_TRAVEL,
+    COOLBED_CYCLE_TIME as _CB_CYCLE,
+)
 
 # ---------------------------------------------------------------------------
 # Layout parameters — user's physical measurements
@@ -38,22 +47,29 @@ X_COOLBED_START = X_FIXED_STOPPER + 2.0   # visual offset past fixed stopper
 X_TC_RAIL = X_FIXED_STOPPER + 1.0  # just past the discharge area
 
 # ---------------------------------------------------------------------------
-# TC C-hook parameters (user's mechanism)
+# TC C-hook parameters (from DXF and config)
 # ---------------------------------------------------------------------------
-TC_CYLINDER_SPEED = 0.22       # m/s
-TC_CYLINDER_STROKE = 1.1       # m (full travel)
-TC_PICKUP_TIME = 5.0           # s (retract 1.1 m — lift billet)
-TC_PLACE_TIME = 2.0            # s (extend 0.44 m — lower to rack)
-TC_RESET_TIME = 3.0            # s (extend 0.66 m — go under next billet)
+TC_CYLINDER_SPEED = TC_HYDRAULIC_FULL_STROKE / TC_HOOK_DOWN_TIME   # m/s (1.1/5 = 0.22)
+TC_CYLINDER_STROKE = TC_HYDRAULIC_FULL_STROKE                       # m (1100mm full travel)
+TC_PICKUP_TIME = TC_HOOK_DOWN_TIME          # s (retract full stroke — lift billet)
+TC_PLACE_TIME = TC_HOOK_DOWN_PLACE_TIME     # s (extend partial — lower to rack)
+TC_RESET_TIME = TC_HOOK_DOWN_SUBSEQUENT_TIME  # s (extend remaining — go under next billet)
+TC_ALIGN_TIME = TC_PARKING_OFFSET / _TC_SPEED * 60.0  # s (450mm alignment at 24 m/min = 1.125s)
 TC_TOTAL_HOOK_TIME = TC_PICKUP_TIME + TC_PLACE_TIME + TC_RESET_TIME  # 10 s
+TC_PLACE_EXTEND = TC_CYLINDER_SPEED * TC_PLACE_TIME    # m (~0.44) partial lower distance
+TC_RESET_EXTEND = TC_CYLINDER_STROKE - TC_PLACE_EXTEND  # m (~0.66) remaining lower distance
 
-TC_LONG_TRAVEL_SPEED = 24.0    # m/min
-TC_INITIAL_POSITION = 4.2      # m from cooling bed slot 1
+TC_LONG_TRAVEL_SPEED = _TC_SPEED              # m/min (24.0)
+TC_INITIAL_POSITION = _TC_INIT_POS            # m from cooling bed slot 1 (10.65)
 
 # ---------------------------------------------------------------------------
-# Cooling bed
+# Cooling bed (from DXF: 10 fixed + 10 movable beams)
 # ---------------------------------------------------------------------------
-COOLBED_CYCLE_TIME = 24.0      # s (4 phases x 6 s)
+COOLBED_CYCLE_TIME = _CB_CYCLE              # s (4 phases x 6 s = 24)
+COOLBED_PHASE_TIME_VIZ = COOLBED_PHASE_TIME  # s per phase (6.0)
+COOLBED_VERT_TRAVEL = COOLBED_VERTICAL_TRAVEL    # m (0.325)
+COOLBED_HORIZ_TRAVEL = COOLBED_HORIZONTAL_TRAVEL  # m (0.505 for 130mm)
+COOLBED_NUM_SLOTS = COOLBED_SLOTS                  # 82
 
 # ---------------------------------------------------------------------------
 # Strand Y-positions

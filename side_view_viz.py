@@ -32,6 +32,7 @@ from viz_common import (
     ROLLER_COLOR, COOLBED_COLOR,
     TC_CYLINDER_STROKE, TC_CYLINDER_SPEED,
     TC_PICKUP_TIME, TC_PLACE_TIME, TC_RESET_TIME,
+    TC_PLACE_EXTEND, TC_RESET_EXTEND,
     X_TC_RAIL,
 )
 from config import NUM_STRANDS
@@ -66,29 +67,35 @@ def _tc_hook_z(state: MachineState, strand_id: int,
         if t < ev.t_start or t > ev.t_ready:
             continue
 
-        # Phases of hook:
-        # t_arrive_strand → t_pickup: retracting (lifting billet)
-        if ev.t_arrive_strand <= t < ev.t_pickup:
-            frac = (t - ev.t_arrive_strand) / TC_PICKUP_TIME
+        # Phase 1: t_arrive_strand → t_hook_down: extending (lowering frame)
+        if ev.t_arrive_strand <= t < ev.t_hook_down:
+            hook_down_dur = ev.t_hook_down - ev.t_arrive_strand
+            frac = (t - ev.t_arrive_strand) / max(hook_down_dur, 0.01)
+            # First pickup: full stroke down. Subsequent: partial (from place extend)
+            if ev.is_first:
+                return Z_TC_HOOK_UP - frac * TC_CYLINDER_STROKE
+            else:
+                # Already partially lowered by TC_PLACE_EXTEND from last put-down
+                z_start = Z_TC_HOOK_UP - TC_PLACE_EXTEND
+                return z_start - frac * TC_RESET_EXTEND
+
+        # Phase 2: t_hook_down → t_aligned: aligning (frame stays down, TC moves 450mm)
+        if ev.t_hook_down <= t < ev.t_aligned:
+            return Z_TC_HOOK_DOWN
+
+        # Phase 3: t_aligned → t_pickup: retracting (lifting billet)
+        if ev.t_aligned <= t < ev.t_pickup:
+            frac = (t - ev.t_aligned) / TC_PICKUP_TIME
             return Z_TC_HOOK_DOWN + frac * TC_CYLINDER_STROKE
 
-        # t_pickup → t_arrive_cb: carrying (fully up)
+        # Phase 4: t_pickup → t_arrive_cb: carrying (fully up)
         if ev.t_pickup <= t < ev.t_arrive_cb:
             return Z_TC_HOOK_UP
 
-        # t_arrive_cb → t_place: extending (lowering billet)
+        # Phase 5: t_arrive_cb → t_place: extending (partial lower to place billet)
         if ev.t_arrive_cb <= t < ev.t_place:
             frac = (t - ev.t_arrive_cb) / TC_PLACE_TIME
-            # Only extends 0.44m for placement
-            extend = 0.44
-            return Z_TC_HOOK_UP - frac * extend
-
-        # t_place → t_ready: further extending (going under next billet)
-        if ev.t_place <= t <= ev.t_ready:
-            frac = (t - ev.t_place) / TC_RESET_TIME
-            z_after_place = Z_TC_HOOK_UP - 0.44
-            remain = TC_CYLINDER_STROKE - 0.44  # 0.66m
-            return z_after_place - frac * remain
+            return Z_TC_HOOK_UP - frac * TC_PLACE_EXTEND
 
     return Z_TC_HOOK_DOWN
 

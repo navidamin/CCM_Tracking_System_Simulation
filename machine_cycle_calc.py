@@ -20,11 +20,15 @@ from dataclasses import dataclass, field
 from viz_common import (
     X_SECURITY_STOPPER, X_INTERMEDIATE_STOPPER, X_FIXED_STOPPER,
     BILLET_LENGTH, ROLLER_SPEED_MPS, STRAND_PITCH,
-    TC_PICKUP_TIME, TC_PLACE_TIME, TC_RESET_TIME,
+    TC_PICKUP_TIME, TC_PLACE_TIME, TC_RESET_TIME, TC_ALIGN_TIME,
     TC_LONG_TRAVEL_SPEED, TC_INITIAL_POSITION,
     COOLBED_CYCLE_TIME, strand_y,
 )
-from config import NUM_STRANDS, STRAND_TO_COOLBED, DETERMINISTIC_LAGS
+from config import (
+    NUM_STRANDS, STRAND_TO_COOLBED, DETERMINISTIC_LAGS,
+    TC_PARKING_OFFSET, TC_HOOK_DOWN_TIME, TC_HOOK_DOWN_SUBSEQUENT_TIME,
+    TC_HOOK_UP_TIME,
+)
 
 # ---------------------------------------------------------------------------
 # Data classes
@@ -57,12 +61,15 @@ class BilletTrace:
 class TCEvent:
     """One TC service event."""
     strand_id: int
-    t_start: float              # TC starts traveling to strand
-    t_arrive_strand: float
-    t_pickup: float             # billet lifted
-    t_arrive_cb: float          # TC arrives at cooling bed
-    t_place: float              # billet placed on rack
-    t_ready: float              # TC ready for next (after reset)
+    t_start: float              # TC starts traveling to strand offset position
+    t_arrive_strand: float      # arrived at offset position (450mm from strand)
+    t_hook_down: float = 0.0    # lifting frame lowered (5s first, 3s subsequent)
+    t_aligned: float = 0.0      # aligned with strand center (1.125s)
+    t_pickup: float = 0.0       # billet lifted (hook up 5s complete)
+    t_arrive_cb: float = 0.0    # TC arrives at cooling bed
+    t_place: float = 0.0        # billet placed on rack (2s partial lower)
+    t_ready: float = 0.0        # TC ready for next
+    is_first: bool = False      # first pickup uses full 5s down
 
 
 @dataclass
@@ -259,32 +266,44 @@ class MachineCycleCalculator:
                 t_ready, sid, pair_idx = best
                 t_start = t_ready
 
-            # Travel to strand
+            # Travel to strand offset position (450mm east of strand)
             strand_pos = STRAND_TO_COOLBED[sid]
-            travel_to = abs(tc_pos - strand_pos) / TC_LONG_TRAVEL_SPEED * 60.0
+            offset_pos = strand_pos + TC_PARKING_OFFSET
+            travel_to = abs(tc_pos - offset_pos) / TC_LONG_TRAVEL_SPEED * 60.0
             t_arrive_strand = t_start + travel_to
 
-            # Pickup (lift billet)
-            t_pickup = t_arrive_strand + TC_PICKUP_TIME
+            # Hook down (first: 5s full, subsequent: 3s partial)
+            is_first = (len(self.tc_events) == 0)
+            hook_down_time = TC_HOOK_DOWN_TIME if is_first else TC_HOOK_DOWN_SUBSEQUENT_TIME
+            t_hook_down = t_arrive_strand + hook_down_time
 
-            # Travel to cooling bed (position 0)
+            # Align 450mm to strand center
+            t_aligned = t_hook_down + TC_ALIGN_TIME
+
+            # Hook up (lift billet — always 5s)
+            t_pickup = t_aligned + TC_HOOK_UP_TIME
+
+            # Travel to cooling bed (from strand_pos to 0)
             travel_cb = strand_pos / TC_LONG_TRAVEL_SPEED * 60.0
             t_arrive_cb = t_pickup + travel_cb
 
-            # Place (lower to rack)
+            # Place (partial lower 2s)
             t_place = t_arrive_cb + TC_PLACE_TIME
 
-            # Reset (go under next billet)
-            t_ready_next = t_place + TC_RESET_TIME
+            # TC departs immediately (no hook up, no reset — partial lower state)
+            t_ready_next = t_place
 
             self.tc_events.append(TCEvent(
                 strand_id=sid,
                 t_start=t_start,
                 t_arrive_strand=t_arrive_strand,
+                t_hook_down=t_hook_down,
+                t_aligned=t_aligned,
                 t_pickup=t_pickup,
                 t_arrive_cb=t_arrive_cb,
                 t_place=t_place,
                 t_ready=t_ready_next,
+                is_first=is_first,
             ))
 
             # Update billet traces
@@ -502,13 +521,24 @@ class MachineCycleCalculator:
                 # Before this event — TC is idle at previous position
                 break
             if t < ev.t_arrive_strand:
-                # Traveling to strand
+                # Traveling to strand offset position
                 prev_pos = self._tc_pos_before(ev)
-                strand_pos = STRAND_TO_COOLBED[ev.strand_id]
+                offset_pos = STRAND_TO_COOLBED[ev.strand_id] + TC_PARKING_OFFSET
                 frac = (t - ev.t_start) / max(ev.t_arrive_strand - ev.t_start, 0.01)
-                y = prev_pos + frac * (strand_pos - prev_pos)
+                y = prev_pos + frac * (offset_pos - prev_pos)
                 return (y, 'travel_to_strand')
+            if t < ev.t_hook_down:
+                # Lowering lifting frame at offset position
+                return (STRAND_TO_COOLBED[ev.strand_id] + TC_PARKING_OFFSET, 'hook_down')
+            if t < ev.t_aligned:
+                # Aligning 450mm to strand center (with frame down)
+                offset_pos = STRAND_TO_COOLBED[ev.strand_id] + TC_PARKING_OFFSET
+                strand_pos = STRAND_TO_COOLBED[ev.strand_id]
+                frac = (t - ev.t_hook_down) / max(ev.t_aligned - ev.t_hook_down, 0.01)
+                y = offset_pos + frac * (strand_pos - offset_pos)
+                return (y, 'aligning')
             if t < ev.t_pickup:
+                # Lifting billet (hook up)
                 return (STRAND_TO_COOLBED[ev.strand_id], 'picking_up')
             if t < ev.t_arrive_cb:
                 strand_pos = STRAND_TO_COOLBED[ev.strand_id]
@@ -518,7 +548,7 @@ class MachineCycleCalculator:
             if t < ev.t_place:
                 return (0.0, 'placing')
             if t < ev.t_ready:
-                return (0.0, 'resetting')
+                return (0.0, 'idle')
 
         # After all events — TC at cooling bed
         if self.tc_events:
@@ -529,7 +559,7 @@ class MachineCycleCalculator:
         """TC position just before a given event."""
         idx = self.tc_events.index(ev)
         if idx == 0:
-            return TC_INITIAL_POSITION
+            return TC_INITIAL_POSITION  # 10.65m (parking position)
         return 0.0  # after previous placement, TC is at CB
 
     def _tc_y_at(self, t: float) -> float:

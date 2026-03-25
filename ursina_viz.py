@@ -48,6 +48,7 @@ from viz_common import (
     ROLLER_COLOR, COOLBED_COLOR,
     strand_y, X_TC_RAIL, X_COOLBED_START,
     TC_CYLINDER_STROKE, TC_PICKUP_TIME, TC_PLACE_TIME, TC_RESET_TIME,
+    TC_PLACE_EXTEND, TC_RESET_EXTEND,
 )
 from config import NUM_STRANDS, STRAND_TO_COOLBED
 
@@ -109,21 +110,29 @@ def _hook_height(calc, t, tc_phase):
     for ev in calc.tc_events:
         if t < ev.t_start or t > ev.t_ready:
             continue
-        # Pickup: retracting cylinder (lifting billet)
-        if ev.t_arrive_strand <= t < ev.t_pickup:
-            frac = (t - ev.t_arrive_strand) / TC_PICKUP_TIME
+        # Phase 1: Hook down (lowering frame at offset position)
+        if ev.t_arrive_strand <= t < ev.t_hook_down:
+            hook_down_dur = ev.t_hook_down - ev.t_arrive_strand
+            frac = (t - ev.t_arrive_strand) / max(hook_down_dur, 0.01)
+            if ev.is_first:
+                return Z_HOOK_UP - frac * TC_CYLINDER_STROKE
+            else:
+                z_start = Z_HOOK_UP - TC_PLACE_EXTEND
+                return z_start - frac * TC_RESET_EXTEND
+        # Phase 2: Aligning (frame stays down, TC moves 450mm)
+        if ev.t_hook_down <= t < ev.t_aligned:
+            return Z_HOOK_DOWN
+        # Phase 3: Pickup - retracting cylinder (lifting billet)
+        if ev.t_aligned <= t < ev.t_pickup:
+            frac = (t - ev.t_aligned) / TC_PICKUP_TIME
             return Z_HOOK_DOWN + frac * TC_CYLINDER_STROKE
-        # Carrying: fully retracted (up)
+        # Phase 4: Carrying (fully retracted/up)
         if ev.t_pickup <= t < ev.t_arrive_cb:
             return Z_HOOK_UP
-        # Placing: extending 0.44 m (lowering billet to rack)
+        # Phase 5: Placing - partial extend (lowering billet to rack)
         if ev.t_arrive_cb <= t < ev.t_place:
             frac = (t - ev.t_arrive_cb) / TC_PLACE_TIME
-            return Z_HOOK_UP - frac * 0.44
-        # Reset: extending remaining 0.66 m (going under next billet)
-        if ev.t_place <= t <= ev.t_ready:
-            frac = (t - ev.t_place) / TC_RESET_TIME
-            return Z_HOOK_UP - 0.44 - frac * 0.66
+            return Z_HOOK_UP - frac * TC_PLACE_EXTEND
 
     return Z_HOOK_DOWN
 
