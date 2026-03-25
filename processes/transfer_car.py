@@ -15,7 +15,8 @@ import simpy
 from config import (
     NUM_STRANDS, STRAND_TO_COOLBED,
     TC_LONG_TRAVEL_SPEED, TC_HOOK_DOWN_TIME, TC_HOOK_UP_TIME,
-    TC_INITIAL_POSITION,
+    TC_HOOK_DOWN_PLACE_TIME, TC_HOOK_DOWN_SUBSEQUENT_TIME,
+    TC_INITIAL_POSITION, TC_PARKING_OFFSET,
 )
 
 
@@ -87,6 +88,7 @@ def transfer_car_process(env: simpy.Environment, shared: dict):
 
     car_position = TC_INITIAL_POSITION  # Start at configured initial position (C3)
     slot1_access = shared['slot1_access']  # simpy.Resource(capacity=1)
+    is_first_pickup = True  # First pickup uses full 5s down; subsequent use 3s
 
     while True:
         # Wait for any strand to have billets ready
@@ -114,22 +116,32 @@ def transfer_car_process(env: simpy.Environment, shared: dict):
             if strand_id is None:
                 continue
 
-        # --- Travel to selected strand ---
+        # --- Travel to strand offset position (450mm east of strand) ---
         strand_pos = _strand_position(strand_id)
-        travel_dist = abs(car_position - strand_pos)
+        # TC stops at parking offset east of strand, then travels offset to center
+        offset_pos = strand_pos + TC_PARKING_OFFSET
+        travel_dist = abs(car_position - offset_pos)
         travel = _travel_time(travel_dist)
 
-        t_start = env.now
         shared['result'].transfer_car_log.append(
             (env.now, 'travel_to_strand', strand_id, travel))
         if travel > 0:
             yield env.timeout(travel)
-        car_position = strand_pos
+        car_position = offset_pos
 
-        # --- Hook down & pick up ---
+        # --- Hook down (before final alignment) ---
+        # First pickup: full 5s down. Subsequent: 3s (partial, since put-down only used 2s)
+        hook_down_time = TC_HOOK_DOWN_TIME if is_first_pickup else TC_HOOK_DOWN_SUBSEQUENT_TIME
         shared['result'].transfer_car_log.append(
-            (env.now, 'hook_down_pickup', strand_id, TC_HOOK_DOWN_TIME))
-        yield env.timeout(TC_HOOK_DOWN_TIME)
+            (env.now, 'hook_down_pickup', strand_id, hook_down_time))
+        yield env.timeout(hook_down_time)
+
+        # --- Travel 450mm to align with strand center ---
+        align_travel = _travel_time(TC_PARKING_OFFSET)
+        shared['result'].transfer_car_log.append(
+            (env.now, 'align_to_strand', strand_id, align_travel))
+        yield env.timeout(align_travel)
+        car_position = strand_pos
 
         # Grab billets from strand queue
         billets_picked = list(shared['strand_queue'][strand_id])
@@ -145,7 +157,7 @@ def transfer_car_process(env: simpy.Environment, shared: dict):
         if not shared['strand_picked_up'][strand_id].triggered:
             shared['strand_picked_up'][strand_id].succeed()
 
-        # --- Hook up ---
+        # --- Hook up (always full 5s) ---
         shared['result'].transfer_car_log.append(
             (env.now, 'hook_up_pickup', strand_id, TC_HOOK_UP_TIME))
         yield env.timeout(TC_HOOK_UP_TIME)
@@ -168,23 +180,23 @@ def transfer_car_process(env: simpy.Environment, shared: dict):
             shared['result'].transfer_car_log.append(
                 (t_interlock_start, 'wait_interlock', strand_id, interlock_wait))
 
-        # --- Hook down & place at slot 1 ---
+        # --- Partial lower to place billets (2s, not full 5s) ---
         shared['result'].transfer_car_log.append(
-            (env.now, 'hook_down_place', strand_id, TC_HOOK_DOWN_TIME))
-        yield env.timeout(TC_HOOK_DOWN_TIME)
+            (env.now, 'hook_down_place', strand_id, TC_HOOK_DOWN_PLACE_TIME))
+        yield env.timeout(TC_HOOK_DOWN_PLACE_TIME)
 
         # Place billets into cooling bed slot 1
         for b in billets_picked:
             b.t_coolbed_entry = env.now
             shared['coolbed_input_queue'].append(b)
 
-        # --- Hook up ---
-        shared['result'].transfer_car_log.append(
-            (env.now, 'hook_up_place', strand_id, TC_HOOK_UP_TIME))
-        yield env.timeout(TC_HOOK_UP_TIME)
+        # Signal cooling bed that a billet has been placed (trigger-based cycling)
+        if not shared['coolbed_trigger'].triggered:
+            shared['coolbed_trigger'].succeed()
 
-        # Release slot 1 access
+        # Release slot 1 access (no hook up needed — TC departs with partial-lowered frame)
         slot1_access.release(req)
+        is_first_pickup = False  # Subsequent pickups use 3s down
 
         shared['result'].transfer_car_log.append(
             (env.now, 'cycle_complete', strand_id, 0))

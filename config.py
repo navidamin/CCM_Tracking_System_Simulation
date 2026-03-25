@@ -31,11 +31,20 @@ TRANSPORT_RT_SECURITY_STOPPER_POS = 25.2  # m (end of transport RT)
 
 # --- Transfer Car ---
 TC_LONG_TRAVEL_SPEED = 24.0   # m/min (C2: was 100.0)
-TC_HOOK_DOWN_TIME = 5.0       # s
-TC_HOOK_UP_TIME = 5.0         # s
-TC_INITIAL_POSITION = 4.2     # m from strand 3-4 centerline (C3)
+TC_HOOK_DOWN_TIME = 5.0       # s (full hydraulic stroke: 1100mm)
+TC_HOOK_UP_TIME = 5.0         # s (full hydraulic stroke: 1100mm)
+TC_HOOK_DOWN_PLACE_TIME = 2.0     # s (partial lower to place billet on cooling bed)
+TC_HOOK_DOWN_SUBSEQUENT_TIME = 3.0  # s (partial lower for pickups after first trip)
+TC_HYDRAULIC_FULL_STROKE = 1.1    # m (1100mm max travel)
+TC_PARKING_OFFSET = 0.45     # m (450mm east of strand 1 center, from DXF)
+TC_INITIAL_POSITION = 10.2 + TC_PARKING_OFFSET  # m from cooling bed slot 1
+# Note: Previous value 4.2m was from strand 3-4 centerline. DXF clarifies:
+# TC parks 450mm east of strand 1 center, which is 10.2m + 0.45m from slot 1.
 
 # Distances from each strand to cooling bed slot 1 (m)
+# From DXF: slot 1 is 7m from RT centerline, strand 1 is 3.25m from RT centerline
+# Formula: 7.0 + (strand_offset_from_RT_center) + billet_size/2
+# But we keep the previously calibrated values for now as they factor in geometry.
 STRAND_TO_COOLBED = {
     1: 10.2,
     2: 8.9,
@@ -49,11 +58,15 @@ STRAND_TO_COOLBED = {
 # Strand i to strand j distance = abs(i - j) * STRAND_PITCH
 
 # --- Cooling Bed ---
-COOLBED_SLOTS = 84
-COOLBED_SLOT_PITCH = 0.375    # m
-COOLBED_PHASE_TIME = 6.0      # s per phase
-COOLBED_CYCLE_TIME = 24.0     # s (4 phases × 6s)
-COOLBED_INTERLOCK_PAUSE = 12.0  # s
+COOLBED_SLOTS = 82                 # total billet positions (from DXF: 82 slots on both fixed and movable beams)
+COOLBED_SLOT_PITCH = 0.375         # m (375mm, both fixed and movable beams)
+COOLBED_VERTICAL_TRAVEL = 0.325    # m (325mm, fixed for all billet sizes)
+COOLBED_HORIZONTAL_TRAVEL = 0.505  # m (505mm for 130mm: slot_pitch + billet_width = 375 + 130)
+COOLBED_PHASE_TIME = 6.0           # s per phase (each of 4 phases)
+COOLBED_CYCLE_TIME = 24.0          # s (4 phases × 6s)
+COOLBED_NUM_FIXED_BEAMS = 10       # from DXF
+COOLBED_NUM_MOVABLE_BEAMS = 10     # from DXF
+COOLBED_TRIGGER_MODE = True        # True = cycle only when billet placed on slot 1 (from DXF)
 
 # --- Collecting Pusher Table ---
 PUSHER_TIME = 6.0             # s

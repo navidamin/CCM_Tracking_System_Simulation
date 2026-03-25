@@ -76,6 +76,7 @@ def run_simulation(velocity: float,
         'coolbed_input_queue': [],
         'coolbed_output_queue': [],
         'coolbed_exit_signal': env.event(),
+        'coolbed_trigger': env.event(),  # trigger-based cycling from DXF
 
         # Collecting table
         'collecting_table_packs': 0,
