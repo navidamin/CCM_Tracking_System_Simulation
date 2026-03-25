@@ -50,7 +50,12 @@ from viz_common import (
     TC_CYLINDER_STROKE, TC_PICKUP_TIME, TC_PLACE_TIME, TC_RESET_TIME,
     TC_PLACE_EXTEND, TC_RESET_EXTEND,
 )
-from config import NUM_STRANDS, STRAND_TO_COOLBED
+from config import (
+    NUM_STRANDS, STRAND_TO_COOLBED,
+    COOLBED_SLOT_PITCH, COOLBED_PHASE_TIME, COOLBED_CYCLE_TIME,
+    COOLBED_VERTICAL_TRAVEL, COOLBED_HORIZONTAL_TRAVEL,
+)
+from viz_common import COOLBED_NUM_SLOTS
 
 
 # ---------------------------------------------------------------------------
@@ -234,11 +239,24 @@ class CCMViewer(Entity):
                position=(X_TC_RAIL, 0.01, rail_z),
                color=_hex(TC_COLOR))
 
-        # Cooling bed area (translucent box)
-        Entity(model='cube',
-               scale=(5, 0.04, strand_y(NUM_STRANDS) + 2),
-               position=(X_COOLBED_START + 2, -0.02, z_center),
-               color=_hex(COOLBED_COLOR, 0.2))
+        # Cooling bed: fixed beam (stationary, gray)
+        cb_len = COOLBED_NUM_SLOTS * COOLBED_SLOT_PITCH
+        self.cb_fixed = Entity(
+            model='cube',
+            scale=(cb_len, 0.03, strand_y(NUM_STRANDS) + 2),
+            position=(X_COOLBED_START + cb_len / 2, -0.015, z_center),
+            color=_hex(COOLBED_COLOR, 0.25))
+
+        # Cooling bed: movable beam (animated, cyan tint)
+        self.cb_movable = Entity(
+            model='cube',
+            scale=(cb_len, 0.025, strand_y(NUM_STRANDS) + 1.5),
+            position=(X_COOLBED_START + cb_len / 2, -0.02, z_center),
+            color=color.Color(0.25, 0.65, 0.85, 0.35))
+
+        # Store base position for animation
+        self._cb_base_x = X_COOLBED_START + cb_len / 2
+        self._cb_base_y = -0.02
 
         # TC body (carriage on the rail)
         self.tc_body = Entity(
@@ -292,6 +310,7 @@ class CCMViewer(Entity):
         self._update_billets(state, hy)
         self._update_stoppers(state)
         self._update_tc(state, hy)
+        self._update_coolbed(state)
         self._update_ui(state)
 
     def _update_billets(self, state, hook_y):
@@ -320,15 +339,17 @@ class CCMViewer(Entity):
                 uz = _tc_to_z(y_pos)
                 uy = hook_y - BILLET_SECTION
             elif phase == 'on_coolbed':
-                # Billet deposited on cooling bed
+                # Billet deposited on cooling bed (rotated 90 degrees)
                 ux = X_COOLBED_START + 1.5
                 uz = strand_y(sid)
                 uy = BILLET_SECTION
+                e.rotation_y = 90  # Billet rotates 90° on cooling bed
             else:
                 # On roller table: x is billet head position, center at x - L/2
                 ux = x - BILLET_LENGTH / 2
                 uz = strand_y(sid)
                 uy = BILLET_SECTION
+                e.rotation_y = 0  # Normal orientation on roller table
 
             e.position = (ux, uy, uz)
 
@@ -381,6 +402,44 @@ class CCMViewer(Entity):
         # Hook bar at hook height
         self.tc_hook.z = tc_z
         self.tc_hook.y = hook_y
+
+    def _update_coolbed(self, state):
+        """Animate the movable beam through 4-phase walking cycle."""
+        if not hasattr(self, 'cb_movable'):
+            return
+
+        # Use tc_events to find coolbed entry times (triggers)
+        if not hasattr(self, '_cb_triggers'):
+            self._cb_triggers = [ev.t_place for ev in self.calc.tc_events]
+
+        offset_x = 0.0
+        offset_y = 0.0
+        for t_start in self._cb_triggers:
+            elapsed = self.t - t_start
+            if elapsed < 0 or elapsed >= COOLBED_CYCLE_TIME:
+                continue
+            phase = int(elapsed / COOLBED_PHASE_TIME)
+            frac = (elapsed % COOLBED_PHASE_TIME) / COOLBED_PHASE_TIME
+            if phase == 0:        # UP
+                offset_y = frac * COOLBED_VERTICAL_TRAVEL
+            elif phase == 1:      # FORWARD
+                offset_y = COOLBED_VERTICAL_TRAVEL
+                offset_x = frac * COOLBED_HORIZONTAL_TRAVEL
+            elif phase == 2:      # DOWN
+                offset_y = COOLBED_VERTICAL_TRAVEL * (1 - frac)
+                offset_x = COOLBED_HORIZONTAL_TRAVEL
+            else:                 # BACKWARD
+                offset_x = COOLBED_HORIZONTAL_TRAVEL * (1 - frac)
+            break
+
+        self.cb_movable.x = self._cb_base_x + offset_x
+        self.cb_movable.y = self._cb_base_y + offset_y
+
+        # Visual feedback: brighter when active
+        if offset_x > 0 or offset_y > 0:
+            self.cb_movable.color = color.Color(0.25, 0.75, 0.95, 0.5)
+        else:
+            self.cb_movable.color = color.Color(0.25, 0.65, 0.85, 0.35)
 
     def _update_ui(self, state):
         """Update HUD and collision text."""

@@ -12,6 +12,8 @@ import {
     X_COOLBED_START, X_COOLBED_END,
     X_TABLE_START, X_TABLE_END,
     X_YARD_START, Z_COOLBED, Z_YARD,
+    COOLBED_PITCH, COOLBED_PHASE_TIME, COOLBED_CYCLE_TIME,
+    COOLBED_VERT_TRAVEL, COOLBED_HORIZ_TRAVEL,
     strandZ,
 } from './equipment.js';
 
@@ -91,6 +93,7 @@ export class AnimationEngine {
 
             mesh.visible = true;
             mesh.position.set(pos.x, pos.y, pos.z);
+            mesh.rotation.y = pos.rotY || 0;
             activeBillets++;
             castCount++;
             if (billet.events.crane_deliver !== null &&
@@ -194,12 +197,12 @@ export class AnimationEngine {
             return { x, y, z };
         }
 
-        // Stage 7: On cooling bed (moving through slots)
+        // Stage 7: On cooling bed (stepping through slots, rotated 90 degrees)
         if (e.coolbed_entry !== null && t < (e.coolbed_exit || Infinity)) {
             const dur = (e.coolbed_exit || e.coolbed_entry + 24) - e.coolbed_entry;
             const frac = Math.min(1, (t - e.coolbed_entry) / dur);
             const x = X_COOLBED_START + frac * (X_COOLBED_END - X_COOLBED_START);
-            return { x, y: 0.35, z: Z_COOLBED };
+            return { x, y: 0.35, z: Z_COOLBED, rotY: Math.PI / 2 };
         }
 
         // Stage 8: Collecting table
@@ -256,5 +259,177 @@ export class AnimationEngine {
             } else break;
         }
         return strandZ(lastStrand, this.numStrands);
+    }
+
+    /**
+     * Get TC hook height (Y) from the transfer car log.
+     * Returns Y position for the hook mesh (0.15 = down at roller level, 1.25 = fully up).
+     */
+    getTCHookHeight(t) {
+        const FULL_STROKE = 1.1;
+        const Y_DOWN = 0.15;
+        const Y_UP = Y_DOWN + FULL_STROKE; // 1.25
+        const PLACE_EXTEND = 0.44; // partial lower for placement
+
+        // Find the active TC log entry and compute hook position
+        let hookY = Y_DOWN; // default: frame down
+        for (let i = 0; i < this.tcLog.length; i++) {
+            const entry = this.tcLog[i];
+            const next = this.tcLog[i + 1];
+            if (entry.t > t) break;
+            const endT = next ? next.t : entry.t + (entry.duration || 0);
+
+            if (t >= entry.t && t < entry.t + (entry.duration || 0.01)) {
+                const frac = Math.min(1, (t - entry.t) / Math.max(entry.duration, 0.01));
+                switch (entry.action) {
+                    case 'hook_down_pickup':
+                        // Lowering: from current to full down
+                        hookY = Y_UP - frac * FULL_STROKE;
+                        break;
+                    case 'align_to_strand':
+                        hookY = Y_DOWN; // stays down during alignment
+                        break;
+                    case 'hook_up_pickup':
+                        // Lifting: from down to up
+                        hookY = Y_DOWN + frac * FULL_STROKE;
+                        break;
+                    case 'travel_to_coolbed':
+                        hookY = Y_UP; // carrying, fully up
+                        break;
+                    case 'hook_down_place':
+                        // Partial lower for placement
+                        hookY = Y_UP - frac * PLACE_EXTEND;
+                        break;
+                    case 'travel_to_strand':
+                        // Traveling with partially lowered frame (after placement)
+                        hookY = Y_UP - PLACE_EXTEND;
+                        break;
+                    default:
+                        // Keep last position
+                        break;
+                }
+                return hookY;
+            }
+        }
+        return hookY;
+    }
+
+    /**
+     * Update stopper states (color + height) based on billet events.
+     * Computes stopper UP/DOWN from billet timestamps client-side.
+     */
+    updateStoppers(simTime, equipment) {
+        if (!equipment || !equipment.stoppers || !this.scenarioData) return;
+        const billets = this.scenarioData.billets;
+
+        // For each strand, determine stopper states
+        for (let s = 1; s <= this.numStrands; s++) {
+            let secUp = false;
+            let intUp = false;
+
+            // Check each billet on this strand
+            for (const b of billets) {
+                if (b.strand !== s) continue;
+                const e = b.events;
+
+                // Intermediate stopper UP when first billet hits fixed stopper + 2s
+                // (discharge_buffer for pair_pos=1 + 2s actuation)
+                if (b.stopper_role === 'first_at_fixed' && e.discharge_buffer != null) {
+                    const tUp = e.discharge_buffer + 2.0;
+                    const tDown = e.transfer_pickup != null ? e.transfer_pickup + 2.0 : Infinity;
+                    if (simTime >= tUp && simTime < tDown) intUp = true;
+                }
+
+                // Security stopper UP when second billet hits intermediate + 2s
+                if (b.stopper_role === 'second_at_intermediate' && e.discharge_buffer != null) {
+                    const tUp = e.discharge_buffer + 2.0;
+                    const tDown = e.transfer_pickup != null ? e.transfer_pickup + 2.0 : Infinity;
+                    if (simTime >= tUp && simTime < tDown) secUp = true;
+                }
+            }
+
+            const ss = equipment.stoppers[s];
+            if (!ss) continue;
+
+            // Security stopper
+            if (ss.security) {
+                ss.security.material.color.setHex(secUp ? 0x33aa33 : 0xdd3333);
+                ss.security.position.y = secUp ? 0.40 : 0.25;
+            }
+            // Intermediate stopper
+            if (ss.intermediate) {
+                ss.intermediate.material.color.setHex(intUp ? 0xddaa00 : 0xdd3333);
+                ss.intermediate.position.y = intUp ? 0.37 : 0.22;
+            }
+        }
+    }
+
+    /**
+     * Update cooling bed movable beam position (4-phase walking cycle).
+     * Computes phase from coolbed_entry timestamps.
+     */
+    updateCoolingBed(simTime, equipment) {
+        if (!equipment || !equipment.movableBeam || !this.scenarioData) return;
+        const billets = this.scenarioData.billets;
+        const beam = equipment.movableBeam;
+
+        // Collect all coolbed entry times (each triggers a 24s cycle)
+        if (!this._cbCycleTimes) {
+            this._cbCycleTimes = [];
+            for (const b of billets) {
+                if (b.events.coolbed_entry != null) {
+                    this._cbCycleTimes.push(b.events.coolbed_entry);
+                }
+            }
+            // Remove near-duplicates (pairs enter at same time)
+            this._cbCycleTimes.sort((a, b) => a - b);
+            const unique = [this._cbCycleTimes[0]];
+            for (let i = 1; i < this._cbCycleTimes.length; i++) {
+                if (this._cbCycleTimes[i] - unique[unique.length - 1] > 1.0) {
+                    unique.push(this._cbCycleTimes[i]);
+                }
+            }
+            this._cbCycleTimes = unique;
+        }
+
+        // Find active cycle
+        let offsetX = 0, offsetY = 0;
+        for (const tStart of this._cbCycleTimes) {
+            const elapsed = simTime - tStart;
+            if (elapsed < 0 || elapsed >= COOLBED_CYCLE_TIME) continue;
+
+            const phase = Math.floor(elapsed / COOLBED_PHASE_TIME);
+            const phaseFrac = (elapsed % COOLBED_PHASE_TIME) / COOLBED_PHASE_TIME;
+
+            if (phase === 0) {       // UP
+                offsetY = phaseFrac * COOLBED_VERT_TRAVEL;
+            } else if (phase === 1) { // FORWARD
+                offsetY = COOLBED_VERT_TRAVEL;
+                offsetX = phaseFrac * COOLBED_HORIZ_TRAVEL;
+            } else if (phase === 2) { // DOWN
+                offsetY = COOLBED_VERT_TRAVEL * (1 - phaseFrac);
+                offsetX = COOLBED_HORIZ_TRAVEL;
+            } else {                  // BACKWARD
+                offsetX = COOLBED_HORIZ_TRAVEL * (1 - phaseFrac);
+            }
+            break; // only one cycle active at a time
+        }
+
+        // Base position (same as fixedBeam but at Y=0.05)
+        const cbLength = 82 * COOLBED_PITCH;
+        beam.position.set(
+            X_COOLBED_START + cbLength / 2 + offsetX,
+            0.05 + offsetY,
+            Z_COOLBED
+        );
+
+        // Color tint by phase
+        if (offsetY > 0 || offsetX > 0) {
+            beam.material.color.setHex(0x44ddff); // active: bright cyan
+            beam.material.opacity = 0.85;
+        } else {
+            beam.material.color.setHex(0x44aadd); // idle: default
+            beam.material.opacity = 0.7;
+        }
     }
 }

@@ -76,6 +76,21 @@ async function init() {
         const stats = engine.update(ui.simTime, equipment);
         ui.updateStats(stats);
 
+        // Update TC hook vertical position
+        if (equipment && equipment.tcHook) {
+            const hookY = engine.getTCHookHeight(ui.simTime);
+            equipment.tcHook.position.y = hookY;
+            // Rod connects frame (Y=1.4) to hook
+            equipment.tcRod.position.y = (1.4 + hookY) / 2;
+            equipment.tcRod.scale.y = (1.4 - hookY) / 1.1;
+        }
+
+        // Update stopper states (color + height)
+        engine.updateStoppers(ui.simTime, equipment);
+
+        // Update cooling bed walking beam
+        engine.updateCoolingBed(ui.simTime, equipment);
+
         // Controls
         controls.update();
 
