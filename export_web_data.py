@@ -69,12 +69,12 @@ def export_scenario(scenario):
                             verbose=False)
     stats = analyze_result(result)
 
-    # Only export post-warmup billets that completed the journey
+    # Export all post-warmup billets that entered the transport RT
+    # (not just fully delivered ones — most billets are still in transit)
     billets = [
         export_billet(b) for b in result.billets
         if b.t_torch_cut_start is not None
-        and b.t_torch_cut_start > SIM_WARMUP
-        and b.t_crane_deliver is not None
+        and b.t_torch_cut_start >= SIM_WARMUP
     ]
 
     data = {

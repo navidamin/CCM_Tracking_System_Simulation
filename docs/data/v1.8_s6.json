@@ -4715,5 +4715,3198 @@
    "occupied": 81
   }
  ],
- "billets": []
+ "billets": [
+  {
+   "id": "S1-B036",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1329.9999999999998,
+    "torch_cut_complete": 1399.9999999999998,
+    "transport_entry": 1399.9999999999998,
+    "transport_exit": 1500.7999999999997,
+    "discharge_entry": 1500.7999999999997,
+    "discharge_buffer": 1554.2999999999997,
+    "discharge_ready": 1731.4999999999998,
+    "transfer_pickup": 1762.2499999999998,
+    "coolbed_entry": 1794.7499999999998,
+    "coolbed_exit": 7163.499999999999,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B042",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1529.9999999999998,
+    "torch_cut_complete": 1599.9999999999998,
+    "transport_entry": 1599.9999999999998,
+    "transport_exit": 1700.7999999999997,
+    "discharge_entry": 1700.7999999999997,
+    "discharge_buffer": 1729.4999999999998,
+    "discharge_ready": 1731.4999999999998,
+    "transfer_pickup": 1762.2499999999998,
+    "coolbed_entry": 1794.7499999999998,
+    "coolbed_exit": 7163.499999999999,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B037",
+   "strand": 4,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1329.9999999999998,
+    "torch_cut_complete": 1399.9999999999998,
+    "transport_entry": 1399.9999999999998,
+    "transport_exit": 1500.7999999999997,
+    "discharge_entry": 1500.7999999999997,
+    "discharge_buffer": 1554.2999999999997,
+    "discharge_ready": 1731.4999999999998,
+    "transfer_pickup": 1815.7499999999998,
+    "coolbed_entry": 1838.4999999999998,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B043",
+   "strand": 4,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1529.9999999999998,
+    "torch_cut_complete": 1599.9999999999998,
+    "transport_entry": 1599.9999999999998,
+    "transport_exit": 1700.7999999999997,
+    "discharge_entry": 1700.7999999999997,
+    "discharge_buffer": 1729.4999999999998,
+    "discharge_ready": 1731.4999999999998,
+    "transfer_pickup": 1815.7499999999998,
+    "coolbed_entry": 1838.4999999999998,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B038",
+   "strand": 2,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1349.9999999999998,
+    "torch_cut_complete": 1419.9999999999998,
+    "transport_entry": 1419.9999999999998,
+    "transport_exit": 1520.7999999999997,
+    "discharge_entry": 1520.7999999999997,
+    "discharge_buffer": 1574.2999999999997,
+    "discharge_ready": 1751.4999999999998,
+    "transfer_pickup": 1916.2499999999998,
+    "coolbed_entry": 1945.4999999999998,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B044",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1549.9999999999998,
+    "torch_cut_complete": 1619.9999999999998,
+    "transport_entry": 1619.9999999999998,
+    "transport_exit": 1720.7999999999997,
+    "discharge_entry": 1720.7999999999997,
+    "discharge_buffer": 1749.4999999999998,
+    "discharge_ready": 1751.4999999999998,
+    "transfer_pickup": 1916.2499999999998,
+    "coolbed_entry": 1945.4999999999998,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B039",
+   "strand": 5,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1349.9999999999998,
+    "torch_cut_complete": 1419.9999999999998,
+    "transport_entry": 1419.9999999999998,
+    "transport_exit": 1520.7999999999997,
+    "discharge_entry": 1565.7999999999997,
+    "discharge_buffer": 1619.2999999999997,
+    "discharge_ready": 1751.4999999999998,
+    "transfer_pickup": 1963.2499999999998,
+    "coolbed_entry": 1982.7499999999998,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B045",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1549.9999999999998,
+    "torch_cut_complete": 1619.9999999999998,
+    "transport_entry": 1619.9999999999998,
+    "transport_exit": 1720.7999999999997,
+    "discharge_entry": 1720.7999999999997,
+    "discharge_buffer": 1749.4999999999998,
+    "discharge_ready": 1751.4999999999998,
+    "transfer_pickup": 1963.2499999999998,
+    "coolbed_entry": 1982.7499999999998,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B040",
+   "strand": 3,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1370.0,
+    "torch_cut_complete": 1440.0,
+    "transport_entry": 1440.0,
+    "transport_exit": 1540.8,
+    "discharge_entry": 1540.8,
+    "discharge_buffer": 1594.3,
+    "discharge_ready": 1771.5,
+    "transfer_pickup": 1862.7499999999998,
+    "coolbed_entry": 1888.7499999999998,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B046",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1570.0,
+    "torch_cut_complete": 1640.0,
+    "transport_entry": 1640.0,
+    "transport_exit": 1740.8,
+    "discharge_entry": 1740.8,
+    "discharge_buffer": 1769.5,
+    "discharge_ready": 1771.5,
+    "transfer_pickup": 1862.7499999999998,
+    "coolbed_entry": 1888.7499999999998,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B041",
+   "strand": 6,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1370.0,
+    "torch_cut_complete": 1440.0,
+    "transport_entry": 1440.0,
+    "transport_exit": 1540.8,
+    "discharge_entry": 1599.8,
+    "discharge_buffer": 1653.3,
+    "discharge_ready": 1771.5,
+    "transfer_pickup": 1997.2499999999998,
+    "coolbed_entry": 2013.4999999999998,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B047",
+   "strand": 6,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1570.0,
+    "torch_cut_complete": 1640.0,
+    "transport_entry": 1640.0,
+    "transport_exit": 1740.8,
+    "discharge_entry": 1740.8,
+    "discharge_buffer": 1769.5,
+    "discharge_ready": 1771.5,
+    "transfer_pickup": 1997.2499999999998,
+    "coolbed_entry": 2013.4999999999998,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B048",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1729.9999999999998,
+    "torch_cut_complete": 1799.9999999999998,
+    "transport_entry": 1799.9999999999998,
+    "transport_exit": 1900.7999999999997,
+    "discharge_entry": 1900.7999999999997,
+    "discharge_buffer": 1954.2999999999997,
+    "discharge_ready": 2131.4999999999995,
+    "transfer_pickup": 2162.2499999999995,
+    "coolbed_entry": 2194.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B054",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1929.9999999999998,
+    "torch_cut_complete": 1999.9999999999998,
+    "transport_entry": 1999.9999999999998,
+    "transport_exit": 2100.7999999999997,
+    "discharge_entry": 2100.7999999999997,
+    "discharge_buffer": 2129.4999999999995,
+    "discharge_ready": 2131.4999999999995,
+    "transfer_pickup": 2162.2499999999995,
+    "coolbed_entry": 2194.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B049",
+   "strand": 4,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1729.9999999999998,
+    "torch_cut_complete": 1799.9999999999998,
+    "transport_entry": 1799.9999999999998,
+    "transport_exit": 1900.7999999999997,
+    "discharge_entry": 1900.7999999999997,
+    "discharge_buffer": 1954.2999999999997,
+    "discharge_ready": 2131.4999999999995,
+    "transfer_pickup": 2215.7499999999995,
+    "coolbed_entry": 2238.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B055",
+   "strand": 4,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1929.9999999999998,
+    "torch_cut_complete": 1999.9999999999998,
+    "transport_entry": 1999.9999999999998,
+    "transport_exit": 2100.7999999999997,
+    "discharge_entry": 2100.7999999999997,
+    "discharge_buffer": 2129.4999999999995,
+    "discharge_ready": 2131.4999999999995,
+    "transfer_pickup": 2215.7499999999995,
+    "coolbed_entry": 2238.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B050",
+   "strand": 2,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1749.9999999999998,
+    "torch_cut_complete": 1819.9999999999998,
+    "transport_entry": 1819.9999999999998,
+    "transport_exit": 1920.7999999999997,
+    "discharge_entry": 1920.7999999999997,
+    "discharge_buffer": 1974.2999999999997,
+    "discharge_ready": 2151.4999999999995,
+    "transfer_pickup": 2316.2499999999995,
+    "coolbed_entry": 2345.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B056",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1949.9999999999998,
+    "torch_cut_complete": 2019.9999999999998,
+    "transport_entry": 2019.9999999999998,
+    "transport_exit": 2120.7999999999997,
+    "discharge_entry": 2120.7999999999997,
+    "discharge_buffer": 2149.4999999999995,
+    "discharge_ready": 2151.4999999999995,
+    "transfer_pickup": 2316.2499999999995,
+    "coolbed_entry": 2345.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B051",
+   "strand": 5,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1749.9999999999998,
+    "torch_cut_complete": 1819.9999999999998,
+    "transport_entry": 1819.9999999999998,
+    "transport_exit": 1920.7999999999997,
+    "discharge_entry": 1965.7999999999997,
+    "discharge_buffer": 2019.2999999999997,
+    "discharge_ready": 2151.4999999999995,
+    "transfer_pickup": 2363.2499999999995,
+    "coolbed_entry": 2382.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B057",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1949.9999999999998,
+    "torch_cut_complete": 2019.9999999999998,
+    "transport_entry": 2019.9999999999998,
+    "transport_exit": 2120.7999999999997,
+    "discharge_entry": 2120.7999999999997,
+    "discharge_buffer": 2149.4999999999995,
+    "discharge_ready": 2151.4999999999995,
+    "transfer_pickup": 2363.2499999999995,
+    "coolbed_entry": 2382.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B052",
+   "strand": 3,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1770.0,
+    "torch_cut_complete": 1840.0,
+    "transport_entry": 1840.0,
+    "transport_exit": 1940.8,
+    "discharge_entry": 1940.8,
+    "discharge_buffer": 1994.3,
+    "discharge_ready": 2171.5,
+    "transfer_pickup": 2262.7499999999995,
+    "coolbed_entry": 2288.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B058",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1970.0,
+    "torch_cut_complete": 2040.0,
+    "transport_entry": 2040.0,
+    "transport_exit": 2140.8,
+    "discharge_entry": 2140.8,
+    "discharge_buffer": 2169.5,
+    "discharge_ready": 2171.5,
+    "transfer_pickup": 2262.7499999999995,
+    "coolbed_entry": 2288.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B053",
+   "strand": 6,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 1770.0,
+    "torch_cut_complete": 1840.0,
+    "transport_entry": 1840.0,
+    "transport_exit": 1940.8,
+    "discharge_entry": 1999.8,
+    "discharge_buffer": 2053.3,
+    "discharge_ready": 2171.5,
+    "transfer_pickup": 2397.2499999999995,
+    "coolbed_entry": 2413.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B059",
+   "strand": 6,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 1970.0,
+    "torch_cut_complete": 2040.0,
+    "transport_entry": 2040.0,
+    "transport_exit": 2140.8,
+    "discharge_entry": 2140.8,
+    "discharge_buffer": 2169.5,
+    "discharge_ready": 2171.5,
+    "transfer_pickup": 2397.2499999999995,
+    "coolbed_entry": 2413.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B060",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2129.9999999999995,
+    "torch_cut_complete": 2199.9999999999995,
+    "transport_entry": 2199.9999999999995,
+    "transport_exit": 2300.7999999999997,
+    "discharge_entry": 2300.7999999999997,
+    "discharge_buffer": 2354.2999999999997,
+    "discharge_ready": 2531.4999999999995,
+    "transfer_pickup": 2562.2499999999995,
+    "coolbed_entry": 2594.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B066",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 2329.9999999999995,
+    "torch_cut_complete": 2399.9999999999995,
+    "transport_entry": 2399.9999999999995,
+    "transport_exit": 2500.7999999999997,
+    "discharge_entry": 2500.7999999999997,
+    "discharge_buffer": 2529.4999999999995,
+    "discharge_ready": 2531.4999999999995,
+    "transfer_pickup": 2562.2499999999995,
+    "coolbed_entry": 2594.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B061",
+   "strand": 4,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2129.9999999999995,
+    "torch_cut_complete": 2199.9999999999995,
+    "transport_entry": 2199.9999999999995,
+    "transport_exit": 2300.7999999999997,
+    "discharge_entry": 2300.7999999999997,
+    "discharge_buffer": 2354.2999999999997,
+    "discharge_ready": 2531.4999999999995,
+    "transfer_pickup": 2615.7499999999995,
+    "coolbed_entry": 2638.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B067",
+   "strand": 4,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 2329.9999999999995,
+    "torch_cut_complete": 2399.9999999999995,
+    "transport_entry": 2399.9999999999995,
+    "transport_exit": 2500.7999999999997,
+    "discharge_entry": 2500.7999999999997,
+    "discharge_buffer": 2529.4999999999995,
+    "discharge_ready": 2531.4999999999995,
+    "transfer_pickup": 2615.7499999999995,
+    "coolbed_entry": 2638.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B062",
+   "strand": 2,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2149.9999999999995,
+    "torch_cut_complete": 2219.9999999999995,
+    "transport_entry": 2219.9999999999995,
+    "transport_exit": 2320.7999999999997,
+    "discharge_entry": 2320.7999999999997,
+    "discharge_buffer": 2374.2999999999997,
+    "discharge_ready": 2551.4999999999995,
+    "transfer_pickup": 2716.2499999999995,
+    "coolbed_entry": 2745.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B068",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 2349.9999999999995,
+    "torch_cut_complete": 2419.9999999999995,
+    "transport_entry": 2419.9999999999995,
+    "transport_exit": 2520.7999999999997,
+    "discharge_entry": 2520.7999999999997,
+    "discharge_buffer": 2549.4999999999995,
+    "discharge_ready": 2551.4999999999995,
+    "transfer_pickup": 2716.2499999999995,
+    "coolbed_entry": 2745.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B063",
+   "strand": 5,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2149.9999999999995,
+    "torch_cut_complete": 2219.9999999999995,
+    "transport_entry": 2219.9999999999995,
+    "transport_exit": 2320.7999999999997,
+    "discharge_entry": 2365.7999999999997,
+    "discharge_buffer": 2419.2999999999997,
+    "discharge_ready": 2551.4999999999995,
+    "transfer_pickup": 2763.2499999999995,
+    "coolbed_entry": 2782.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B069",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 2349.9999999999995,
+    "torch_cut_complete": 2419.9999999999995,
+    "transport_entry": 2419.9999999999995,
+    "transport_exit": 2520.7999999999997,
+    "discharge_entry": 2520.7999999999997,
+    "discharge_buffer": 2549.4999999999995,
+    "discharge_ready": 2551.4999999999995,
+    "transfer_pickup": 2763.2499999999995,
+    "coolbed_entry": 2782.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B064",
+   "strand": 3,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2170.0,
+    "torch_cut_complete": 2240.0,
+    "transport_entry": 2240.0,
+    "transport_exit": 2340.8,
+    "discharge_entry": 2340.8,
+    "discharge_buffer": 2394.3,
+    "discharge_ready": 2571.5,
+    "transfer_pickup": 2662.7499999999995,
+    "coolbed_entry": 2688.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B070",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 2370.0,
+    "torch_cut_complete": 2440.0,
+    "transport_entry": 2440.0,
+    "transport_exit": 2540.8,
+    "discharge_entry": 2540.8,
+    "discharge_buffer": 2569.5,
+    "discharge_ready": 2571.5,
+    "transfer_pickup": 2662.7499999999995,
+    "coolbed_entry": 2688.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B065",
+   "strand": 6,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2170.0,
+    "torch_cut_complete": 2240.0,
+    "transport_entry": 2240.0,
+    "transport_exit": 2340.8,
+    "discharge_entry": 2399.8,
+    "discharge_buffer": 2453.3,
+    "discharge_ready": 2571.5,
+    "transfer_pickup": 2797.2499999999995,
+    "coolbed_entry": 2813.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B071",
+   "strand": 6,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 2370.0,
+    "torch_cut_complete": 2440.0,
+    "transport_entry": 2440.0,
+    "transport_exit": 2540.8,
+    "discharge_entry": 2540.8,
+    "discharge_buffer": 2569.5,
+    "discharge_ready": 2571.5,
+    "transfer_pickup": 2797.2499999999995,
+    "coolbed_entry": 2813.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B072",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2529.9999999999995,
+    "torch_cut_complete": 2599.9999999999995,
+    "transport_entry": 2599.9999999999995,
+    "transport_exit": 2700.7999999999997,
+    "discharge_entry": 2700.7999999999997,
+    "discharge_buffer": 2754.2999999999997,
+    "discharge_ready": 2931.4999999999995,
+    "transfer_pickup": 2962.2499999999995,
+    "coolbed_entry": 2994.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B078",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 2729.9999999999995,
+    "torch_cut_complete": 2799.9999999999995,
+    "transport_entry": 2799.9999999999995,
+    "transport_exit": 2900.7999999999997,
+    "discharge_entry": 2900.7999999999997,
+    "discharge_buffer": 2929.4999999999995,
+    "discharge_ready": 2931.4999999999995,
+    "transfer_pickup": 2962.2499999999995,
+    "coolbed_entry": 2994.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B073",
+   "strand": 4,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2529.9999999999995,
+    "torch_cut_complete": 2599.9999999999995,
+    "transport_entry": 2599.9999999999995,
+    "transport_exit": 2700.7999999999997,
+    "discharge_entry": 2700.7999999999997,
+    "discharge_buffer": 2754.2999999999997,
+    "discharge_ready": 2931.4999999999995,
+    "transfer_pickup": 3015.7499999999995,
+    "coolbed_entry": 3038.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B079",
+   "strand": 4,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 2729.9999999999995,
+    "torch_cut_complete": 2799.9999999999995,
+    "transport_entry": 2799.9999999999995,
+    "transport_exit": 2900.7999999999997,
+    "discharge_entry": 2900.7999999999997,
+    "discharge_buffer": 2929.4999999999995,
+    "discharge_ready": 2931.4999999999995,
+    "transfer_pickup": 3015.7499999999995,
+    "coolbed_entry": 3038.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B074",
+   "strand": 2,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2549.9999999999995,
+    "torch_cut_complete": 2619.9999999999995,
+    "transport_entry": 2619.9999999999995,
+    "transport_exit": 2720.7999999999997,
+    "discharge_entry": 2720.7999999999997,
+    "discharge_buffer": 2774.2999999999997,
+    "discharge_ready": 2951.4999999999995,
+    "transfer_pickup": 3116.2499999999995,
+    "coolbed_entry": 3145.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B080",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 2749.9999999999995,
+    "torch_cut_complete": 2819.9999999999995,
+    "transport_entry": 2819.9999999999995,
+    "transport_exit": 2920.7999999999997,
+    "discharge_entry": 2920.7999999999997,
+    "discharge_buffer": 2949.4999999999995,
+    "discharge_ready": 2951.4999999999995,
+    "transfer_pickup": 3116.2499999999995,
+    "coolbed_entry": 3145.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B075",
+   "strand": 5,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2549.9999999999995,
+    "torch_cut_complete": 2619.9999999999995,
+    "transport_entry": 2619.9999999999995,
+    "transport_exit": 2720.7999999999997,
+    "discharge_entry": 2765.7999999999997,
+    "discharge_buffer": 2819.2999999999997,
+    "discharge_ready": 2951.4999999999995,
+    "transfer_pickup": 3163.2499999999995,
+    "coolbed_entry": 3182.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B081",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 2749.9999999999995,
+    "torch_cut_complete": 2819.9999999999995,
+    "transport_entry": 2819.9999999999995,
+    "transport_exit": 2920.7999999999997,
+    "discharge_entry": 2920.7999999999997,
+    "discharge_buffer": 2949.4999999999995,
+    "discharge_ready": 2951.4999999999995,
+    "transfer_pickup": 3163.2499999999995,
+    "coolbed_entry": 3182.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B076",
+   "strand": 3,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2570.0,
+    "torch_cut_complete": 2640.0,
+    "transport_entry": 2640.0,
+    "transport_exit": 2740.8,
+    "discharge_entry": 2740.8,
+    "discharge_buffer": 2794.3,
+    "discharge_ready": 2971.5,
+    "transfer_pickup": 3062.7499999999995,
+    "coolbed_entry": 3088.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B082",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 2770.0,
+    "torch_cut_complete": 2840.0,
+    "transport_entry": 2840.0,
+    "transport_exit": 2940.8,
+    "discharge_entry": 2940.8,
+    "discharge_buffer": 2969.5,
+    "discharge_ready": 2971.5,
+    "transfer_pickup": 3062.7499999999995,
+    "coolbed_entry": 3088.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B077",
+   "strand": 6,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2570.0,
+    "torch_cut_complete": 2640.0,
+    "transport_entry": 2640.0,
+    "transport_exit": 2740.8,
+    "discharge_entry": 2799.8,
+    "discharge_buffer": 2853.3,
+    "discharge_ready": 2971.5,
+    "transfer_pickup": 3197.2499999999995,
+    "coolbed_entry": 3213.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B083",
+   "strand": 6,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 2770.0,
+    "torch_cut_complete": 2840.0,
+    "transport_entry": 2840.0,
+    "transport_exit": 2940.8,
+    "discharge_entry": 2940.8,
+    "discharge_buffer": 2969.5,
+    "discharge_ready": 2971.5,
+    "transfer_pickup": 3197.2499999999995,
+    "coolbed_entry": 3213.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B084",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2929.9999999999995,
+    "torch_cut_complete": 2999.9999999999995,
+    "transport_entry": 2999.9999999999995,
+    "transport_exit": 3100.7999999999997,
+    "discharge_entry": 3100.7999999999997,
+    "discharge_buffer": 3154.2999999999997,
+    "discharge_ready": 3331.4999999999995,
+    "transfer_pickup": 3362.2499999999995,
+    "coolbed_entry": 3394.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B090",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3129.9999999999995,
+    "torch_cut_complete": 3199.9999999999995,
+    "transport_entry": 3199.9999999999995,
+    "transport_exit": 3300.7999999999997,
+    "discharge_entry": 3300.7999999999997,
+    "discharge_buffer": 3329.4999999999995,
+    "discharge_ready": 3331.4999999999995,
+    "transfer_pickup": 3362.2499999999995,
+    "coolbed_entry": 3394.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B085",
+   "strand": 4,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2929.9999999999995,
+    "torch_cut_complete": 2999.9999999999995,
+    "transport_entry": 2999.9999999999995,
+    "transport_exit": 3100.7999999999997,
+    "discharge_entry": 3100.7999999999997,
+    "discharge_buffer": 3154.2999999999997,
+    "discharge_ready": 3331.4999999999995,
+    "transfer_pickup": 3415.7499999999995,
+    "coolbed_entry": 3438.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B091",
+   "strand": 4,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3129.9999999999995,
+    "torch_cut_complete": 3199.9999999999995,
+    "transport_entry": 3199.9999999999995,
+    "transport_exit": 3300.7999999999997,
+    "discharge_entry": 3300.7999999999997,
+    "discharge_buffer": 3329.4999999999995,
+    "discharge_ready": 3331.4999999999995,
+    "transfer_pickup": 3415.7499999999995,
+    "coolbed_entry": 3438.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B086",
+   "strand": 2,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2949.9999999999995,
+    "torch_cut_complete": 3019.9999999999995,
+    "transport_entry": 3019.9999999999995,
+    "transport_exit": 3120.7999999999997,
+    "discharge_entry": 3120.7999999999997,
+    "discharge_buffer": 3174.2999999999997,
+    "discharge_ready": 3351.4999999999995,
+    "transfer_pickup": 3516.2499999999995,
+    "coolbed_entry": 3545.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B092",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3149.9999999999995,
+    "torch_cut_complete": 3219.9999999999995,
+    "transport_entry": 3219.9999999999995,
+    "transport_exit": 3320.7999999999997,
+    "discharge_entry": 3320.7999999999997,
+    "discharge_buffer": 3349.4999999999995,
+    "discharge_ready": 3351.4999999999995,
+    "transfer_pickup": 3516.2499999999995,
+    "coolbed_entry": 3545.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B087",
+   "strand": 5,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2949.9999999999995,
+    "torch_cut_complete": 3019.9999999999995,
+    "transport_entry": 3019.9999999999995,
+    "transport_exit": 3120.7999999999997,
+    "discharge_entry": 3165.7999999999997,
+    "discharge_buffer": 3219.2999999999997,
+    "discharge_ready": 3351.4999999999995,
+    "transfer_pickup": 3563.2499999999995,
+    "coolbed_entry": 3582.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B093",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3149.9999999999995,
+    "torch_cut_complete": 3219.9999999999995,
+    "transport_entry": 3219.9999999999995,
+    "transport_exit": 3320.7999999999997,
+    "discharge_entry": 3320.7999999999997,
+    "discharge_buffer": 3349.4999999999995,
+    "discharge_ready": 3351.4999999999995,
+    "transfer_pickup": 3563.2499999999995,
+    "coolbed_entry": 3582.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B088",
+   "strand": 3,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2970.0,
+    "torch_cut_complete": 3040.0,
+    "transport_entry": 3040.0,
+    "transport_exit": 3140.8,
+    "discharge_entry": 3140.8,
+    "discharge_buffer": 3194.3,
+    "discharge_ready": 3371.5,
+    "transfer_pickup": 3462.7499999999995,
+    "coolbed_entry": 3488.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B094",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3170.0,
+    "torch_cut_complete": 3240.0,
+    "transport_entry": 3240.0,
+    "transport_exit": 3340.8,
+    "discharge_entry": 3340.8,
+    "discharge_buffer": 3369.5,
+    "discharge_ready": 3371.5,
+    "transfer_pickup": 3462.7499999999995,
+    "coolbed_entry": 3488.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B089",
+   "strand": 6,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 2970.0,
+    "torch_cut_complete": 3040.0,
+    "transport_entry": 3040.0,
+    "transport_exit": 3140.8,
+    "discharge_entry": 3199.8,
+    "discharge_buffer": 3253.3,
+    "discharge_ready": 3371.5,
+    "transfer_pickup": 3597.2499999999995,
+    "coolbed_entry": 3613.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B095",
+   "strand": 6,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3170.0,
+    "torch_cut_complete": 3240.0,
+    "transport_entry": 3240.0,
+    "transport_exit": 3340.8,
+    "discharge_entry": 3340.8,
+    "discharge_buffer": 3369.5,
+    "discharge_ready": 3371.5,
+    "transfer_pickup": 3597.2499999999995,
+    "coolbed_entry": 3613.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B096",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 3329.9999999999995,
+    "torch_cut_complete": 3399.9999999999995,
+    "transport_entry": 3399.9999999999995,
+    "transport_exit": 3500.7999999999997,
+    "discharge_entry": 3500.7999999999997,
+    "discharge_buffer": 3554.2999999999997,
+    "discharge_ready": 3731.4999999999995,
+    "transfer_pickup": 3762.2499999999995,
+    "coolbed_entry": 3794.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B102",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3529.9999999999995,
+    "torch_cut_complete": 3599.9999999999995,
+    "transport_entry": 3599.9999999999995,
+    "transport_exit": 3700.7999999999997,
+    "discharge_entry": 3700.7999999999997,
+    "discharge_buffer": 3729.4999999999995,
+    "discharge_ready": 3731.4999999999995,
+    "transfer_pickup": 3762.2499999999995,
+    "coolbed_entry": 3794.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B097",
+   "strand": 4,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 3329.9999999999995,
+    "torch_cut_complete": 3399.9999999999995,
+    "transport_entry": 3399.9999999999995,
+    "transport_exit": 3500.7999999999997,
+    "discharge_entry": 3500.7999999999997,
+    "discharge_buffer": 3554.2999999999997,
+    "discharge_ready": 3731.4999999999995,
+    "transfer_pickup": 3815.7499999999995,
+    "coolbed_entry": 3838.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B103",
+   "strand": 4,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3529.9999999999995,
+    "torch_cut_complete": 3599.9999999999995,
+    "transport_entry": 3599.9999999999995,
+    "transport_exit": 3700.7999999999997,
+    "discharge_entry": 3700.7999999999997,
+    "discharge_buffer": 3729.4999999999995,
+    "discharge_ready": 3731.4999999999995,
+    "transfer_pickup": 3815.7499999999995,
+    "coolbed_entry": 3838.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B098",
+   "strand": 2,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 3349.9999999999995,
+    "torch_cut_complete": 3419.9999999999995,
+    "transport_entry": 3419.9999999999995,
+    "transport_exit": 3520.7999999999997,
+    "discharge_entry": 3520.7999999999997,
+    "discharge_buffer": 3574.2999999999997,
+    "discharge_ready": 3751.4999999999995,
+    "transfer_pickup": 3916.2499999999995,
+    "coolbed_entry": 3945.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B104",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3549.9999999999995,
+    "torch_cut_complete": 3619.9999999999995,
+    "transport_entry": 3619.9999999999995,
+    "transport_exit": 3720.7999999999997,
+    "discharge_entry": 3720.7999999999997,
+    "discharge_buffer": 3749.4999999999995,
+    "discharge_ready": 3751.4999999999995,
+    "transfer_pickup": 3916.2499999999995,
+    "coolbed_entry": 3945.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B099",
+   "strand": 5,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 3349.9999999999995,
+    "torch_cut_complete": 3419.9999999999995,
+    "transport_entry": 3419.9999999999995,
+    "transport_exit": 3520.7999999999997,
+    "discharge_entry": 3565.7999999999997,
+    "discharge_buffer": 3619.2999999999997,
+    "discharge_ready": 3751.4999999999995,
+    "transfer_pickup": 3963.2499999999995,
+    "coolbed_entry": 3982.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B105",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3549.9999999999995,
+    "torch_cut_complete": 3619.9999999999995,
+    "transport_entry": 3619.9999999999995,
+    "transport_exit": 3720.7999999999997,
+    "discharge_entry": 3720.7999999999997,
+    "discharge_buffer": 3749.4999999999995,
+    "discharge_ready": 3751.4999999999995,
+    "transfer_pickup": 3963.2499999999995,
+    "coolbed_entry": 3982.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B100",
+   "strand": 3,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 3370.0,
+    "torch_cut_complete": 3440.0,
+    "transport_entry": 3440.0,
+    "transport_exit": 3540.8,
+    "discharge_entry": 3540.8,
+    "discharge_buffer": 3594.3,
+    "discharge_ready": 3771.5,
+    "transfer_pickup": 3862.7499999999995,
+    "coolbed_entry": 3888.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B106",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3570.0,
+    "torch_cut_complete": 3640.0,
+    "transport_entry": 3640.0,
+    "transport_exit": 3740.8,
+    "discharge_entry": 3740.8,
+    "discharge_buffer": 3769.5,
+    "discharge_ready": 3771.5,
+    "transfer_pickup": 3862.7499999999995,
+    "coolbed_entry": 3888.7499999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B101",
+   "strand": 6,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 3370.0,
+    "torch_cut_complete": 3440.0,
+    "transport_entry": 3440.0,
+    "transport_exit": 3540.8,
+    "discharge_entry": 3599.8,
+    "discharge_buffer": 3653.3,
+    "discharge_ready": 3771.5,
+    "transfer_pickup": 3997.2499999999995,
+    "coolbed_entry": 4013.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B107",
+   "strand": 6,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3570.0,
+    "torch_cut_complete": 3640.0,
+    "transport_entry": 3640.0,
+    "transport_exit": 3740.8,
+    "discharge_entry": 3740.8,
+    "discharge_buffer": 3769.5,
+    "discharge_ready": 3771.5,
+    "transfer_pickup": 3997.2499999999995,
+    "coolbed_entry": 4013.4999999999995,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B108",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 3729.9999999999995,
+    "torch_cut_complete": 3799.9999999999995,
+    "transport_entry": 3799.9999999999995,
+    "transport_exit": 3900.7999999999997,
+    "discharge_entry": 3900.7999999999997,
+    "discharge_buffer": 3954.2999999999997,
+    "discharge_ready": 4131.499999999999,
+    "transfer_pickup": 4162.249999999999,
+    "coolbed_entry": 4194.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B114",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3929.9999999999995,
+    "torch_cut_complete": 3999.9999999999995,
+    "transport_entry": 3999.9999999999995,
+    "transport_exit": 4100.799999999999,
+    "discharge_entry": 4100.799999999999,
+    "discharge_buffer": 4129.499999999999,
+    "discharge_ready": 4131.499999999999,
+    "transfer_pickup": 4162.249999999999,
+    "coolbed_entry": 4194.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B109",
+   "strand": 4,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 3729.9999999999995,
+    "torch_cut_complete": 3799.9999999999995,
+    "transport_entry": 3799.9999999999995,
+    "transport_exit": 3900.7999999999997,
+    "discharge_entry": 3900.7999999999997,
+    "discharge_buffer": 3954.2999999999997,
+    "discharge_ready": 4131.499999999999,
+    "transfer_pickup": 4215.749999999999,
+    "coolbed_entry": 4238.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B115",
+   "strand": 4,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3929.9999999999995,
+    "torch_cut_complete": 3999.9999999999995,
+    "transport_entry": 3999.9999999999995,
+    "transport_exit": 4100.799999999999,
+    "discharge_entry": 4100.799999999999,
+    "discharge_buffer": 4129.499999999999,
+    "discharge_ready": 4131.499999999999,
+    "transfer_pickup": 4215.749999999999,
+    "coolbed_entry": 4238.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B110",
+   "strand": 2,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 3749.9999999999995,
+    "torch_cut_complete": 3819.9999999999995,
+    "transport_entry": 3819.9999999999995,
+    "transport_exit": 3920.7999999999997,
+    "discharge_entry": 3920.7999999999997,
+    "discharge_buffer": 3974.2999999999997,
+    "discharge_ready": 4151.499999999999,
+    "transfer_pickup": 4316.249999999999,
+    "coolbed_entry": 4345.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B116",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3949.9999999999995,
+    "torch_cut_complete": 4019.9999999999995,
+    "transport_entry": 4019.9999999999995,
+    "transport_exit": 4120.799999999999,
+    "discharge_entry": 4120.799999999999,
+    "discharge_buffer": 4149.499999999999,
+    "discharge_ready": 4151.499999999999,
+    "transfer_pickup": 4316.249999999999,
+    "coolbed_entry": 4345.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B111",
+   "strand": 5,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 3749.9999999999995,
+    "torch_cut_complete": 3819.9999999999995,
+    "transport_entry": 3819.9999999999995,
+    "transport_exit": 3920.7999999999997,
+    "discharge_entry": 3965.7999999999997,
+    "discharge_buffer": 4019.2999999999997,
+    "discharge_ready": 4151.499999999999,
+    "transfer_pickup": 4363.249999999999,
+    "coolbed_entry": 4382.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B117",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3949.9999999999995,
+    "torch_cut_complete": 4019.9999999999995,
+    "transport_entry": 4019.9999999999995,
+    "transport_exit": 4120.799999999999,
+    "discharge_entry": 4120.799999999999,
+    "discharge_buffer": 4149.499999999999,
+    "discharge_ready": 4151.499999999999,
+    "transfer_pickup": 4363.249999999999,
+    "coolbed_entry": 4382.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B112",
+   "strand": 3,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 3770.0,
+    "torch_cut_complete": 3840.0,
+    "transport_entry": 3840.0,
+    "transport_exit": 3940.8,
+    "discharge_entry": 3940.8,
+    "discharge_buffer": 3994.3,
+    "discharge_ready": 4171.5,
+    "transfer_pickup": 4262.749999999999,
+    "coolbed_entry": 4288.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B118",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3970.0,
+    "torch_cut_complete": 4040.0,
+    "transport_entry": 4040.0,
+    "transport_exit": 4140.8,
+    "discharge_entry": 4140.8,
+    "discharge_buffer": 4169.5,
+    "discharge_ready": 4171.5,
+    "transfer_pickup": 4262.749999999999,
+    "coolbed_entry": 4288.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B113",
+   "strand": 6,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 3770.0,
+    "torch_cut_complete": 3840.0,
+    "transport_entry": 3840.0,
+    "transport_exit": 3940.8,
+    "discharge_entry": 3999.8,
+    "discharge_buffer": 4053.3,
+    "discharge_ready": 4171.5,
+    "transfer_pickup": 4397.249999999999,
+    "coolbed_entry": 4413.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B119",
+   "strand": 6,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 3970.0,
+    "torch_cut_complete": 4040.0,
+    "transport_entry": 4040.0,
+    "transport_exit": 4140.8,
+    "discharge_entry": 4140.8,
+    "discharge_buffer": 4169.5,
+    "discharge_ready": 4171.5,
+    "transfer_pickup": 4397.249999999999,
+    "coolbed_entry": 4413.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B120",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4129.999999999999,
+    "torch_cut_complete": 4199.999999999999,
+    "transport_entry": 4199.999999999999,
+    "transport_exit": 4300.799999999999,
+    "discharge_entry": 4300.799999999999,
+    "discharge_buffer": 4354.299999999999,
+    "discharge_ready": 4531.499999999999,
+    "transfer_pickup": 4562.249999999999,
+    "coolbed_entry": 4594.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B126",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 4329.999999999999,
+    "torch_cut_complete": 4399.999999999999,
+    "transport_entry": 4399.999999999999,
+    "transport_exit": 4500.799999999999,
+    "discharge_entry": 4500.799999999999,
+    "discharge_buffer": 4529.499999999999,
+    "discharge_ready": 4531.499999999999,
+    "transfer_pickup": 4562.249999999999,
+    "coolbed_entry": 4594.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B121",
+   "strand": 4,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4129.999999999999,
+    "torch_cut_complete": 4199.999999999999,
+    "transport_entry": 4199.999999999999,
+    "transport_exit": 4300.799999999999,
+    "discharge_entry": 4300.799999999999,
+    "discharge_buffer": 4354.299999999999,
+    "discharge_ready": 4531.499999999999,
+    "transfer_pickup": 4615.749999999999,
+    "coolbed_entry": 4638.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B127",
+   "strand": 4,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 4329.999999999999,
+    "torch_cut_complete": 4399.999999999999,
+    "transport_entry": 4399.999999999999,
+    "transport_exit": 4500.799999999999,
+    "discharge_entry": 4500.799999999999,
+    "discharge_buffer": 4529.499999999999,
+    "discharge_ready": 4531.499999999999,
+    "transfer_pickup": 4615.749999999999,
+    "coolbed_entry": 4638.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B122",
+   "strand": 2,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4149.999999999999,
+    "torch_cut_complete": 4219.999999999999,
+    "transport_entry": 4219.999999999999,
+    "transport_exit": 4320.799999999999,
+    "discharge_entry": 4320.799999999999,
+    "discharge_buffer": 4374.299999999999,
+    "discharge_ready": 4551.499999999999,
+    "transfer_pickup": 4716.249999999999,
+    "coolbed_entry": 4745.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B128",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 4349.999999999999,
+    "torch_cut_complete": 4419.999999999999,
+    "transport_entry": 4419.999999999999,
+    "transport_exit": 4520.799999999999,
+    "discharge_entry": 4520.799999999999,
+    "discharge_buffer": 4549.499999999999,
+    "discharge_ready": 4551.499999999999,
+    "transfer_pickup": 4716.249999999999,
+    "coolbed_entry": 4745.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B123",
+   "strand": 5,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4149.999999999999,
+    "torch_cut_complete": 4219.999999999999,
+    "transport_entry": 4219.999999999999,
+    "transport_exit": 4320.799999999999,
+    "discharge_entry": 4365.799999999999,
+    "discharge_buffer": 4419.299999999999,
+    "discharge_ready": 4551.499999999999,
+    "transfer_pickup": 4763.249999999999,
+    "coolbed_entry": 4782.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B129",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 4349.999999999999,
+    "torch_cut_complete": 4419.999999999999,
+    "transport_entry": 4419.999999999999,
+    "transport_exit": 4520.799999999999,
+    "discharge_entry": 4520.799999999999,
+    "discharge_buffer": 4549.499999999999,
+    "discharge_ready": 4551.499999999999,
+    "transfer_pickup": 4763.249999999999,
+    "coolbed_entry": 4782.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B124",
+   "strand": 3,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4170.0,
+    "torch_cut_complete": 4240.0,
+    "transport_entry": 4240.0,
+    "transport_exit": 4340.8,
+    "discharge_entry": 4340.8,
+    "discharge_buffer": 4394.3,
+    "discharge_ready": 4571.5,
+    "transfer_pickup": 4662.749999999999,
+    "coolbed_entry": 4688.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B130",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 4370.0,
+    "torch_cut_complete": 4440.0,
+    "transport_entry": 4440.0,
+    "transport_exit": 4540.8,
+    "discharge_entry": 4540.8,
+    "discharge_buffer": 4569.5,
+    "discharge_ready": 4571.5,
+    "transfer_pickup": 4662.749999999999,
+    "coolbed_entry": 4688.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B125",
+   "strand": 6,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4170.0,
+    "torch_cut_complete": 4240.0,
+    "transport_entry": 4240.0,
+    "transport_exit": 4340.8,
+    "discharge_entry": 4399.8,
+    "discharge_buffer": 4453.3,
+    "discharge_ready": 4571.5,
+    "transfer_pickup": 4797.249999999999,
+    "coolbed_entry": 4813.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B131",
+   "strand": 6,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 4370.0,
+    "torch_cut_complete": 4440.0,
+    "transport_entry": 4440.0,
+    "transport_exit": 4540.8,
+    "discharge_entry": 4540.8,
+    "discharge_buffer": 4569.5,
+    "discharge_ready": 4571.5,
+    "transfer_pickup": 4797.249999999999,
+    "coolbed_entry": 4813.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B132",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4529.999999999999,
+    "torch_cut_complete": 4599.999999999999,
+    "transport_entry": 4599.999999999999,
+    "transport_exit": 4700.799999999999,
+    "discharge_entry": 4700.799999999999,
+    "discharge_buffer": 4754.299999999999,
+    "discharge_ready": 4931.499999999999,
+    "transfer_pickup": 4962.249999999999,
+    "coolbed_entry": 4994.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B138",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 4729.999999999999,
+    "torch_cut_complete": 4799.999999999999,
+    "transport_entry": 4799.999999999999,
+    "transport_exit": 4900.799999999999,
+    "discharge_entry": 4900.799999999999,
+    "discharge_buffer": 4929.499999999999,
+    "discharge_ready": 4931.499999999999,
+    "transfer_pickup": 4962.249999999999,
+    "coolbed_entry": 4994.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B133",
+   "strand": 4,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4529.999999999999,
+    "torch_cut_complete": 4599.999999999999,
+    "transport_entry": 4599.999999999999,
+    "transport_exit": 4700.799999999999,
+    "discharge_entry": 4700.799999999999,
+    "discharge_buffer": 4754.299999999999,
+    "discharge_ready": 4931.499999999999,
+    "transfer_pickup": 5015.749999999999,
+    "coolbed_entry": 5038.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B139",
+   "strand": 4,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 4729.999999999999,
+    "torch_cut_complete": 4799.999999999999,
+    "transport_entry": 4799.999999999999,
+    "transport_exit": 4900.799999999999,
+    "discharge_entry": 4900.799999999999,
+    "discharge_buffer": 4929.499999999999,
+    "discharge_ready": 4931.499999999999,
+    "transfer_pickup": 5015.749999999999,
+    "coolbed_entry": 5038.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B134",
+   "strand": 2,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4549.999999999999,
+    "torch_cut_complete": 4619.999999999999,
+    "transport_entry": 4619.999999999999,
+    "transport_exit": 4720.799999999999,
+    "discharge_entry": 4720.799999999999,
+    "discharge_buffer": 4774.299999999999,
+    "discharge_ready": 4951.499999999999,
+    "transfer_pickup": 5116.249999999999,
+    "coolbed_entry": 5145.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B140",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 4749.999999999999,
+    "torch_cut_complete": 4819.999999999999,
+    "transport_entry": 4819.999999999999,
+    "transport_exit": 4920.799999999999,
+    "discharge_entry": 4920.799999999999,
+    "discharge_buffer": 4949.499999999999,
+    "discharge_ready": 4951.499999999999,
+    "transfer_pickup": 5116.249999999999,
+    "coolbed_entry": 5145.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B135",
+   "strand": 5,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4549.999999999999,
+    "torch_cut_complete": 4619.999999999999,
+    "transport_entry": 4619.999999999999,
+    "transport_exit": 4720.799999999999,
+    "discharge_entry": 4765.799999999999,
+    "discharge_buffer": 4819.299999999999,
+    "discharge_ready": 4951.499999999999,
+    "transfer_pickup": 5163.249999999999,
+    "coolbed_entry": 5182.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B141",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 4749.999999999999,
+    "torch_cut_complete": 4819.999999999999,
+    "transport_entry": 4819.999999999999,
+    "transport_exit": 4920.799999999999,
+    "discharge_entry": 4920.799999999999,
+    "discharge_buffer": 4949.499999999999,
+    "discharge_ready": 4951.499999999999,
+    "transfer_pickup": 5163.249999999999,
+    "coolbed_entry": 5182.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B136",
+   "strand": 3,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4570.0,
+    "torch_cut_complete": 4640.0,
+    "transport_entry": 4640.0,
+    "transport_exit": 4740.8,
+    "discharge_entry": 4740.8,
+    "discharge_buffer": 4794.3,
+    "discharge_ready": 4971.5,
+    "transfer_pickup": 5062.749999999999,
+    "coolbed_entry": 5088.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B142",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 4770.0,
+    "torch_cut_complete": 4840.0,
+    "transport_entry": 4840.0,
+    "transport_exit": 4940.8,
+    "discharge_entry": 4940.8,
+    "discharge_buffer": 4969.5,
+    "discharge_ready": 4971.5,
+    "transfer_pickup": 5062.749999999999,
+    "coolbed_entry": 5088.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B137",
+   "strand": 6,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4570.0,
+    "torch_cut_complete": 4640.0,
+    "transport_entry": 4640.0,
+    "transport_exit": 4740.8,
+    "discharge_entry": 4799.8,
+    "discharge_buffer": 4853.3,
+    "discharge_ready": 4971.5,
+    "transfer_pickup": 5197.249999999999,
+    "coolbed_entry": 5213.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B143",
+   "strand": 6,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 4770.0,
+    "torch_cut_complete": 4840.0,
+    "transport_entry": 4840.0,
+    "transport_exit": 4940.8,
+    "discharge_entry": 4940.8,
+    "discharge_buffer": 4969.5,
+    "discharge_ready": 4971.5,
+    "transfer_pickup": 5197.249999999999,
+    "coolbed_entry": 5213.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B144",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4929.999999999999,
+    "torch_cut_complete": 4999.999999999999,
+    "transport_entry": 4999.999999999999,
+    "transport_exit": 5100.799999999999,
+    "discharge_entry": 5100.799999999999,
+    "discharge_buffer": 5154.299999999999,
+    "discharge_ready": 5331.499999999999,
+    "transfer_pickup": 5362.249999999999,
+    "coolbed_entry": 5394.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B150",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5129.999999999999,
+    "torch_cut_complete": 5199.999999999999,
+    "transport_entry": 5199.999999999999,
+    "transport_exit": 5300.799999999999,
+    "discharge_entry": 5300.799999999999,
+    "discharge_buffer": 5329.499999999999,
+    "discharge_ready": 5331.499999999999,
+    "transfer_pickup": 5362.249999999999,
+    "coolbed_entry": 5394.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B145",
+   "strand": 4,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4929.999999999999,
+    "torch_cut_complete": 4999.999999999999,
+    "transport_entry": 4999.999999999999,
+    "transport_exit": 5100.799999999999,
+    "discharge_entry": 5100.799999999999,
+    "discharge_buffer": 5154.299999999999,
+    "discharge_ready": 5331.499999999999,
+    "transfer_pickup": 5415.749999999999,
+    "coolbed_entry": 5438.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B151",
+   "strand": 4,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5129.999999999999,
+    "torch_cut_complete": 5199.999999999999,
+    "transport_entry": 5199.999999999999,
+    "transport_exit": 5300.799999999999,
+    "discharge_entry": 5300.799999999999,
+    "discharge_buffer": 5329.499999999999,
+    "discharge_ready": 5331.499999999999,
+    "transfer_pickup": 5415.749999999999,
+    "coolbed_entry": 5438.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B146",
+   "strand": 2,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4949.999999999999,
+    "torch_cut_complete": 5019.999999999999,
+    "transport_entry": 5019.999999999999,
+    "transport_exit": 5120.799999999999,
+    "discharge_entry": 5120.799999999999,
+    "discharge_buffer": 5174.299999999999,
+    "discharge_ready": 5351.499999999999,
+    "transfer_pickup": 5516.249999999999,
+    "coolbed_entry": 5545.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B152",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5149.999999999999,
+    "torch_cut_complete": 5219.999999999999,
+    "transport_entry": 5219.999999999999,
+    "transport_exit": 5320.799999999999,
+    "discharge_entry": 5320.799999999999,
+    "discharge_buffer": 5349.499999999999,
+    "discharge_ready": 5351.499999999999,
+    "transfer_pickup": 5516.249999999999,
+    "coolbed_entry": 5545.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B147",
+   "strand": 5,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4949.999999999999,
+    "torch_cut_complete": 5019.999999999999,
+    "transport_entry": 5019.999999999999,
+    "transport_exit": 5120.799999999999,
+    "discharge_entry": 5165.799999999999,
+    "discharge_buffer": 5219.299999999999,
+    "discharge_ready": 5351.499999999999,
+    "transfer_pickup": 5563.249999999999,
+    "coolbed_entry": 5582.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B153",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5149.999999999999,
+    "torch_cut_complete": 5219.999999999999,
+    "transport_entry": 5219.999999999999,
+    "transport_exit": 5320.799999999999,
+    "discharge_entry": 5320.799999999999,
+    "discharge_buffer": 5349.499999999999,
+    "discharge_ready": 5351.499999999999,
+    "transfer_pickup": 5563.249999999999,
+    "coolbed_entry": 5582.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B148",
+   "strand": 3,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4970.0,
+    "torch_cut_complete": 5040.0,
+    "transport_entry": 5040.0,
+    "transport_exit": 5140.8,
+    "discharge_entry": 5140.8,
+    "discharge_buffer": 5194.3,
+    "discharge_ready": 5371.5,
+    "transfer_pickup": 5462.749999999999,
+    "coolbed_entry": 5488.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B154",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5170.0,
+    "torch_cut_complete": 5240.0,
+    "transport_entry": 5240.0,
+    "transport_exit": 5340.8,
+    "discharge_entry": 5340.8,
+    "discharge_buffer": 5369.5,
+    "discharge_ready": 5371.5,
+    "transfer_pickup": 5462.749999999999,
+    "coolbed_entry": 5488.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B149",
+   "strand": 6,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 4970.0,
+    "torch_cut_complete": 5040.0,
+    "transport_entry": 5040.0,
+    "transport_exit": 5140.8,
+    "discharge_entry": 5199.8,
+    "discharge_buffer": 5253.3,
+    "discharge_ready": 5371.5,
+    "transfer_pickup": 5597.249999999999,
+    "coolbed_entry": 5613.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B155",
+   "strand": 6,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5170.0,
+    "torch_cut_complete": 5240.0,
+    "transport_entry": 5240.0,
+    "transport_exit": 5340.8,
+    "discharge_entry": 5340.8,
+    "discharge_buffer": 5369.5,
+    "discharge_ready": 5371.5,
+    "transfer_pickup": 5597.249999999999,
+    "coolbed_entry": 5613.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B156",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 5329.999999999999,
+    "torch_cut_complete": 5399.999999999999,
+    "transport_entry": 5399.999999999999,
+    "transport_exit": 5500.799999999999,
+    "discharge_entry": 5500.799999999999,
+    "discharge_buffer": 5554.299999999999,
+    "discharge_ready": 5731.499999999999,
+    "transfer_pickup": 5762.249999999999,
+    "coolbed_entry": 5794.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B162",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5529.999999999999,
+    "torch_cut_complete": 5599.999999999999,
+    "transport_entry": 5599.999999999999,
+    "transport_exit": 5700.799999999999,
+    "discharge_entry": 5700.799999999999,
+    "discharge_buffer": 5729.499999999999,
+    "discharge_ready": 5731.499999999999,
+    "transfer_pickup": 5762.249999999999,
+    "coolbed_entry": 5794.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B157",
+   "strand": 4,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 5329.999999999999,
+    "torch_cut_complete": 5399.999999999999,
+    "transport_entry": 5399.999999999999,
+    "transport_exit": 5500.799999999999,
+    "discharge_entry": 5500.799999999999,
+    "discharge_buffer": 5554.299999999999,
+    "discharge_ready": 5731.499999999999,
+    "transfer_pickup": 5815.749999999999,
+    "coolbed_entry": 5838.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B163",
+   "strand": 4,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5529.999999999999,
+    "torch_cut_complete": 5599.999999999999,
+    "transport_entry": 5599.999999999999,
+    "transport_exit": 5700.799999999999,
+    "discharge_entry": 5700.799999999999,
+    "discharge_buffer": 5729.499999999999,
+    "discharge_ready": 5731.499999999999,
+    "transfer_pickup": 5815.749999999999,
+    "coolbed_entry": 5838.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B158",
+   "strand": 2,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 5349.999999999999,
+    "torch_cut_complete": 5419.999999999999,
+    "transport_entry": 5419.999999999999,
+    "transport_exit": 5520.799999999999,
+    "discharge_entry": 5520.799999999999,
+    "discharge_buffer": 5574.299999999999,
+    "discharge_ready": 5751.499999999999,
+    "transfer_pickup": 5916.249999999999,
+    "coolbed_entry": 5945.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B164",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5549.999999999999,
+    "torch_cut_complete": 5619.999999999999,
+    "transport_entry": 5619.999999999999,
+    "transport_exit": 5720.799999999999,
+    "discharge_entry": 5720.799999999999,
+    "discharge_buffer": 5749.499999999999,
+    "discharge_ready": 5751.499999999999,
+    "transfer_pickup": 5916.249999999999,
+    "coolbed_entry": 5945.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B159",
+   "strand": 5,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 5349.999999999999,
+    "torch_cut_complete": 5419.999999999999,
+    "transport_entry": 5419.999999999999,
+    "transport_exit": 5520.799999999999,
+    "discharge_entry": 5565.799999999999,
+    "discharge_buffer": 5619.299999999999,
+    "discharge_ready": 5751.499999999999,
+    "transfer_pickup": 5963.249999999999,
+    "coolbed_entry": 5982.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B165",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5549.999999999999,
+    "torch_cut_complete": 5619.999999999999,
+    "transport_entry": 5619.999999999999,
+    "transport_exit": 5720.799999999999,
+    "discharge_entry": 5720.799999999999,
+    "discharge_buffer": 5749.499999999999,
+    "discharge_ready": 5751.499999999999,
+    "transfer_pickup": 5963.249999999999,
+    "coolbed_entry": 5982.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B160",
+   "strand": 3,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 5370.0,
+    "torch_cut_complete": 5440.0,
+    "transport_entry": 5440.0,
+    "transport_exit": 5540.8,
+    "discharge_entry": 5540.8,
+    "discharge_buffer": 5594.3,
+    "discharge_ready": 5771.5,
+    "transfer_pickup": 5862.749999999999,
+    "coolbed_entry": 5888.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B166",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5570.0,
+    "torch_cut_complete": 5640.0,
+    "transport_entry": 5640.0,
+    "transport_exit": 5740.8,
+    "discharge_entry": 5740.8,
+    "discharge_buffer": 5769.5,
+    "discharge_ready": 5771.5,
+    "transfer_pickup": 5862.749999999999,
+    "coolbed_entry": 5888.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B161",
+   "strand": 6,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 5370.0,
+    "torch_cut_complete": 5440.0,
+    "transport_entry": 5440.0,
+    "transport_exit": 5540.8,
+    "discharge_entry": 5599.8,
+    "discharge_buffer": 5653.3,
+    "discharge_ready": 5771.5,
+    "transfer_pickup": 5997.249999999999,
+    "coolbed_entry": 6013.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B167",
+   "strand": 6,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5570.0,
+    "torch_cut_complete": 5640.0,
+    "transport_entry": 5640.0,
+    "transport_exit": 5740.8,
+    "discharge_entry": 5740.8,
+    "discharge_buffer": 5769.5,
+    "discharge_ready": 5771.5,
+    "transfer_pickup": 5997.249999999999,
+    "coolbed_entry": 6013.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B168",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 5729.999999999999,
+    "torch_cut_complete": 5799.999999999999,
+    "transport_entry": 5799.999999999999,
+    "transport_exit": 5900.799999999999,
+    "discharge_entry": 5900.799999999999,
+    "discharge_buffer": 5954.299999999999,
+    "discharge_ready": 6131.499999999999,
+    "transfer_pickup": 6162.249999999999,
+    "coolbed_entry": 6194.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B174",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5929.999999999999,
+    "torch_cut_complete": 5999.999999999999,
+    "transport_entry": 5999.999999999999,
+    "transport_exit": 6100.799999999999,
+    "discharge_entry": 6100.799999999999,
+    "discharge_buffer": 6129.499999999999,
+    "discharge_ready": 6131.499999999999,
+    "transfer_pickup": 6162.249999999999,
+    "coolbed_entry": 6194.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B169",
+   "strand": 4,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 5729.999999999999,
+    "torch_cut_complete": 5799.999999999999,
+    "transport_entry": 5799.999999999999,
+    "transport_exit": 5900.799999999999,
+    "discharge_entry": 5900.799999999999,
+    "discharge_buffer": 5954.299999999999,
+    "discharge_ready": 6131.499999999999,
+    "transfer_pickup": 6215.749999999999,
+    "coolbed_entry": 6238.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B175",
+   "strand": 4,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5929.999999999999,
+    "torch_cut_complete": 5999.999999999999,
+    "transport_entry": 5999.999999999999,
+    "transport_exit": 6100.799999999999,
+    "discharge_entry": 6100.799999999999,
+    "discharge_buffer": 6129.499999999999,
+    "discharge_ready": 6131.499999999999,
+    "transfer_pickup": 6215.749999999999,
+    "coolbed_entry": 6238.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B170",
+   "strand": 2,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 5749.999999999999,
+    "torch_cut_complete": 5819.999999999999,
+    "transport_entry": 5819.999999999999,
+    "transport_exit": 5920.799999999999,
+    "discharge_entry": 5920.799999999999,
+    "discharge_buffer": 5974.299999999999,
+    "discharge_ready": 6151.499999999999,
+    "transfer_pickup": 6316.249999999999,
+    "coolbed_entry": 6345.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B176",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5949.999999999999,
+    "torch_cut_complete": 6019.999999999999,
+    "transport_entry": 6019.999999999999,
+    "transport_exit": 6120.799999999999,
+    "discharge_entry": 6120.799999999999,
+    "discharge_buffer": 6149.499999999999,
+    "discharge_ready": 6151.499999999999,
+    "transfer_pickup": 6316.249999999999,
+    "coolbed_entry": 6345.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B171",
+   "strand": 5,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 5749.999999999999,
+    "torch_cut_complete": 5819.999999999999,
+    "transport_entry": 5819.999999999999,
+    "transport_exit": 5920.799999999999,
+    "discharge_entry": 5965.799999999999,
+    "discharge_buffer": 6019.299999999999,
+    "discharge_ready": 6151.499999999999,
+    "transfer_pickup": 6363.249999999999,
+    "coolbed_entry": 6382.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B177",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5949.999999999999,
+    "torch_cut_complete": 6019.999999999999,
+    "transport_entry": 6019.999999999999,
+    "transport_exit": 6120.799999999999,
+    "discharge_entry": 6120.799999999999,
+    "discharge_buffer": 6149.499999999999,
+    "discharge_ready": 6151.499999999999,
+    "transfer_pickup": 6363.249999999999,
+    "coolbed_entry": 6382.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B172",
+   "strand": 3,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 5770.0,
+    "torch_cut_complete": 5840.0,
+    "transport_entry": 5840.0,
+    "transport_exit": 5940.8,
+    "discharge_entry": 5940.8,
+    "discharge_buffer": 5994.3,
+    "discharge_ready": 6171.5,
+    "transfer_pickup": 6262.749999999999,
+    "coolbed_entry": 6288.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B178",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5970.0,
+    "torch_cut_complete": 6040.0,
+    "transport_entry": 6040.0,
+    "transport_exit": 6140.8,
+    "discharge_entry": 6140.8,
+    "discharge_buffer": 6169.5,
+    "discharge_ready": 6171.5,
+    "transfer_pickup": 6262.749999999999,
+    "coolbed_entry": 6288.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B173",
+   "strand": 6,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 5770.0,
+    "torch_cut_complete": 5840.0,
+    "transport_entry": 5840.0,
+    "transport_exit": 5940.8,
+    "discharge_entry": 5999.8,
+    "discharge_buffer": 6053.3,
+    "discharge_ready": 6171.5,
+    "transfer_pickup": 6397.249999999999,
+    "coolbed_entry": 6413.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B179",
+   "strand": 6,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 5970.0,
+    "torch_cut_complete": 6040.0,
+    "transport_entry": 6040.0,
+    "transport_exit": 6140.8,
+    "discharge_entry": 6140.8,
+    "discharge_buffer": 6169.5,
+    "discharge_ready": 6171.5,
+    "transfer_pickup": 6397.249999999999,
+    "coolbed_entry": 6413.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B180",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 6129.999999999999,
+    "torch_cut_complete": 6199.999999999999,
+    "transport_entry": 6199.999999999999,
+    "transport_exit": 6300.799999999999,
+    "discharge_entry": 6300.799999999999,
+    "discharge_buffer": 6354.299999999999,
+    "discharge_ready": 6531.499999999999,
+    "transfer_pickup": 6562.249999999999,
+    "coolbed_entry": 6594.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B186",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 6329.999999999999,
+    "torch_cut_complete": 6399.999999999999,
+    "transport_entry": 6399.999999999999,
+    "transport_exit": 6500.799999999999,
+    "discharge_entry": 6500.799999999999,
+    "discharge_buffer": 6529.499999999999,
+    "discharge_ready": 6531.499999999999,
+    "transfer_pickup": 6562.249999999999,
+    "coolbed_entry": 6594.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B181",
+   "strand": 4,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 6129.999999999999,
+    "torch_cut_complete": 6199.999999999999,
+    "transport_entry": 6199.999999999999,
+    "transport_exit": 6300.799999999999,
+    "discharge_entry": 6300.799999999999,
+    "discharge_buffer": 6354.299999999999,
+    "discharge_ready": 6531.499999999999,
+    "transfer_pickup": 6615.749999999999,
+    "coolbed_entry": 6638.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B187",
+   "strand": 4,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 6329.999999999999,
+    "torch_cut_complete": 6399.999999999999,
+    "transport_entry": 6399.999999999999,
+    "transport_exit": 6500.799999999999,
+    "discharge_entry": 6500.799999999999,
+    "discharge_buffer": 6529.499999999999,
+    "discharge_ready": 6531.499999999999,
+    "transfer_pickup": 6615.749999999999,
+    "coolbed_entry": 6638.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B182",
+   "strand": 2,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 6149.999999999999,
+    "torch_cut_complete": 6219.999999999999,
+    "transport_entry": 6219.999999999999,
+    "transport_exit": 6320.799999999999,
+    "discharge_entry": 6320.799999999999,
+    "discharge_buffer": 6374.299999999999,
+    "discharge_ready": 6551.499999999999,
+    "transfer_pickup": 6716.249999999999,
+    "coolbed_entry": 6745.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B188",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 6349.999999999999,
+    "torch_cut_complete": 6419.999999999999,
+    "transport_entry": 6419.999999999999,
+    "transport_exit": 6520.799999999999,
+    "discharge_entry": 6520.799999999999,
+    "discharge_buffer": 6549.499999999999,
+    "discharge_ready": 6551.499999999999,
+    "transfer_pickup": 6716.249999999999,
+    "coolbed_entry": 6745.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B183",
+   "strand": 5,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 6149.999999999999,
+    "torch_cut_complete": 6219.999999999999,
+    "transport_entry": 6219.999999999999,
+    "transport_exit": 6320.799999999999,
+    "discharge_entry": 6365.799999999999,
+    "discharge_buffer": 6419.299999999999,
+    "discharge_ready": 6551.499999999999,
+    "transfer_pickup": 6763.249999999999,
+    "coolbed_entry": 6782.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B189",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 6349.999999999999,
+    "torch_cut_complete": 6419.999999999999,
+    "transport_entry": 6419.999999999999,
+    "transport_exit": 6520.799999999999,
+    "discharge_entry": 6520.799999999999,
+    "discharge_buffer": 6549.499999999999,
+    "discharge_ready": 6551.499999999999,
+    "transfer_pickup": 6763.249999999999,
+    "coolbed_entry": 6782.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B184",
+   "strand": 3,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 6170.0,
+    "torch_cut_complete": 6240.0,
+    "transport_entry": 6240.0,
+    "transport_exit": 6340.8,
+    "discharge_entry": 6340.8,
+    "discharge_buffer": 6394.3,
+    "discharge_ready": 6571.5,
+    "transfer_pickup": 6662.749999999999,
+    "coolbed_entry": 6688.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B190",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 6370.0,
+    "torch_cut_complete": 6440.0,
+    "transport_entry": 6440.0,
+    "transport_exit": 6540.8,
+    "discharge_entry": 6540.8,
+    "discharge_buffer": 6569.5,
+    "discharge_ready": 6571.5,
+    "transfer_pickup": 6662.749999999999,
+    "coolbed_entry": 6688.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B185",
+   "strand": 6,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 6170.0,
+    "torch_cut_complete": 6240.0,
+    "transport_entry": 6240.0,
+    "transport_exit": 6340.8,
+    "discharge_entry": 6399.8,
+    "discharge_buffer": 6453.3,
+    "discharge_ready": 6571.5,
+    "transfer_pickup": 6797.249999999999,
+    "coolbed_entry": 6813.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B191",
+   "strand": 6,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 6370.0,
+    "torch_cut_complete": 6440.0,
+    "transport_entry": 6440.0,
+    "transport_exit": 6540.8,
+    "discharge_entry": 6540.8,
+    "discharge_buffer": 6569.5,
+    "discharge_ready": 6571.5,
+    "transfer_pickup": 6797.249999999999,
+    "coolbed_entry": 6813.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B192",
+   "strand": 1,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 6529.999999999999,
+    "torch_cut_complete": 6599.999999999999,
+    "transport_entry": 6599.999999999999,
+    "transport_exit": 6700.799999999999,
+    "discharge_entry": 6700.799999999999,
+    "discharge_buffer": 6754.299999999999,
+    "discharge_ready": 6931.499999999999,
+    "transfer_pickup": 6962.249999999999,
+    "coolbed_entry": 6994.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S1-B198",
+   "strand": 1,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 6729.999999999999,
+    "torch_cut_complete": 6799.999999999999,
+    "transport_entry": 6799.999999999999,
+    "transport_exit": 6900.799999999999,
+    "discharge_entry": 6900.799999999999,
+    "discharge_buffer": 6929.499999999999,
+    "discharge_ready": 6931.499999999999,
+    "transfer_pickup": 6962.249999999999,
+    "coolbed_entry": 6994.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B193",
+   "strand": 4,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 6529.999999999999,
+    "torch_cut_complete": 6599.999999999999,
+    "transport_entry": 6599.999999999999,
+    "transport_exit": 6700.799999999999,
+    "discharge_entry": 6700.799999999999,
+    "discharge_buffer": 6754.299999999999,
+    "discharge_ready": 6931.499999999999,
+    "transfer_pickup": 7015.749999999999,
+    "coolbed_entry": 7038.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S4-B199",
+   "strand": 4,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 6729.999999999999,
+    "torch_cut_complete": 6799.999999999999,
+    "transport_entry": 6799.999999999999,
+    "transport_exit": 6900.799999999999,
+    "discharge_entry": 6900.799999999999,
+    "discharge_buffer": 6929.499999999999,
+    "discharge_ready": 6931.499999999999,
+    "transfer_pickup": 7015.749999999999,
+    "coolbed_entry": 7038.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B194",
+   "strand": 2,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 6549.999999999999,
+    "torch_cut_complete": 6619.999999999999,
+    "transport_entry": 6619.999999999999,
+    "transport_exit": 6720.799999999999,
+    "discharge_entry": 6720.799999999999,
+    "discharge_buffer": 6774.299999999999,
+    "discharge_ready": 6951.499999999999,
+    "transfer_pickup": 7116.249999999999,
+    "coolbed_entry": 7145.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S2-B200",
+   "strand": 2,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 6749.999999999999,
+    "torch_cut_complete": 6819.999999999999,
+    "transport_entry": 6819.999999999999,
+    "transport_exit": 6920.799999999999,
+    "discharge_entry": 6920.799999999999,
+    "discharge_buffer": 6949.499999999999,
+    "discharge_ready": 6951.499999999999,
+    "transfer_pickup": 7116.249999999999,
+    "coolbed_entry": 7145.499999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B195",
+   "strand": 5,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 6549.999999999999,
+    "torch_cut_complete": 6619.999999999999,
+    "transport_entry": 6619.999999999999,
+    "transport_exit": 6720.799999999999,
+    "discharge_entry": 6765.799999999999,
+    "discharge_buffer": 6819.299999999999,
+    "discharge_ready": 6951.499999999999,
+    "transfer_pickup": 7163.249999999999,
+    "coolbed_entry": 7182.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S5-B201",
+   "strand": 5,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 6749.999999999999,
+    "torch_cut_complete": 6819.999999999999,
+    "transport_entry": 6819.999999999999,
+    "transport_exit": 6920.799999999999,
+    "discharge_entry": 6920.799999999999,
+    "discharge_buffer": 6949.499999999999,
+    "discharge_ready": 6951.499999999999,
+    "transfer_pickup": 7163.249999999999,
+    "coolbed_entry": 7182.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B196",
+   "strand": 3,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 6570.0,
+    "torch_cut_complete": 6640.0,
+    "transport_entry": 6640.0,
+    "transport_exit": 6740.8,
+    "discharge_entry": 6740.8,
+    "discharge_buffer": 6794.3,
+    "discharge_ready": 6971.5,
+    "transfer_pickup": 7062.749999999999,
+    "coolbed_entry": 7088.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S3-B202",
+   "strand": 3,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 6770.0,
+    "torch_cut_complete": 6840.0,
+    "transport_entry": 6840.0,
+    "transport_exit": 6940.8,
+    "discharge_entry": 6940.8,
+    "discharge_buffer": 6969.5,
+    "discharge_ready": 6971.5,
+    "transfer_pickup": 7062.749999999999,
+    "coolbed_entry": 7088.749999999999,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B197",
+   "strand": 6,
+   "stopper_role": "first_at_fixed",
+   "events": {
+    "torch_cut_start": 6570.0,
+    "torch_cut_complete": 6640.0,
+    "transport_entry": 6640.0,
+    "transport_exit": 6740.8,
+    "discharge_entry": 6799.8,
+    "discharge_buffer": 6853.3,
+    "discharge_ready": 6971.5,
+    "transfer_pickup": 7197.249999999999,
+    "coolbed_entry": null,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  },
+  {
+   "id": "S6-B203",
+   "strand": 6,
+   "stopper_role": "second_at_intermediate",
+   "events": {
+    "torch_cut_start": 6770.0,
+    "torch_cut_complete": 6840.0,
+    "transport_entry": 6840.0,
+    "transport_exit": 6940.8,
+    "discharge_entry": 6940.8,
+    "discharge_buffer": 6969.5,
+    "discharge_ready": 6971.5,
+    "transfer_pickup": 7197.249999999999,
+    "coolbed_entry": null,
+    "coolbed_exit": null,
+    "crane_pickup": null,
+    "crane_deliver": null
+   }
+  }
+ ]
 }
