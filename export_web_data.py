@@ -69,12 +69,12 @@ def export_scenario(scenario):
                             verbose=False)
     stats = analyze_result(result)
 
-    # Only export post-warmup billets that completed the journey
+    # Export all post-warmup billets that entered the transport RT
+    # (not just fully delivered ones — most billets are still in transit)
     billets = [
         export_billet(b) for b in result.billets
         if b.t_torch_cut_start is not None
-        and b.t_torch_cut_start > SIM_WARMUP
-        and b.t_crane_deliver is not None
+        and b.t_torch_cut_start >= SIM_WARMUP
     ]
 
     data = {
@@ -119,7 +119,8 @@ def export_scenario(scenario):
             "yard_width": YARD_TROLLEY_SPAN,
         },
         "transfer_car_log": [
-            {"t": round(entry[0], 2), "action": entry[1], "strand": entry[2]}
+            {"t": round(entry[0], 2), "action": entry[1], "strand": entry[2],
+             "duration": round(entry[3], 3) if len(entry) > 3 else 0}
             for entry in result.transfer_car_log
         ],
         "coolbed_occupancy_log": [
